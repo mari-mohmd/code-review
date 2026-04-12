@@ -1,0 +1,12 @@
+diff --git a/main.py b/main.py
+index 6f9faab..35f497e 100644
+--- a/main.py
++++ b/main.py
+@@ -1,6 +1,6 @@
+ from firewall import configure_firewall
+ 
+-HOSTS = ["host1", "host2", "host3", "host4", "host5"]
++HOSTS = ["host1", "host2", "host3", "host4", "host5", "host6"]
+ COMMON_APPS = ["Firefox", "Antivirus", "Matlab"]
+ 
+ def deploy(host):

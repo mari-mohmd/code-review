@@ -1,0 +1,17 @@
+diff --git a/main.py b/main.py
+index d009830..50850eb 100644
+--- a/main.py
++++ b/main.py
+@@ -5,5 +5,11 @@ class Sensor:
+ class LightSensor(Sensor):
+     type = "Light"
+ 
++    def __str__(self):
++        return self.type
++
++class HeatSensor(Sensor):
++    type = "Light"
++
+     def __str__(self):
+         return self.type
+\ No newline at end of file
