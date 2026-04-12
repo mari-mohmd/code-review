@@ -97,7 +97,7 @@ Code_Review/
 ## Installation
 
 ```bash
-git clone https://github.com/your-org/logic-verifier.git
+git clone https://github.com/mari-mohmd/code-review.git
 ```
 
 No package installation required. Run directly with Python.
@@ -110,25 +110,25 @@ No package installation required. Run directly with Python.
 
 ```bash
 git diff main > changes.diff
-python cli.py --project . --diff changes.diff
+python review.py --project . --diff changes.diff
 ```
 
 ### Analyse specific files
 
 ```bash
-python cli.py --project . --files src/main.py src/utils.py
+python review.py --project . --files src/main.py src/utils.py
 ```
 
 ### Scan the entire project
 
 ```bash
-python cli.py --project . --all
+python review.py --project . --all
 ```
 
 ### One-line summary
 
 ```bash
-python cli.py --project . --all --summary
+python review.py --project . --all --summary
 ```
 
 
