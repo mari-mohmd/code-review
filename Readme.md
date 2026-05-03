@@ -97,7 +97,7 @@ Code_Review/
 ## Installation
 
 ```bash
-git clone https://github.com/mari-mohmd/code-review.git
+git clone https://github.com/your-org/logic-verifier.git
 ```
 
 No package installation required. Run directly with Python.
@@ -110,27 +110,86 @@ No package installation required. Run directly with Python.
 
 ```bash
 git diff main > changes.diff
-python review.py --project . --diff changes.diff
+python cli.py --project . --diff changes.diff
 ```
 
 ### Analyse specific files
 
 ```bash
-python review.py --project . --files src/main.py src/utils.py
+python cli.py --project . --files src/main.py src/utils.py
 ```
 
 ### Scan the entire project
 
 ```bash
-python review.py --project . --all
+python cli.py --project . --all
 ```
 
 ### One-line summary
 
 ```bash
-python review.py --project . --all --summary
+python cli.py --project . --all --summary
 ```
 
+
+## Static Checklist
+
+In addition to the dynamic, diff-driven checkers, the tool supports a
+**static checklist**: a set of user-defined items that are appended to every
+review run, regardless of what changed. These represent reviewer obligations
+that apply to every commit -- for example, confirming that the CHANGELOG was
+updated or that new environment variables are documented.
+
+### Configuration file
+
+Static items are loaded from a JSON file named `.checklist.json` placed in the
+project directory being reviewed.
+
+```json
+{
+  "items": [
+    {
+      "message": "CHANGELOG updated",
+      "detail": "Every user-facing change should be recorded in CHANGELOG.md.",
+      "category": "manual",
+      "enabled": true
+    },
+    {
+      "message": "New environment variables documented",
+      "detail": "Ensure new or removed env vars are documented in README or .env.example.",
+      "category": "manual",
+      "enabled": true
+    }
+  ]
+}
+```
+
+| Field      | Type   | Required | Default    | Description                                      |
+|------------|--------|----------|------------|--------------------------------------------------|
+| `message`  | string | yes      | —          | Short title shown in the checklist output        |
+| `detail`   | string | no       | `""`       | Multi-line reviewer guidance                     |
+| `category` | string | no       | `"manual"` | Free-form tag (e.g. `"manual"`, `"security"`)    |
+| `enabled`  | bool   | no       | `true`     | Set to `false` to skip an item without deleting it |
+
+### Generating a starter config
+
+```bash
+python review.py --checklist-init
+```
+
+This writes a `.checklist.json` template with example items into the current
+project directory. The command fails if the file already exists.
+
+### Behaviour
+
+- Items with `"enabled": false` are silently skipped.
+- Items with an empty or missing `"message"` are skipped.
+- If the file cannot be found or parsed, a single error item is emitted so the
+  reviewer is notified rather than silently missing items.
+- If no `.checklist.json` exists and no path is supplied, the static checklist
+  is empty and the tool runs normally.
+
+---
 
 ## Test Scenarios
 

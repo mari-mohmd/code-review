@@ -21,6 +21,7 @@ import sys
 from pathlib import Path
 
 from lib.analyzer import ChecklistGenerator
+from lib.static_checklist import StaticChecklistLoader
 
 # Terminal colors:
 RESET = "\033[0m"
@@ -100,7 +101,7 @@ examples:
   python review.py --project . --diff changes.diff --json | jq '.[] | select(.severity=="warning")'
         """,
     )
-    parser.add_argument("--project", "-p", required=True,
+    parser.add_argument("--project", "-p", default=None,
                         help="Path to the project root directory.")
     parser.add_argument("--diff", "-d",
                         help="Path to a unified diff file (.diff / .patch).")
@@ -112,19 +113,49 @@ examples:
                         help="Output as JSON instead of human-readable text.")
     parser.add_argument("--summary", action="store_true",
                         help="Print a one-line summary instead of full checklist.")
+    parser.add_argument("--ignore-test", action="store_true", default=False,
+                        help="ignores test files.")
     parser.add_argument("--category", nargs="+",
                         metavar="CAT",
                         help="Filter to specific categories "
                              "(e.g. lifecycle portability shell naming).")
+    parser.add_argument("--checklist", metavar="FILE",
+                        help="Path to a .checklist.json file of user-defined "
+                             "static items to prepend to every review.")
+    parser.add_argument("--checklist-init", metavar="FILE", nargs="?",
+                        const=".checklist.json",
+                        help="Write a starter .checklist.json template to FILE "
+                             "(default: .checklist.json) and exit.")
 
     args = parser.parse_args()
+
+    if args.checklist_init:
+        dest = Path(args.checklist_init)
+        try:
+            StaticChecklistLoader.write_example(dest)
+            print(f"Created starter checklist template: {dest}")
+        except FileExistsError as e:
+            print(f"Error: {e}", file=sys.stderr)
+            sys.exit(1)
+        sys.exit(0)
+
+    if not args.project:
+        parser.print_help()
+        sys.exit(1)
 
     project_dir = Path(args.project)
     if not project_dir.is_dir():
         print(f"Error: '{args.project}' is not a directory.", file=sys.stderr)
         sys.exit(1)
 
-    generator = ChecklistGenerator(str(project_dir))
+    # Resolve checklist: explicit flag > project root > tool directory
+    checklist_path = args.checklist
+    if checklist_path is None:
+        checklist_path = StaticChecklistLoader.resolve_for_project(project_dir)
+    if checklist_path is None:
+        checklist_path = StaticChecklistLoader.resolve_for_project(Path(__file__).parent)
+
+    generator = ChecklistGenerator(str(project_dir), checklist_path=checklist_path)
 
     if args.diff:
         diff_path = Path(args.diff)
@@ -132,12 +163,13 @@ examples:
             print(f"Error: diff file '{args.diff}' not found.", file=sys.stderr)
             sys.exit(1)
         items = generator.generate_from_diff(
-            diff_path.read_text(encoding="utf-8", errors="replace")
+            diff_path.read_text(encoding="utf-8", errors="replace"), should_ignore_test=args.ignore_test
         )
+
     elif args.files:
-        items = generator.generate_from_files(args.files)
+        items = generator.generate_from_files(args.files, args.ignore_test)
     elif args.all:
-        items = generator.generate_from_project()
+        items = generator.generate_from_project(args.ignore_test)
     else:
         parser.print_help()
         sys.exit(0)

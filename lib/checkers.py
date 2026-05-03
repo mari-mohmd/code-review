@@ -334,61 +334,120 @@ class NameSimilarityChecker:
         "source", "target", "temp", "tmp", "ret", "res", "resp",
     }
 
-    def check(self, source: str, filename: str) -> list:
-        items = []
-        try:
-            tree = ast.parse(source)
-        except SyntaxError:
-            return items
+    # Name kind labels
+    _VAR = "variable"
+    _FUNC = "function"
+    _CLASS = "class"
 
-        # Collect only user-defined names: function args, assignment targets,
-        # function/class definitions - not every Name Load node (too noisy).
-        names: dict[str, list[tuple[str, Optional[int]]]] = {}
+    def _collect(self, tree) -> dict:
+        """
+        Return {normalised_key: [(surface_name, lineno, kind), ...]}
+        collecting only user-defined names with their kind tag.
+        """
+        names: dict = {}
 
         for node in ast.walk(tree):
             candidates = []
+
             if isinstance(node, ast.arg):
-                candidates.append((node.arg, node.lineno))
-            elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
-                candidates.append((node.name, node.lineno))
+                candidates.append((node.arg, node.lineno, self._VAR))
+
+            elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
+                candidates.append((node.name, node.lineno, self._FUNC))
+
+            elif isinstance(node, ast.ClassDef):
+                candidates.append((node.name, node.lineno, self._CLASS))
+
             elif isinstance(node, ast.Assign):
                 for t in node.targets:
                     if isinstance(t, ast.Name):
-                        candidates.append((t.id, node.lineno))
+                        candidates.append((t.id, node.lineno, self._VAR))
 
-            for name, ln in candidates:
+            for name, ln, kind in candidates:
                 if len(name) <= 2:
                     continue
                 key = re.sub(r"_", "", name).lower()
-                names.setdefault(key, []).append((name, ln))
+                names.setdefault(key, []).append((name, ln, kind))
 
-        reported: set[str] = set()
+        return names
+
+    def _build_items(self, names: dict, filename: str,
+                     diff_names: set = None) -> list:
+        """
+        Compare collected names and emit checklist items.
+
+        diff_names — if provided, at least one surface name in a flagged
+                     pair must appear in this set (diff-aware mode).
+        """
+        items = []
+        reported: set = set()
+
         for key, entries in names.items():
-            unique = list(dict.fromkeys(e[0] for e in entries))
-            if len(unique) < 2:
-                continue
-            if len(key) <= 4:
-                continue
-            if key in self._NAMING_SKIP:
-                continue
-            # Require that at least one variant uses underscore or mixed case
-            has_style_diff = any("_" in v or (v != v.lower() and v != v.upper())
-                                 for v in unique)
-            if not has_style_diff:
-                continue
-            frozen = frozenset(unique)
-            if frozen in reported:
-                continue
-            reported.add(frozen)
-            ln = next((e[1] for e in entries if e[1]), None)
-            items.append(ChecklistItem(
-                category="naming",
-                message=f"Name inconsistency in {filename}",
-                detail=(f"Did you mean '{unique[0]}' or '{unique[1]}'?\n"
-                        f"Found {len(unique)} variants: {', '.join(unique)}"),
-                line=ln,
-            ))
+            # Group by kind — only compare within the same kind
+            by_kind: dict = {}
+            for name, ln, kind in entries:
+                by_kind.setdefault(kind, []).append((name, ln))
+
+            for kind, kind_entries in by_kind.items():
+                unique = list(dict.fromkeys(e[0] for e in kind_entries))
+                if len(unique) < 2:
+                    continue
+                if len(key) <= 4:
+                    continue
+                if key in self._NAMING_SKIP:
+                    continue
+                has_style_diff = any(
+                    "_" in v or (v != v.lower() and v != v.upper())
+                    for v in unique
+                )
+                if not has_style_diff:
+                    continue
+
+                frozen = frozenset(unique)
+                if frozen in reported:
+                    continue
+
+                # Diff-aware gate: skip if neither name was in the diff
+                if diff_names is not None:
+                    if not any(n in diff_names for n in unique):
+                        continue
+
+                reported.add(frozen)
+                ln = next((e[1] for e in kind_entries if e[1]), None)
+                items.append(ChecklistItem(
+                    category="naming",
+                    message=f"Name inconsistency ({kind}) in {filename}",
+                    detail=(
+                        f"Did you mean '{unique[0]}' or '{unique[1]}'?\n"
+                        f"Both are {kind} names with the same normalised key "
+                        f"'{key}'.\n"
+                        f"Found {len(unique)} variant(s): {', '.join(unique)}"
+                    ),
+                    line=ln,
+                ))
         return items
+
+    def check(self, source: str, filename: str) -> list:
+        """Full-file mode."""
+        try:
+            tree = ast.parse(source)
+        except SyntaxError:
+            return []
+        return self._build_items(self._collect(tree), filename,
+                                 diff_names=None)
+
+    def check_diff(self, source: str, filename: str,
+                   diff_names: set) -> list:
+        """
+        Diff-aware mode: only report pairs where at least one name
+        appears in the set of identifiers touched by the diff.
+        """
+        try:
+            tree = ast.parse(source)
+        except SyntaxError:
+            return []
+        return self._build_items(self._collect(tree), filename,
+                                 diff_names=diff_names)
 
 
 # ------------------------------------------------------------------------------------------------
@@ -522,9 +581,8 @@ class MagicNumberChecker:
             items.append(ChecklistItem(
                 category="magic",
                 message=f"Magic number {val!r} in {filename}",
-                detail=(f"Bare literal {val!r} at line {ln} - intent is not self-evident.\n"
-                        f"Consider naming it: MAX_RETRIES = {val!r}, TIMEOUT_SEC = {val!r}, etc.\n"
-                        f"Named constants improve readability and make spec changes safer."),
+                detail=(f"Bare literal {val!r} - intent is not self-evident.\n"
+                        f"Named constants improve readability and make future changes safer."),
                 line=ln,
             ))
         return items
@@ -541,12 +599,19 @@ class StructuralDivergenceChecker:
       SD(·) ∈ [0, 1];  1.0 = structurally identical
 
     Thresholds:
-      SD ≥ 0.90  -> WARNING  ("almost identical - is this intended?")
-      SD ≥ 0.75  -> INFO     ("high similarity - verify intentional divergence")
+      SD ≥ 0.95  -> WARNING  ("almost identical - is this intended?")
+
+    Two comparison modes:
+
+      check()          — compares all pairs in the file (used by --files / --all)
+      check_diff()     — only compares pairs where at least one block was
+                         touched by the diff (used by --diff). Pre-existing
+                         pairs that are both outside the diff are suppressed.
+
     """
 
     WARN_THRESHOLD = 1
-    INFO_THRESHOLD = 0.90
+    INFO_THRESHOLD = 0.97
     NAMING_SKIP = ["__init__", "__str__", "__repr__"]
 
     def check(self, source: str, filename: str) -> list:
@@ -645,7 +710,8 @@ class InjectionRiskChecker:
                         category="injection",
                         message=f"Runtime evaluation risk in {filename}",
                         detail=(f"Call to '{name}()' at line {getattr(node,'lineno','?')} "
-                                f"introduces potential code injection or deserialisation risk."),
+                                f"introduces potential code injection or deserialisation risk. \n"
+                                f"Verify that no potential security risks are introduced here"),
                         line=getattr(node, "lineno", None),
                     ))
         return items

@@ -29,7 +29,7 @@ class ProgramModel:
     linkages: dict = field(default_factory=dict)
 
 class DependencyGraphBuilder:
-    def build(self, project_dir: str) -> ProgramModel:
+    def build(self, project_dir: str, should_ignore_test) -> ProgramModel:
         model = ProgramModel()
         root = Path(project_dir)
         for path in root.rglob("*"):
@@ -37,6 +37,8 @@ class DependencyGraphBuilder:
                 continue
             rel = str(path.relative_to(root))
             if path.suffix == ".py":
+                if should_ignore_test and "test" in rel:
+                    continue
                 model.python_files.append(rel)
             elif path.suffix in (".json", ".md", ".txt", ".yaml", ".yml",
                                   ".cfg", ".ini", ".toml", ".csv", ".log"):
