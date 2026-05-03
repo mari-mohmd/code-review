@@ -142,7 +142,7 @@ updated or that new environment variables are documented.
 
 ### Configuration file
 
-Static items are loaded from a JSON file named `.checklist.json` placed in the
+Static items are loaded from a JSON file named `checklist.json` placed in the
 project directory being reviewed.
 
 ```json
@@ -177,7 +177,7 @@ project directory being reviewed.
 python review.py --checklist-init
 ```
 
-This writes a `.checklist.json` template with example items into the current
+This writes a `checklist.json` template with example items into the current
 project directory. The command fails if the file already exists.
 
 ### Behaviour
@@ -186,7 +186,7 @@ project directory. The command fails if the file already exists.
 - Items with an empty or missing `"message"` are skipped.
 - If the file cannot be found or parsed, a single error item is emitted so the
   reviewer is notified rather than silently missing items.
-- If no `.checklist.json` exists and no path is supplied, the static checklist
+- If no `checklist.json` exists and no path is supplied, the static checklist
   is empty and the tool runs normally.
 
 ---

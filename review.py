@@ -120,12 +120,12 @@ examples:
                         help="Filter to specific categories "
                              "(e.g. lifecycle portability shell naming).")
     parser.add_argument("--checklist", metavar="FILE",
-                        help="Path to a .checklist.json file of user-defined "
+                        help="Path to a checklist.json file of user-defined "
                              "static items to prepend to every review.")
     parser.add_argument("--checklist-init", metavar="FILE", nargs="?",
-                        const=".checklist.json",
-                        help="Write a starter .checklist.json template to FILE "
-                             "(default: .checklist.json) and exit.")
+                        const="checklist.json",
+                        help="Write a starter checklist.json template to FILE "
+                             "(default: checklist.json) and exit.")
 
     args = parser.parse_args()
 

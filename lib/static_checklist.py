@@ -19,7 +19,7 @@ from typing import Optional
 
 from .checklist_data import ChecklistItem
 
-DEFAULT_CONFIG_NAME = ".checklist.json"
+DEFAULT_CONFIG_NAME = "checklist.json"
 
 _EXAMPLE_CONFIG = {
     "items": [
@@ -62,7 +62,7 @@ class StaticChecklistLoader:
     They represent reviewer obligations that apply to every commit
     (e.g. "Was the CHANGELOG updated?", "Are new env vars documented?").
 
-    Config file format  (<project>/.checklist.json):
+    Config file format  (<project>/checklist.json):
 
         {
           "items": [
@@ -89,7 +89,7 @@ class StaticChecklistLoader:
     items  = loader.load()          # -> list[ChecklistItem]
 
     To generate a starter config in a project:
-        StaticChecklistLoader.write_example(Path("my_project/.checklist.json"))
+        StaticChecklistLoader.write_example(Path("my_project/checklist.json"))
     """
 
     def __init__(self, config_path: Optional[Path] = None):
@@ -150,7 +150,7 @@ class StaticChecklistLoader:
 
     @classmethod
     def write_example(cls, path: Path) -> None:
-        """Write a starter .checklist.json to *path*."""
+        """Write a starter checklist.json to *path*."""
         path = Path(path)
         if path.exists():
             raise FileExistsError(

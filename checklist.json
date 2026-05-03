@@ -1,0 +1,10 @@
+{
+  "items": [
+    {
+      "message": "File header updated with technology transfer warning",
+      "detail": "Verify that every modified file's header includes the required\ntechnology transfer warning block, for example:\n\n    # WARNING: This software contains proprietary algorithms developed\n    # at Griffith University. Redistribution, commercial use, or transfer\n    # to a third party requires prior written approval.\n\nEnsure the warning is present, up to date, and consistent with the\nlicensing terms agreed with the technology transfer office.",
+      "category": "manual",
+      "enabled": true
+    }
+  ]
+}
