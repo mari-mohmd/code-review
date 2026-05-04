@@ -3,7 +3,7 @@
 A lightweight, offline tool for generating dynamic, change-specific code review
 checklists for Python projects. Implements the methodology from:
 
-> A Lightweight Methodology for Verifying Intended Logic During Code Review
+> IntentCheck: A Lightweight Tool for Detecting Intent Violations During Code Review
 > Mohammad Mari, Lian Wen -- Griffith University, February 2026
 
 ---
