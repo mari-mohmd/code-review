@@ -11,7 +11,7 @@
  License    : MIT License (see LICENSE file for details)
  Description: A graph builder module bsed on the defined formal method:
               P = (F, C, L)  where F = Y ∪ S.
- Usage      : Supplementary file. see review.py
+ Usage      : Supplementary file. see IntentCheck.py
 ===============================================================================
 """
 import ast

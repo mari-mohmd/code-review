@@ -9,7 +9,7 @@
  Created    : 2026
  License    : MIT License (see LICENSE file for details)
  Description: User-defined static checklist items loaded from a JSON config.
- Usage      : Supplementary file. see review.py
+ Usage      : Supplementary file. see IntentCheck.py
 ===============================================================================
 """
 
@@ -97,8 +97,6 @@ class StaticChecklistLoader:
             Path(config_path) if config_path is not None else None
         )
 
-    # ── Public API ────────────────────────────────────────────────────────────
-
     def load(self) -> list:
         """
         Parse the config file and return enabled ChecklistItems.
@@ -167,8 +165,6 @@ class StaticChecklistLoader:
         candidate = Path(project_dir) / DEFAULT_CONFIG_NAME
         return candidate if candidate.exists() else None
 
-    # ── Internal ──────────────────────────────────────────────────────────────
-
     @staticmethod
     def _error(path: Path, reason: str) -> ChecklistItem:
         return ChecklistItem(
@@ -177,6 +173,6 @@ class StaticChecklistLoader:
             detail=(
                 f"Could not load user-defined checklist from '{path}'.\n"
                 f"Reason: {reason}\n"
-                f"Run  python review.py --checklist-init  to create a valid template."
+                f"Run  python IntentCheck.py --checklist-init  to create a valid template."
             ),
         )

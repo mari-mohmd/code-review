@@ -10,7 +10,7 @@
  License    : MIT License (see LICENSE file for details)
  Description: AST-based code analysis. Imports checkers and perform analysis
  Author      : Mohammad Mari, Lian Wen
- Usage      : Supplementary file. see review.py
+ Usage      : Supplementary file. see IntentCheck.py
 ===============================================================================
 
 Logic Verifier - AST-based code analysis for intended logic verification.
@@ -22,7 +22,6 @@ Formal models implemented:
   SD(B_i,B_j) = 2|LCS|/(|Bi|+|Bj|) - structural divergence score
   DI(y) = I_y ∖ U_y                  - dead import set
 """
-
 
 import os
 import re
@@ -51,17 +50,17 @@ def parse_unified_diff(diff_text: str, should_ignore_test: bool) -> dict[str, st
     which files changed; the actual analysis is now done by DiffScopeAnalyser.
     """
     changed: dict[str, str] = {}
-    cur   = None
+    cur = None
     lines = []
     for line in diff_text.splitlines():
         if line.startswith("+++ b/") or (line.startswith("+++ ")
-                                          and not line.startswith("+++ b/")):
+                                         and not line.startswith("+++ b/")):
             if should_ignore_test and "test" in line:
                 continue
             if cur and lines:
                 changed[cur] = "\n".join(lines)
-            cur   = line[6:].strip() if line.startswith("+++ b/") \
-                    else line[4:].strip()
+            cur = line[6:].strip() if line.startswith("+++ b/") \
+                else line[4:].strip()
             lines = []
         elif line.startswith("+") and not line.startswith("+++"):
             lines.append(line[1:])
@@ -70,7 +69,7 @@ def parse_unified_diff(diff_text: str, should_ignore_test: bool) -> dict[str, st
     return changed
 
 
-# ─── Diff Scope Analyser ──────────────────────────────────────────────────────
+# Diff Scope Analyser
 
 class DiffScopeAnalyser:
     """
@@ -101,15 +100,15 @@ class DiffScopeAnalyser:
 
     def __init__(self, full_source: str, filename: str):
         self.full_source = full_source
-        self.filename    = filename
+        self.filename = filename
         try:
             self.tree = ast.parse(full_source)
             self.lines = full_source.splitlines()
         except SyntaxError:
-            self.tree  = None
+            self.tree = None
             self.lines = full_source.splitlines()
 
-    # ── Step 1: parse the diff into {line_number: added_line_text} ────────
+    # Step 1: parse the diff into {line_number: added_line_text}
     @staticmethod
     def added_lines(diff_text: str, filename: str) -> dict[int, str]:
         """
@@ -129,11 +128,11 @@ class DiffScopeAnalyser:
             # Detect which file this hunk belongs to
             if line.startswith("+++ b/") or line.startswith("+++ "):
                 target = line[6:].strip() if line.startswith("+++ b/") \
-                         else line[4:].strip()
+                    else line[4:].strip()
                 in_file = (
-                    target == filename
-                    or target.endswith("/" + filename)
-                    or filename.endswith(target)
+                        target == filename
+                        or target.endswith("/" + filename)
+                        or filename.endswith(target)
                 )
                 new_lineno = 0
                 continue
@@ -153,11 +152,11 @@ class DiffScopeAnalyser:
 
             if line.startswith("+"):
                 new_lineno += 1
-                result[new_lineno] = line[1:]   # strip the leading +
+                result[new_lineno] = line[1:]  # strip the leading +
             elif line.startswith("-"):
-                pass                            # deleted lines don't advance new counter
+                pass  # deleted lines don't advance new counter
             else:
-                new_lineno += 1                 # context lines advance the counter
+                new_lineno += 1  # context lines advance the counter
 
         return result
 
@@ -216,6 +215,7 @@ class DiffScopeAnalyser:
 
         flush()
         return result
+
     @staticmethod
     def _is_formatting_only(old_text: str, new_text: str) -> bool:
         """
@@ -473,7 +473,8 @@ class DiffScopeAnalyser:
                                 results.append((src, label, removal_note))
 
         return results
-    # ── Step 2: map each added line to its enclosing scope ───────────────
+
+    # map each added line to its enclosing scope
     def _scope_for_line(self, lineno: int):
         """
         Walk the AST and return the innermost FunctionDef/AsyncFunctionDef
@@ -489,24 +490,24 @@ class DiffScopeAnalyser:
                                      ast.ClassDef)):
                 continue
             start = node.lineno
-            end   = getattr(node, "end_lineno", start)
+            end = getattr(node, "end_lineno", start)
             if start <= lineno <= end:
                 # Take the innermost (largest start line)
                 if best is None or node.lineno > best.lineno:
                     best = node
         return best
 
-    # ── Step 3a: extract source for a local scope node ────────────────────
+    # extract source for a local scope node
     def _extract_scope_source(self, scope_node) -> str:
         """
         Return the source lines for a FunctionDef / ClassDef node,
         including its full body.
         """
-        start = scope_node.lineno - 1            # 0-indexed
-        end   = getattr(scope_node, "end_lineno", scope_node.lineno)
+        start = scope_node.lineno - 1  # 0-indexed
+        end = getattr(scope_node, "end_lineno", scope_node.lineno)
         return "\n".join(self.lines[start:end])
 
-    # ── Step 3b: find all call sites of a local function/class ───────────
+    # find all call sites of a local function/class
     def _call_sites_of(self, scope_name: str) -> list[int]:
         """
         Return line numbers where `scope_name` is called anywhere in the
@@ -527,7 +528,7 @@ class DiffScopeAnalyser:
                 sites.append(getattr(node, "lineno", 0))
         return sites
 
-    # ── Step 3c: find all usages of a global name ─────────────────────────
+    # find all usages of a global name
     def _global_usage_lines(self, name: str) -> list[int]:
         """
         Return every line number where `name` appears as a Load node —
@@ -542,7 +543,7 @@ class DiffScopeAnalyser:
                 lines.append(getattr(node, "lineno", 0))
         return lines
 
-    # ── Step 4: names introduced at module level by a line ────────────────
+    # names introduced at module level by a line
     def _module_level_names(self, lineno: int) -> list[str]:
         """
         If `lineno` is a module-level assignment or import, return the
@@ -628,7 +629,7 @@ class DiffScopeAnalyser:
         spaces).  The caller emits a single INFO item and skips usage
         tracing and all checker runs for that scope.
         """
-        added        = self.added_lines(diff_text, self.filename)
+        added = self.added_lines(diff_text, self.filename)
         hunk_removed = self._hunk_removed_lines(diff_text, self.filename)
         if not added:
             return []
@@ -670,7 +671,7 @@ class DiffScopeAnalyser:
 
         for lineno in sorted(added.keys()):
             scope = self._scope_for_line(lineno)
-            hs    = hunk_for_lineno(lineno)
+            hs = hunk_for_lineno(lineno)
             is_fmt = hs in formatting_hunks
 
             if scope is not None:
@@ -679,12 +680,12 @@ class DiffScopeAnalyser:
                     continue
                 seen_scopes.add(scope_id)
 
-                src    = self._extract_scope_source(scope)
-                kind   = (type(scope).__name__
-                          .replace("Def", "")
-                          .replace("Async", "async ")
-                          .lower())
-                label  = f"{kind}:{scope.name}"
+                src = self._extract_scope_source(scope)
+                kind = (type(scope).__name__
+                        .replace("Def", "")
+                        .replace("Async", "async ")
+                        .lower())
+                label = f"{kind}:{scope.name}"
                 # offset = how many lines before this scope in the file
                 # checkers produce line numbers relative to the fragment
                 # starting at 1; adding offset converts to file line numbers
@@ -695,15 +696,15 @@ class DiffScopeAnalyser:
                     continue
 
                 for usage_node in self._usage_scopes_of(scope.name,
-                                                         seen_scopes):
+                                                        seen_scopes):
                     seen_scopes.add(id(usage_node))
-                    usage_src    = self._extract_scope_source(usage_node)
-                    usage_kind   = (type(usage_node).__name__
-                                    .replace("Def", "")
-                                    .replace("Async", "async ")
-                                    .lower())
-                    usage_label  = (f"{usage_kind}:{usage_node.name}"
-                                    f" [uses {scope.name}]")
+                    usage_src = self._extract_scope_source(usage_node)
+                    usage_kind = (type(usage_node).__name__
+                                  .replace("Def", "")
+                                  .replace("Async", "async ")
+                                  .lower())
+                    usage_label = (f"{usage_kind}:{usage_node.name}"
+                                   f" [uses {scope.name}]")
                     usage_offset = usage_node.lineno - 1
                     results.append((usage_src, usage_label, False,
                                     usage_offset))
@@ -720,7 +721,7 @@ class DiffScopeAnalyser:
                         idx = ln - 1
                         if 0 <= idx < len(self.lines):
                             fragment_lines.append(self.lines[idx])
-                    src   = "\n".join(fragment_lines)
+                    src = "\n".join(fragment_lines)
                     label = f"global:{','.join(names)}"
                     # Global fragments: first relevant line is the offset
                     offset = (relevant[0] - 1) if relevant else 0
@@ -736,17 +737,15 @@ class DiffScopeAnalyser:
         return results
 
 
-
-
 class ChecklistGenerator:
     """
     Full pipeline:
       1. Build P = (F, C, L)         - dependency graph for the project
       2. Parse diff or accept file list
       3. For each target file:
-           a. Linkage items           - L_import ∪ L_open dependencies
-           b. All registered checkers - in declaration order
-      4. Return sorted checklist      - warnings before info
+           a. Linkage items  --> L_import ∪ L_open dependencies
+           b. All registered checkers
+      4. Return sorted checklist
     """
 
     def __init__(self, project_dir: str, checklist_path=None):
@@ -755,7 +754,6 @@ class ChecklistGenerator:
         self._static_loader = StaticChecklistLoader(checklist_path)
         self.checkers = [
             NameSimilarityChecker(),
-            #DeadImportChecker(),
             MagicNumberChecker(),
             LifecycleChecker(),
             StructuralDivergenceChecker(),
@@ -824,7 +822,7 @@ class ChecklistGenerator:
 
     @staticmethod
     def _reconstruct_old_source(diff_text: str, filename: str,
-                                 new_source: str) -> str:
+                                new_source: str) -> str:
         """
         Reconstruct the pre-patch file source by applying the diff in
         reverse: take the new_source and swap added lines for removed
@@ -838,9 +836,9 @@ class ChecklistGenerator:
         """
         try:
             lines = new_source.splitlines()
-            in_file   = False
+            in_file = False
             new_lineno = 0
-            patches: list = []   # list of (new_lineno, "add"/"remove", text)
+            patches: list = []  # list of (new_lineno, "add"/"remove", text)
 
             for line in diff_text.splitlines():
                 if line.startswith("+++ b/") or line.startswith("+++ "):
@@ -848,9 +846,9 @@ class ChecklistGenerator:
                               if line.startswith("+++ b/")
                               else line[4:].strip())
                     in_file = (
-                        target == filename
-                        or target.endswith("/" + filename)
-                        or filename.endswith(target)
+                            target == filename
+                            or target.endswith("/" + filename)
+                            or filename.endswith(target)
                     )
                     new_lineno = 0
                     continue
@@ -878,7 +876,7 @@ class ChecklistGenerator:
             # Rebuild old source: remove added lines, insert removed lines
             result = list(lines)
             offset = 0
-            added_linenos   = {ln for ln, op, _ in patches if op == "added"}
+            added_linenos = {ln for ln, op, _ in patches if op == "added"}
             removed_patches = [(ln, t) for ln, op, t in patches
                                if op == "removed"]
 
@@ -933,10 +931,10 @@ class ChecklistGenerator:
         for filename, _added_only in changed.items():
             base = os.path.basename(filename)
 
-            # ── Linkage ───────────────────────────────────────────────
+            #  Linkage
             items += self._linkage(base, filename, model)
 
-            # ── Load full file from disk ───────────────────────────────
+            # Load full file from disk
             # Try multiple path resolutions in order:
             #   1. project_dir / filename          (e.g. project/main.py)
             #   2. project_dir / basename          (e.g. project/main.py when diff has subdir)
@@ -979,7 +977,7 @@ class ChecklistGenerator:
                 items += raw
 
             #  Scope-aware checkers
-            analyser  = DiffScopeAnalyser(full_source, filename)
+            analyser = DiffScopeAnalyser(full_source, filename)
             fragments = analyser.scoped_sources(diff_text)
 
             if not fragments:
@@ -1081,6 +1079,7 @@ class ChecklistGenerator:
         text = f"{item.message} {item.detail}"
         tokens = set(re.findall(r'\b([A-Za-z_][A-Za-z0-9_]*)\b', text))
         return bool(tokens & changed_names)
+
     def _linkage(self, base, filename, model):
         linked = model.linkages.get(base, model.linkages.get(filename, []))
         if not linked:

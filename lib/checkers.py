@@ -9,7 +9,7 @@
  Created    : 2026
  License    : MIT License (see LICENSE file for details)
  Description: A set of checkers run on the AST of the target code
- Usage      : Supplementary file. see review.py
+ Usage      : Supplementary file. see IntentCheck.py
 ===============================================================================
 """
 
@@ -768,7 +768,7 @@ class ConcurrencyChecker:
         "spawnv", "spawnve", "spawnvp", "spawnvpe",
     }
 
-    # ── Detail templates ──────────────────────────────────────────────────
+    # Detail templates
     _SUBPROCESS_DETAIL = (
         "Subprocess spawned via '{name}' at line {ln}.\n"
         "Review:\n"

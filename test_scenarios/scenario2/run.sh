@@ -1,1 +1,1 @@
-python3 ../../review.py --project ./project_dir --diff ./diff.txt
+python3 ../../IntentCheck.py --project ./project_dir --diff ./diff.txt

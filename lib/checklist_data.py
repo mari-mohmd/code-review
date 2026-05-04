@@ -9,7 +9,7 @@
  Created    : 2026
  License    : MIT License (see LICENSE file for details)
  Description: Checklist data structure
- Usage      : Supplementary file. see review.py
+ Usage      : Supplementary file. see IntentCheck.py
 ===============================================================================
 """
 from dataclasses import dataclass

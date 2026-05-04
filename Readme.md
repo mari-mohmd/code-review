@@ -52,7 +52,7 @@ The methodology is grounded in five formal models:
 
 ```
 Code_Review/
-    review.py                -- main entry
+    IntentCheck.py                -- main entry
     lib/   
         analyzer.py
         checkers.py
@@ -109,26 +109,28 @@ No package installation required. Run directly with Python.
 ### Analyse a git diff
 
 ```bash
-git diff main > changes.diff
-python cli.py --project . --diff changes.diff
+git diff main > changes.diff 
+# or get commit specific diff
+# e.g: git diff 3ee89b7~1 3ee89b7 > changes.diff
+python IntentCheck.py --project <<target-project-path>> --diff changes.diff
 ```
 
 ### Analyse specific files
 
 ```bash
-python cli.py --project . --files src/main.py src/utils.py
+python IntentCheck.py --project . --files src/main.py src/utils.py
 ```
 
 ### Scan the entire project
 
 ```bash
-python cli.py --project . --all
+python IntentCheck.py --project . --all
 ```
 
 ### One-line summary
 
 ```bash
-python cli.py --project . --all --summary
+python IntentCheck.py --project . --all --summary
 ```
 
 
@@ -174,7 +176,7 @@ project directory being reviewed.
 ### Generating a starter config
 
 ```bash
-python review.py --checklist-init
+python IntentCheck.py --checklist-init
 ```
 
 This writes a `checklist.json` template with example items into the current
@@ -195,7 +197,7 @@ project directory. The command fails if the file already exists.
 
 The test_scenarios/ directory contains four self-contained scenarios that
 correspond to the evaluation cases discussed in the paper. Each scenario
-includes a run.sh script that executes the analyser and reproduces the exact
+includes a `run.sh` script that executes the analyser and reproduces the exact
 checklist output shown in the paper.
 
 
