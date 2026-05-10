@@ -8,13 +8,16 @@
  Contact    : mohammad.mari@griffithuni.edu.au
  Created    : 2026
  License    : MIT License (see LICENSE file for details)
- Description: Scenario for detecting hardcoded paths
+ Description: Scenario for detecting path coherence issues
  Usage      : Execute the "run.sh" file included within the project
 ===============================================================================
 """
-from pathlib import Path
 
-# Create "logs" dir and log file
-Log_dir = "/var/logs"
-Path(Log_dir).mkdir(parents=True, exist_ok=True)
-Path(Log_dir+ "/log_file.log").mkdir()
+import os
+
+# Create 'logs' directory
+os.makedirs("/var/logs")
+# Create a logfile inside 'logs' directory
+# BUG: Log file is created outside the log directory (should be inside!!)
+with open("/var/app.log", mode="a") as log:
+    pass

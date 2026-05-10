@@ -20,4 +20,5 @@ component_name = ""
 if sensors:
     component_name = sensors[0]
 else:
+    # # BUG: 'component_name' NOT 'componentName'
     componentName = "Not a sensor"

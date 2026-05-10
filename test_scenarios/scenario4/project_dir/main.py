@@ -15,4 +15,6 @@
 import subprocess
 
 filename = input("Enter file to create: ")
+# WARNING: Input is not validated or sanitized
 subprocess.run(f"touch {filename}", shell=True)
+# WARNING: Spawns a new process; ensure the subprocess is properly managed

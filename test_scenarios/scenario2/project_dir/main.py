@@ -24,7 +24,7 @@ class LightSensor(Sensor):
         return self.type
 
 class HeatSensor(Sensor):
-    type = "Light"  # Simulated copy and paste mistake.
+    type = "Light"  # BUG: Simulated copy and paste mistake.
 
     def __str__(self):
         return self.type

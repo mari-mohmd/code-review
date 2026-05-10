@@ -31,3 +31,4 @@ class Executor:
 
 e = Executor()
 e.start()
+# BUG: Lifecycle is not complete. 'e.stop()' was never called!!
