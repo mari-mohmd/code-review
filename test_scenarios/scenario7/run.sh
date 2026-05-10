@@ -1,1 +1,0 @@
-python3 ../../IntentCheck.py --project ./project_dir --all
