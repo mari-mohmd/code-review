@@ -11,7 +11,7 @@ checklists for Python projects. Implements the methodology from:
 ## Overview
 
 Static analysis tools check that code is syntactically and structurally correct.
-Logic Verifier goes one step further: it checks whether the code does what the
+IntentCheck goes one step further: it checks whether the code does what the
 developer intended. It combines diff-based change detection, Abstract Syntax Tree
 (AST) traversal, and a suite of formally grounded checkers to surface intent
 violations that conventional tools cannot detect.
@@ -91,10 +91,22 @@ Code_Review/
 
 ---
 
+## Quick Start
+
+```bash
+git clone https://github.com/mari-mohmd/code-review.git
+cd code-review
+python IntentCheck.py --project . --all
+```
+
+No package installation required. Requires Python 3.10 or later.
+
+---
+
 ## Installation
 
 ```bash
-git clone https://github.com/your-org/logic-verifier.git
+git clone https://github.com/mari-mohmd/code-review.git
 ```
 
 No package installation required. Run directly with Python.
@@ -192,10 +204,17 @@ project directory. The command fails if the file already exists.
 
 ## Test Scenarios
 
-The test_scenarios/ directory contains four self-contained scenarios that
+The `test_scenarios/` directory contains six self-contained scenarios that
 correspond to the evaluation cases discussed in the paper. Each scenario
 includes a `run.sh` script that executes the analyser and reproduces the exact
 checklist output shown in the paper.
+
+To run a scenario:
+
+```bash
+cd test_scenarios/scenario1
+./run.sh
+```
 
 
 ## License
