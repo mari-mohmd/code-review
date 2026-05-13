@@ -1,4 +1,4 @@
-# Code Review assistance 
+# IntentCheck — Code Review Assistant
 
 A lightweight, offline tool for generating dynamic, change-specific code review
 checklists for Python projects. Implements the methodology from:
@@ -13,8 +13,8 @@ checklists for Python projects. Implements the methodology from:
 Static analysis tools check that code is syntactically and structurally correct.
 IntentCheck goes one step further: it checks whether the code does what the
 developer intended. It combines diff-based change detection, Abstract Syntax Tree
-(AST) traversal, and a suite of formally grounded checkers to surface intent
-violations that conventional tools cannot detect.
+(AST) traversal, and inter-file dependency resolution to surface intent violations
+that conventional tools such as Pylint and Pyright cannot detect.
 
 The tool runs entirely offline -- no AI inference, no cloud connectivity, no
 external services.
@@ -23,7 +23,7 @@ external services.
 
 ## Formal Basis
 
-The methodology is grounded in five formal models:
+The methodology is grounded in four formal models:
 
 - P = (F, C, L)                               -- program representation
 - LC(y) = (Ry, Oy, Uy)                        -- lifecycle completeness
@@ -40,25 +40,25 @@ The methodology is grounded in five formal models:
 | 2   | Naming               | Identifier variants in the same scope (user_id/userId) |
 | 3   | Magic Number         | Bare numeric literals with no named constant           |
 | 4   | Lifecycle            | Resources or context managers not properly released    |
-| 5   | Structural Divergence| Near-duplicate code blocks                             | 
+| 5   | Structural Divergence| Near-duplicate code blocks                             |
 | 6   | Concurrency          | Subprocess, multiprocessing, and threading constructs  |
-| 10  | Shell Execution      | os.system, subprocess with shell=True                  |
-| 11  | Path Coherence       | File written outside its intended directory            |
-| 12  | Input                | input() validation, blocking, encoding, and echo risks |
+| 7   | Path Coherence       | File written outside its intended directory            |
+| 8   | Shell Execution      | os.system, subprocess with shell=True                  |
+| 9   | Input                | input() validation, blocking, encoding, and echo risks |
 
 ---
 
 ## Project Structure
 
 ```
-Code_Review/
+code-review/
     IntentCheck.py                -- main entry
-    lib/   
+    lib/
         analyzer.py
         checkers.py
         checklist_data
-        graph_builder               
-    test_scenarios/          -- contains scenario projects for testing
+        graph_builder
+    test_scenarios/          -- self-contained scenarios for testing and replication
         scenario1/
             project_dir/
             diff.txt
@@ -79,7 +79,6 @@ Code_Review/
         scenario6/
             project_dir/
             run.sh
-            
 ```
 
 ---
@@ -93,13 +92,14 @@ Code_Review/
 
 ## Quick Start
 
+Clone IntentCheck once and run it against any Python project:
+
 ```bash
 git clone https://github.com/mari-mohmd/code-review.git
-cd code-review
-python IntentCheck.py --project . --all
+cd your-project
+git diff main > changes.diff
+python /path/to/code-review/IntentCheck.py --project . --diff changes.diff
 ```
-
-No package installation required. Requires Python 3.10 or later.
 
 ---
 
@@ -113,15 +113,59 @@ No package installation required. Run directly with Python.
 
 ---
 
+## Using IntentCheck on Your Project
+
+IntentCheck is a standalone tool. Clone it once to a convenient location on your
+machine, then point it at any Python project using the `--project` flag.
+
+### Step 1 — Clone IntentCheck
+
+```bash
+git clone https://github.com/mari-mohmd/code-review.git ~/tools/intentcheck
+```
+
+### Step 2 — Analyse your project
+
+Navigate to your project and generate a diff, then run IntentCheck against it:
+
+```bash
+cd /path/to/your-project
+
+# Review uncommitted changes against main
+git diff main > changes.diff
+python ~/tools/intentcheck/IntentCheck.py --project . --diff changes.diff
+
+# Review a specific commit
+git diff abc1234~1 abc1234 > changes.diff
+python ~/tools/intentcheck/IntentCheck.py --project . --diff changes.diff
+
+# Scan the entire project without a diff
+python ~/tools/intentcheck/IntentCheck.py --project . --all
+```
+
+### Step 3 — Optional: CI/CD integration
+
+Add IntentCheck to a Git pre-push hook or pull request check so the checklist
+is generated automatically whenever a diff is produced:
+
+```bash
+# .git/hooks/pre-push  (make executable with chmod +x)
+#!/bin/bash
+git diff main > /tmp/changes.diff
+python ~/tools/intentcheck/IntentCheck.py --project . --diff /tmp/changes.diff
+```
+
+---
+
 ## Usage
 
 ### Analyse a git diff
 
 ```bash
-git diff main > changes.diff 
-# or get commit specific diff
-# e.g: git diff 3ee89b7~1 3ee89b7 > changes.diff
-python IntentCheck.py --project <<target-project-path>> --diff changes.diff
+git diff main > changes.diff
+# or a specific commit:
+# git diff 3ee89b7~1 3ee89b7 > changes.diff
+python IntentCheck.py --project <target-project-path> --diff changes.diff
 ```
 
 ### Analyse specific files
@@ -142,6 +186,7 @@ python IntentCheck.py --project . --all
 python IntentCheck.py --project . --all --summary
 ```
 
+---
 
 ## Static Checklist
 
@@ -202,12 +247,20 @@ project directory. The command fails if the file already exists.
 
 ---
 
+## Extending IntentCheck
+
+Additional checkers can be implemented by creating new checker classes in
+`lib/checkers.py` and registering them in the `ChecklistGenerator` class within
+`lib/analyzer.py`, allowing the checklist to be tailored to project-specific
+requirements.
+
+---
+
 ## Test Scenarios
 
-The `test_scenarios/` directory contains six self-contained scenarios that
-correspond to the evaluation cases discussed in the paper. Each scenario
-includes a `run.sh` script that executes the analyser and reproduces the exact
-checklist output shown in the paper.
+The `test_scenarios/` directory contains six self-contained scenarios for testing
+and evaluation replication. Each scenario includes a `run.sh` script that executes
+the analyser and reproduces checklist output.
 
 To run a scenario:
 
@@ -216,6 +269,7 @@ cd test_scenarios/scenario1
 ./run.sh
 ```
 
+---
 
 ## License
 
