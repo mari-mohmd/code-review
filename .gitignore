@@ -31,3 +31,6 @@ env/
 
 # Claude Code
 .claude/
+
+# Research papers (not for redistribution)
+research/
