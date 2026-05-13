@@ -79,9 +79,6 @@ Code_Review/
         scenario6/
             project_dir/
             run.sh
-        scenario7/
-            project_dir/
-            run.sh
             
 ```
 
