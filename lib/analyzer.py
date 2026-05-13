@@ -28,8 +28,6 @@ import re
 import ast
 from pathlib import Path
 
-from pandas.io.sas.sas_constants import header_size_offset
-
 from .graph_builder import DependencyGraphBuilder
 from .checklist_data import ChecklistItem
 from .checkers import LifecycleChecker, NameSimilarityChecker, DeadImportChecker, MagicNumberChecker, \
