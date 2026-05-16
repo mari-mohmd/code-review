@@ -93,12 +93,6 @@ examples:
 
   # Scan the whole project
   python IntentCheck.py --project . --all
-
-  # Warnings only, lifecycle and shell categories
-  python IntentCheck.py --project . --all --only warnings --category lifecycle shell
-
-  # JSON output for CI
-  python IntentCheck.py --project . --diff changes.diff --json | jq '.[] | select(.severity=="warning")'
         """,
     )
     parser.add_argument("--project", "-p", default=None,
