@@ -604,24 +604,34 @@ class StructuralDivergenceChecker:
     Two comparison modes:
 
       check()          — compares all pairs in the file (used by --files / --all)
-      check_diff()     — only compares pairs where at least one block was
-                         touched by the diff (used by --diff). Pre-existing
-                         pairs that are both outside the diff are suppressed.
-
+      check_diff()     — only compares pairs where at least one block's name
+                         appears in diff_names, i.e. was touched by the diff
+                         (used by --diff). Pre-existing pairs that are both
+                         outside the diff are suppressed.
     """
 
     WARN_THRESHOLD = 1
     INFO_THRESHOLD = 0.97
     NAMING_SKIP = ["__init__", "__str__", "__repr__"]
 
-    def check(self, source: str, filename: str) -> list:
-        items = []
-        try:
-            tree = ast.parse(source)
-        except SyntaxError:
-            return items
+    def _extract(self, tree) -> list:
+        blocks = []
+        for node in ast.walk(tree):
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+                kind = "class" if isinstance(node, ast.ClassDef) else "function"
+                if node.name not in self.NAMING_SKIP:
+                    blocks.append((node.name, self._normalise(node), node.lineno, kind))
+        return blocks
 
-        blocks = self._extract(tree)
+    def _build_items(self, blocks: list, filename: str,
+                     diff_names: set = None) -> list:
+        """
+        Compare all block pairs and emit checklist items.
+
+        diff_names — if provided, at least one of the two block names in a
+                     flagged pair must appear in this set (diff-aware mode).
+        """
+        items = []
         seen: set = set()
 
         for i, (na, ta, la, ka) in enumerate(blocks):
@@ -632,6 +642,12 @@ class StructuralDivergenceChecker:
                 if pair in seen:
                     continue
                 seen.add(pair)
+
+                # Diff-aware gate: skip if neither block was touched by the diff
+                if diff_names is not None:
+                    if na not in diff_names and nb not in diff_names:
+                        continue
+
                 score = self._sd(ta, tb)
                 if score >= self.WARN_THRESHOLD:
                     items.append(ChecklistItem(
@@ -662,14 +678,24 @@ class StructuralDivergenceChecker:
                     ))
         return items
 
-    def _extract(self, tree):
-        blocks = []
-        for node in ast.walk(tree):
-            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
-                kind = "class" if isinstance(node, ast.ClassDef) else "function"
-                if node.name not in self.NAMING_SKIP:
-                    blocks.append((node.name, self._normalise(node), node.lineno, kind))
-        return blocks
+    def check(self, source: str, filename: str) -> list:
+        """Full-file mode."""
+        try:
+            tree = ast.parse(source)
+        except SyntaxError:
+            return []
+        return self._build_items(self._extract(tree), filename, diff_names=None)
+
+    def check_diff(self, source: str, filename: str, diff_names: set) -> list:
+        """
+        Diff-aware mode: only report pairs where at least one block's name
+        appears in the set of identifiers touched by the diff.
+        """
+        try:
+            tree = ast.parse(source)
+        except SyntaxError:
+            return []
+        return self._build_items(self._extract(tree), filename, diff_names=diff_names)
 
     @staticmethod
     def _normalise(node) -> str:

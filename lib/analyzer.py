@@ -961,17 +961,10 @@ class ChecklistGenerator:
             ## Diff-aware structural divergence and naming
             # SD and Naming need the full file, but only report pairs
             # where at least one block was touched by the diff.
-            added_line_nos = set(
-                DiffScopeAnalyser.added_lines(diff_text, filename).keys()
-            )
             changed_names = self._changed_names(diff_text, filename)
 
             for checker in full_file_checkers:
-                if isinstance(checker, StructuralDivergenceChecker):
-                    raw = checker.check(full_source, base)
-                else:
-                    # NameSimilarityChecker: diff-aware + type-filtered
-                    raw = checker.check_diff(full_source, base, changed_names)
+                raw = checker.check_diff(full_source, base, changed_names)
                 items += raw
 
             #  Scope-aware checkers
