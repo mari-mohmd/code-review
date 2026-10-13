@@ -1,0 +1,3274 @@
+[
+ {
+  "sha": "df279718d69e48cde056ba56df0e03bce0174b37",
+  "date": "2014-03-27",
+  "subject": "make HasAttributeObservers work",
+  "py": [
+   "droneapi/lib/DroneApi.py"
+  ],
+  "parent": "de9748338d85d3dcfc09b734f2b47dd65e575132",
+  "seconds": 0.118,
+  "returncode": 0,
+  "stderr": "",
+  "added": 19,
+  "removed": 4,
+  "items": [],
+  "parse": {
+   "droneapi/lib/DroneApi.py": true
+  },
+  "diff_files": [
+   "droneapi/lib/DroneApi.py"
+  ]
+ },
+ {
+  "sha": "f5e44e8f731ee3002b041f00987ff0b5d8d21f82",
+  "date": "2014-03-29",
+  "subject": "A minimal API example",
+  "py": [
+   "example/small-demo.py"
+  ],
+  "parent": "0a3d3ab9be15010bd214163ad92170a30808d262",
+  "seconds": 0.068,
+  "returncode": 0,
+  "stderr": "",
+  "added": 22,
+  "removed": 1,
+  "items": [],
+  "parse": {
+   "example/small-demo.py": false
+  },
+  "diff_files": [
+   "example/small-demo.py"
+  ]
+ },
+ {
+  "sha": "b16fe4d68dd691bda859c02e59b0c859f90e0266",
+  "date": "2014-04-02",
+  "subject": "update release script",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "494bae6ea42567e78470af04f3ea72545399fab2",
+  "seconds": 0.083,
+  "returncode": 0,
+  "stderr": "",
+  "added": 6,
+  "removed": 5,
+  "items": [],
+  "parse": {
+   "setup.py": true
+  },
+  "diff_files": [
+   "README.md",
+   "setup.py"
+  ]
+ },
+ {
+  "sha": "bb6f073476408bb5161fc8dcc9eec4e2fc957031",
+  "date": "2014-05-10",
+  "subject": "better docs",
+  "py": [
+   "droneapi/lib/__init__.py"
+  ],
+  "parent": "3ad9b4bb4e3d76be54f1aac5d85a043ceb1d95f9",
+  "seconds": 0.084,
+  "returncode": 0,
+  "stderr": "",
+  "added": 8,
+  "removed": 2,
+  "items": [],
+  "parse": {
+   "droneapi/lib/__init__.py": true
+  },
+  "diff_files": [
+   "droneapi/lib/__init__.py"
+  ]
+ },
+ {
+  "sha": "36aa54f4edf16f6cb3dec2416b0893118d430b1d",
+  "date": "2014-07-05",
+  "subject": "implement v.rc_readback per spec",
+  "py": [
+   "droneapi/module/api.py",
+   "example/small_demo.py"
+  ],
+  "parent": "685599b96aa58f4f11f6574abc7e2cd29235f6f5",
+  "seconds": 0.083,
+  "returncode": 0,
+  "stderr": "",
+  "added": 26,
+  "removed": 2,
+  "items": [],
+  "parse": {
+   "droneapi/module/api.py": false,
+   "example/small_demo.py": false
+  },
+  "diff_files": [
+   "droneapi/module/api.py",
+   "example/small_demo.py"
+  ]
+ },
+ {
+  "sha": "937d74b01a8bd879f4febcd5a5c520c953b9ee86",
+  "date": "2014-07-31",
+  "subject": "update to latest protobufs",
+  "py": [
+   "droneapi/lib/webapi_pb2.py"
+  ],
+  "parent": "ac27de9946695120b6306e7ce2f7a72055b02576",
+  "seconds": 0.223,
+  "returncode": 0,
+  "stderr": "",
+  "added": 41,
+  "removed": 34,
+  "items": [
+   {
+    "category": "naming",
+    "message": "Name inconsistency (variable) in webapi_pb2.py",
+    "detail": "Did you mean '_ACCESSCODE' or 'AccessCode'?\nBoth are variable names with the same normalised key 'accesscode'.\nFound 2 variant(s): _ACCESSCODE, AccessCode",
+    "line": 19,
+    "score": null
+   },
+   {
+    "category": "naming",
+    "message": "Name inconsistency (variable) in webapi_pb2.py",
+    "detail": "Did you mean '_LOGINREQUESTCODE' or 'LoginRequestCode'?\nBoth are variable names with the same normalised key 'loginrequestcode'.\nFound 2 variant(s): _LOGINREQUESTCODE, LoginRequestCode",
+    "line": 53,
+    "score": null
+   },
+   {
+    "category": "structural",
+    "message": "High structural similarity in webapi_pb2.py",
+    "detail": "SD(LoginResponseMsg, PingResponseMsg) = 0.97  (info threshold \u2265 0.97)\n'LoginResponseMsg' (line 889) and 'PingResponseMsg' (line 919) share 97% structural similarity.\nVerify whether the divergence is intentional.",
+    "line": 889,
+    "score": 0.9710982658959537
+   },
+   {
+    "category": "structural",
+    "message": "High structural similarity in webapi_pb2.py",
+    "detail": "SD(StartMissionMsg, StopMissionMsg) = 0.97  (info threshold \u2265 0.97)\n'StartMissionMsg' (line 895) and 'StopMissionMsg' (line 901) share 97% structural similarity.\nVerify whether the divergence is intentional.",
+    "line": 895,
+    "score": 0.9707602339181286
+   }
+  ],
+  "parse": {
+   "droneapi/lib/webapi_pb2.py": true
+  },
+  "diff_files": [
+   "droneapi/lib/webapi_pb2.py"
+  ]
+ },
+ {
+  "sha": "dbc369177c96f8f7303a08a26c86338641163d3a",
+  "date": "2014-08-01",
+  "subject": "remote commands are now accepted by the local vehicle",
+  "py": [
+   "droneapi/module/api.py"
+  ],
+  "parent": "668c8dcfc889c283124d2fa37bfddbd5a25ce4a7",
+  "seconds": 0.082,
+  "returncode": 0,
+  "stderr": "",
+  "added": 13,
+  "removed": 3,
+  "items": [],
+  "parse": {
+   "droneapi/module/api.py": false
+  },
+  "diff_files": [
+   "droneapi/module/api.py"
+  ]
+ },
+ {
+  "sha": "241bacd3ec4d1ac720e0c45c5e562a0c08f3afa4",
+  "date": "2014-12-05",
+  "subject": "Wait on reading params until after they have been fetched from vehicle.",
+  "py": [
+   "droneapi/module/api.py"
+  ],
+  "parent": "4ffb67c2000a68b2fa7148f88141656514675235",
+  "seconds": 0.117,
+  "returncode": 0,
+  "stderr": "",
+  "added": 13,
+  "removed": 0,
+  "items": [],
+  "parse": {
+   "droneapi/module/api.py": false
+  },
+  "diff_files": [
+   "droneapi/module/api.py"
+  ]
+ },
+ {
+  "sha": "8b6189d1d3fd2421c9a653f2911e449c64bbb2e0",
+  "date": "2014-12-19",
+  "subject": "api takeoff",
+  "py": [
+   "droneapi/module/api.py"
+  ],
+  "parent": "77738549d3b996068fed4397262240286a4cdff3",
+  "seconds": 0.101,
+  "returncode": 0,
+  "stderr": "",
+  "added": 9,
+  "removed": 0,
+  "items": [],
+  "parse": {
+   "droneapi/module/api.py": false
+  },
+  "diff_files": [
+   "droneapi/module/api.py"
+  ]
+ },
+ {
+  "sha": "6eef088446a710a8266b757b7c4c462badf76795",
+  "date": "2014-12-29",
+  "subject": "use abspath of the script to derive local_path",
+  "py": [
+   "droneapi/module/api.py"
+  ],
+  "parent": "c53a46e281cb412d48621ed291af1e013eb7ea7f",
+  "seconds": 0.118,
+  "returncode": 0,
+  "stderr": "",
+  "added": 3,
+  "removed": 9,
+  "items": [],
+  "parse": {
+   "droneapi/module/api.py": false
+  },
+  "diff_files": [
+   "droneapi/module/api.py"
+  ]
+ },
+ {
+  "sha": "b05a9999e44a1e90ddf59ac2dbad7ce88ee74c35",
+  "date": "2015-02-23",
+  "subject": "tests are now a package",
+  "py": [
+   "tests/__init__.py",
+   "tests/web_integration_test.py"
+  ],
+  "parent": "5cee787af96b815c35560c1c3e978cbba6a808c4",
+  "seconds": 0.154,
+  "returncode": 0,
+  "stderr": "",
+  "added": 39,
+  "removed": 20,
+  "items": [
+   {
+    "category": "magic",
+    "message": "Magic number 1141 in cloud_client_test.py",
+    "detail": "[scope: class:CloudClientTest]\nBare literal 1141 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 27,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1141 in cloud_client_test.py",
+    "detail": "[scope: class:CloudClientTest]\nBare literal 1141 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 30,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1141 in cloud_client_test.py",
+    "detail": "[scope: class:CloudClientTest]\nBare literal 1141 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 33,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1141 in cloud_client_test.py",
+    "detail": "[scope: class:CloudClientTest]\nBare literal 1141 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 36,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1141 in cloud_client_test.py",
+    "detail": "[scope: class:CloudClientTest]\nBare literal 1141 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 39,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1141 in cloud_client_test.py",
+    "detail": "[scope: class:CloudClientTest]\nBare literal 1141 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 42,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 218 in cloud_client_test.py",
+    "detail": "[scope: class:CloudClientTest]\nBare literal 218 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 48,
+    "score": null
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in web_integration_test.py",
+    "detail": "SD(setUp, tearDown) = 1.00  'setUp' (line 10) and 'tearDown' (line 14) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 10,
+    "score": 1.0
+   }
+  ],
+  "parse": {
+   "tests/__init__.py": true,
+   "tests/web_integration_test.py": true
+  },
+  "diff_files": [
+   "test-web.py",
+   "tests/__init__.py",
+   "tests/cloud_client_test.py",
+   "tests/test-runner.sh",
+   "tests/web_integration_test.py"
+  ]
+ },
+ {
+  "sha": "2a3ab95d082c29a7bcd8e2193cbae06953672240",
+  "date": "2015-04-10",
+  "subject": "bump mavproxy and update version",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "8b96d3f73d7b0e7ced8fe9418059a976b4a12866",
+  "seconds": 0.102,
+  "returncode": 0,
+  "stderr": "",
+  "added": 3,
+  "removed": 2,
+  "items": [],
+  "parse": {
+   "setup.py": true
+  },
+  "diff_files": [
+   "requirements.txt",
+   "setup.py"
+  ]
+ },
+ {
+  "sha": "9b9b303e1ddcebb7cb75d3e364faa226dc18742c",
+  "date": "2015-04-30",
+  "subject": "Significant changes to API reference - including addition of introductory section and code snippets throughout API. Also put warnings for APIs that are still not implemented or not intended for third party use",
+  "py": [
+   "droneapi/lib/__init__.py"
+  ],
+  "parent": "10c9bcfd58a669587f568b4d21354ce95b94fef9",
+  "seconds": 1.13,
+  "returncode": 0,
+  "stderr": "",
+  "added": 512,
+  "removed": 134,
+  "items": [
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(web_connect, local_connect) = 1.00  'web_connect' (line 42) and 'local_connect' (line 52) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 42,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, Command) = 1.00  'Mission' (line 696) and 'Command' (line 728) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, delete) = 1.00  'Mission' (line 696) and 'delete' (line 559) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, send_mavlink) = 1.00  'Mission' (line 696) and 'send_mavlink' (line 618) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, flush) = 1.00  'Mission' (line 696) and 'flush' (line 661) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, download) = 1.00  'Mission' (line 696) and 'download' (line 805) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, wait_valid) = 1.00  'Mission' (line 696) and 'wait_valid' (line 813) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, goto) = 1.00  'Mission' (line 696) and 'goto' (line 821) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, clear) = 1.00  'Mission' (line 696) and 'clear' (line 839) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, add) = 1.00  'Mission' (line 696) and 'add' (line 845) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, next) = 1.00  'Mission' (line 696) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 696,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, delete) = 1.00  'Command' (line 728) and 'delete' (line 559) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 728,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, send_mavlink) = 1.00  'Command' (line 728) and 'send_mavlink' (line 618) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 728,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, flush) = 1.00  'Command' (line 728) and 'flush' (line 661) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 728,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, download) = 1.00  'Command' (line 728) and 'download' (line 805) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 728,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, wait_valid) = 1.00  'Command' (line 728) and 'wait_valid' (line 813) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 728,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, goto) = 1.00  'Command' (line 728) and 'goto' (line 821) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 728,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, clear) = 1.00  'Command' (line 728) and 'clear' (line 839) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 728,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, add) = 1.00  'Command' (line 728) and 'add' (line 845) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 728,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, next) = 1.00  'Command' (line 728) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 728,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(commands, message_factory) = 1.00  'commands' (line 541) and 'message_factory' (line 586) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 541,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, send_mavlink) = 1.00  'delete' (line 559) and 'send_mavlink' (line 618) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 559,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, flush) = 1.00  'delete' (line 559) and 'flush' (line 661) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 559,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, download) = 1.00  'delete' (line 559) and 'download' (line 805) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 559,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, wait_valid) = 1.00  'delete' (line 559) and 'wait_valid' (line 813) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 559,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, goto) = 1.00  'delete' (line 559) and 'goto' (line 821) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 559,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, clear) = 1.00  'delete' (line 559) and 'clear' (line 839) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 559,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, add) = 1.00  'delete' (line 559) and 'add' (line 845) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 559,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, next) = 1.00  'delete' (line 559) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 559,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, flush) = 1.00  'send_mavlink' (line 618) and 'flush' (line 661) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 618,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, download) = 1.00  'send_mavlink' (line 618) and 'download' (line 805) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 618,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, wait_valid) = 1.00  'send_mavlink' (line 618) and 'wait_valid' (line 813) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 618,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, goto) = 1.00  'send_mavlink' (line 618) and 'goto' (line 821) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 618,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, clear) = 1.00  'send_mavlink' (line 618) and 'clear' (line 839) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 618,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, add) = 1.00  'send_mavlink' (line 618) and 'add' (line 845) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 618,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, next) = 1.00  'send_mavlink' (line 618) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 618,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, download) = 1.00  'flush' (line 661) and 'download' (line 805) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 661,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, wait_valid) = 1.00  'flush' (line 661) and 'wait_valid' (line 813) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 661,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, goto) = 1.00  'flush' (line 661) and 'goto' (line 821) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 661,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, clear) = 1.00  'flush' (line 661) and 'clear' (line 839) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 661,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, add) = 1.00  'flush' (line 661) and 'add' (line 845) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 661,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, next) = 1.00  'flush' (line 661) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 661,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, wait_valid) = 1.00  'download' (line 805) and 'wait_valid' (line 813) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 805,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, goto) = 1.00  'download' (line 805) and 'goto' (line 821) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 805,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, clear) = 1.00  'download' (line 805) and 'clear' (line 839) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 805,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, add) = 1.00  'download' (line 805) and 'add' (line 845) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 805,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, next) = 1.00  'download' (line 805) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 805,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(wait_valid, goto) = 1.00  'wait_valid' (line 813) and 'goto' (line 821) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 813,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(wait_valid, clear) = 1.00  'wait_valid' (line 813) and 'clear' (line 839) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 813,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(wait_valid, add) = 1.00  'wait_valid' (line 813) and 'add' (line 845) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 813,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(wait_valid, next) = 1.00  'wait_valid' (line 813) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 813,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(goto, clear) = 1.00  'goto' (line 821) and 'clear' (line 839) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 821,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(goto, add) = 1.00  'goto' (line 821) and 'add' (line 845) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 821,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(goto, next) = 1.00  'goto' (line 821) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 821,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(clear, add) = 1.00  'clear' (line 839) and 'add' (line 845) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 839,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(clear, next) = 1.00  'clear' (line 839) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 839,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(add, next) = 1.00  'add' (line 845) and 'next' (line 872) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 845,
+    "score": 1.0
+   }
+  ],
+  "parse": {
+   "droneapi/lib/__init__.py": true
+  },
+  "diff_files": [
+   "droneapi/lib/__init__.py"
+  ]
+ },
+ {
+  "sha": "d78abc112302d92b8394bbdd3388216abba4173d",
+  "date": "2015-05-06",
+  "subject": "Hide Vehicle.delete from api docs, as discussed in #65. Update source file to also make usage clear for people reading that directly",
+  "py": [
+   "droneapi/lib/__init__.py"
+  ],
+  "parent": "43f9310d152a45d539ae9d0bbfe11f6aaaf3a997",
+  "seconds": 0.343,
+  "returncode": 0,
+  "stderr": "",
+  "added": 5,
+  "removed": 4,
+  "items": [],
+  "parse": {
+   "droneapi/lib/__init__.py": true
+  },
+  "diff_files": [
+   "docs/automodule.rst",
+   "droneapi/lib/__init__.py"
+  ]
+ },
+ {
+  "sha": "7e9dc44155dd8eb57166991b33ebe98271547098",
+  "date": "2015-05-19",
+  "subject": "Update instructions for preferred VehicleMode on Plane/Rover",
+  "py": [
+   "droneapi/lib/__init__.py"
+  ],
+  "parent": "6cafee7a0b2f9014194c698b90cd61bfa261f0f4",
+  "seconds": 0.128,
+  "returncode": 0,
+  "stderr": "",
+  "added": 10,
+  "removed": 5,
+  "items": [
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(commands, message_factory) = 1.00  'commands' (line 547) and 'message_factory' (line 596) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 547,
+    "score": 1.0
+   }
+  ],
+  "parse": {
+   "droneapi/lib/__init__.py": true
+  },
+  "diff_files": [
+   "droneapi/lib/__init__.py"
+  ]
+ },
+ {
+  "sha": "406757653d2ad1e04720ba827f715dbd4fb62952",
+  "date": "2015-05-19",
+  "subject": "First draft of example .py file and documentation",
+  "py": [
+   "example/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "02f358bf4fbb147fb418d89cd2df2915d9a462ce",
+  "seconds": 0.149,
+  "returncode": 0,
+  "stderr": "",
+  "added": 367,
+  "removed": 69,
+  "items": [
+   {
+    "category": "magic",
+    "message": "Magic number 5 in vehicle_state.rst",
+    "detail": "[scope: line:162]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 162,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in vehicle_state.rst",
+    "detail": "[scope: line:166]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 166,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in vehicle_state.rst",
+    "detail": "[scope: line:172]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 172,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in vehicle_state.rst",
+    "detail": "[scope: line:176]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 176,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in vehicle_state.rst",
+    "detail": "[scope: line:267]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 267,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in vehicle_state.rst",
+    "detail": "[scope: line:272]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 272,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in vehicle_state.rst",
+    "detail": "[scope: line:278]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 278,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 10 in vehicle_state.py",
+    "detail": "[scope: line:77]\nBare literal 10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 77,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 130 in vehicle_state.py",
+    "detail": "[scope: line:101]\nBare literal 130 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 101,
+    "score": null
+   }
+  ],
+  "parse": {
+   "example/vehicle_state/vehicle_state.py": false
+  },
+  "diff_files": [
+   "docs/examples/index.rst",
+   "docs/examples/vehicle_state.rst",
+   "example/vehicle_state/vehicle_state.py"
+  ]
+ },
+ {
+  "sha": "bbf7d95f8115ae9ba862cd4b3defe59bcd7168fc",
+  "date": "2015-06-03",
+  "subject": "Tidy documentation for addition of Battery class #137",
+  "py": [
+   "droneapi/lib/__init__.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "26f39db6a2142caa35c6d28537270458d543806f",
+  "seconds": 0.462,
+  "returncode": 0,
+  "stderr": "",
+  "added": 51,
+  "removed": 50,
+  "items": [
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, Command) = 1.00  'Mission' (line 727) and 'Command' (line 768) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, delete) = 1.00  'Mission' (line 727) and 'delete' (line 589) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, send_mavlink) = 1.00  'Mission' (line 727) and 'send_mavlink' (line 651) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, flush) = 1.00  'Mission' (line 727) and 'flush' (line 692) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, download) = 1.00  'Mission' (line 727) and 'download' (line 871) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, wait_valid) = 1.00  'Mission' (line 727) and 'wait_valid' (line 879) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, goto) = 1.00  'Mission' (line 727) and 'goto' (line 888) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, clear) = 1.00  'Mission' (line 727) and 'clear' (line 906) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, add) = 1.00  'Mission' (line 727) and 'add' (line 912) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, next) = 1.00  'Mission' (line 727) and 'next' (line 939) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 727,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, flush) = 1.00  'Command' (line 768) and 'flush' (line 692) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 768,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, download) = 1.00  'Command' (line 768) and 'download' (line 871) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 768,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, wait_valid) = 1.00  'Command' (line 768) and 'wait_valid' (line 879) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 768,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, goto) = 1.00  'Command' (line 768) and 'goto' (line 888) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 768,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(commands, message_factory) = 1.00  'commands' (line 571) and 'message_factory' (line 619) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 571,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, flush) = 1.00  'delete' (line 589) and 'flush' (line 692) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 589,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, download) = 1.00  'delete' (line 589) and 'download' (line 871) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 589,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, wait_valid) = 1.00  'delete' (line 589) and 'wait_valid' (line 879) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 589,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, goto) = 1.00  'delete' (line 589) and 'goto' (line 888) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 589,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, flush) = 1.00  'send_mavlink' (line 651) and 'flush' (line 692) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 651,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, download) = 1.00  'send_mavlink' (line 651) and 'download' (line 871) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 651,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, wait_valid) = 1.00  'send_mavlink' (line 651) and 'wait_valid' (line 879) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 651,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, goto) = 1.00  'send_mavlink' (line 651) and 'goto' (line 888) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 651,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, download) = 1.00  'flush' (line 692) and 'download' (line 871) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 692,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, wait_valid) = 1.00  'flush' (line 692) and 'wait_valid' (line 879) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 692,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, goto) = 1.00  'flush' (line 692) and 'goto' (line 888) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 692,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, clear) = 1.00  'flush' (line 692) and 'clear' (line 906) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 692,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, add) = 1.00  'flush' (line 692) and 'add' (line 912) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 692,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, next) = 1.00  'flush' (line 692) and 'next' (line 939) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 692,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, wait_valid) = 1.00  'download' (line 871) and 'wait_valid' (line 879) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 871,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, goto) = 1.00  'download' (line 871) and 'goto' (line 888) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 871,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, clear) = 1.00  'download' (line 871) and 'clear' (line 906) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 871,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, add) = 1.00  'download' (line 871) and 'add' (line 912) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 871,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, next) = 1.00  'download' (line 871) and 'next' (line 939) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 871,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(wait_valid, goto) = 1.00  'wait_valid' (line 879) and 'goto' (line 888) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 879,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(wait_valid, clear) = 1.00  'wait_valid' (line 879) and 'clear' (line 906) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 879,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(wait_valid, add) = 1.00  'wait_valid' (line 879) and 'add' (line 912) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 879,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(wait_valid, next) = 1.00  'wait_valid' (line 879) and 'next' (line 939) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 879,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(goto, clear) = 1.00  'goto' (line 888) and 'clear' (line 906) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 888,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(goto, add) = 1.00  'goto' (line 888) and 'add' (line 912) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 888,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(goto, next) = 1.00  'goto' (line 888) and 'next' (line 939) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 888,
+    "score": 1.0
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1000.0 in __init__.py",
+    "detail": "[scope: class:Battery]\nBare literal 1000.0 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 181,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: class:VehicleMode]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: function:add_attribute_observer]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: function:commands]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: function:message_factory]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: function:send_mavlink]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: function:set_mavlink_callback]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: class:Parameters]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: class:Command]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: class:CommandSequence]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: function:download]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: function:wait_valid]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in __init__.py",
+    "detail": "[scope: function:count]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   }
+  ],
+  "parse": {
+   "droneapi/lib/__init__.py": true,
+   "examples/vehicle_state/vehicle_state.py": false
+  },
+  "diff_files": [
+   "docs/examples/vehicle_state.rst",
+   "droneapi/lib/__init__.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ]
+ },
+ {
+  "sha": "272dc266b4f13cd8abd8a9598662e3aabaa03e5e",
+  "date": "2015-07-10",
+  "subject": "Fixes MSG_WAITALL implementation for Windows.",
+  "py": [
+   "droneapi/lib/WebClient.py"
+  ],
+  "parent": "cc38a3f47a2e66c0f31cb6c0349dde7f894fecf4",
+  "seconds": 0.156,
+  "returncode": 0,
+  "stderr": "",
+  "added": 8,
+  "removed": 1,
+  "items": [],
+  "parse": {
+   "droneapi/lib/WebClient.py": true
+  },
+  "diff_files": [
+   "droneapi/lib/WebClient.py"
+  ]
+ },
+ {
+  "sha": "2db66b66bbc4dd5125da256a31e5e41d84d48b9b",
+  "date": "2015-07-16",
+  "subject": "Allows TEST_VERBOSE to be set to enable verbose messaging.",
+  "py": [
+   "tests/sitl/__main__.py"
+  ],
+  "parent": "3cee6c5ce5cd17cb04530cc4b501d624b67fd16b",
+  "seconds": 0.243,
+  "returncode": 0,
+  "stderr": "",
+  "added": 66,
+  "removed": 25,
+  "items": [
+   {
+    "category": "concurrency",
+    "message": "Concurrency construct in __main__.py",
+    "detail": "[scope: class:NonBlockingStreamReader]\nConcurrency construct 'Queue' at line 10.\nVerify thread-safety and absence of deadlocks:\n  * Are all shared variables accessed under the appropriate lock?\n  * Is lock acquisition order consistent to prevent deadlock?\n  * Are daemon threads explicitly joined or their lifecycle managed?",
+    "line": 55,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Concurrency construct in __main__.py",
+    "detail": "[scope: class:NonBlockingStreamReader]\nConcurrency construct 'Thread' at line 24.\nVerify thread-safety and absence of deadlocks:\n  * Are all shared variables accessed under the appropriate lock?\n  * Is lock acquisition order consistent to prevent deadlock?\n  * Are daemon threads explicitly joined or their lifecycle managed?",
+    "line": 69,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.25 in __main__.py",
+    "detail": "[scope: function:wait_timeout [uses NonBlockingStreamReader]]\nBare literal 0.25 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 88,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in __main__.py",
+    "detail": "[scope: function:lets_run_a_test [uses readline]]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 163,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in __main__.py",
+    "detail": "[scope: function:lets_run_a_test [uses readline]]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 217,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in __main__.py",
+    "detail": "[scope: function:lets_run_a_test [uses readline]]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 182,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 143 in __main__.py",
+    "detail": "[scope: function:lets_run_a_test [uses readline]]\nBare literal 143 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 199,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Subprocess spawned in __main__.py",
+    "detail": "[scope: function:lets_run_a_test [uses readline]]\nSubprocess spawned via 'Popen' at line 12.\nReview:\n  * Is the child process always waited on (communicate() / wait())\n    to prevent zombie processes?\n  * Are stdout/stderr explicitly handled or closed to prevent\n    file-descriptor leaks?\n  * Could a race condition exist between the parent and child on\n    any shared resource (files, sockets, signals)?\n  * Is shell=False? (or is shell=True justified and reviewed\n    by the ShellInjectionChecker)?",
+    "line": 126,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Subprocess spawned in __main__.py",
+    "detail": "[scope: function:lets_run_a_test [uses readline]]\nSubprocess spawned via 'Popen' at line 14.\nReview:\n  * Is the child process always waited on (communicate() / wait())\n    to prevent zombie processes?\n  * Are stdout/stderr explicitly handled or closed to prevent\n    file-descriptor leaks?\n  * Could a race condition exist between the parent and child on\n    any shared resource (files, sockets, signals)?\n  * Is shell=False? (or is shell=True justified and reviewed\n    by the ShellInjectionChecker)?",
+    "line": 128,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Subprocess spawned in __main__.py",
+    "detail": "[scope: function:lets_run_a_test [uses readline]]\nSubprocess spawned via 'Popen' at line 52.\nReview:\n  * Is the child process always waited on (communicate() / wait())\n    to prevent zombie processes?\n  * Are stdout/stderr explicitly handled or closed to prevent\n    file-descriptor leaks?\n  * Could a race condition exist between the parent and child on\n    any shared resource (files, sockets, signals)?\n  * Is shell=False? (or is shell=True justified and reviewed\n    by the ShellInjectionChecker)?",
+    "line": 166,
+    "score": null
+   },
+   {
+    "category": "shell",
+    "message": "subprocess with shell=True in __main__.py",
+    "detail": "[scope: function:lets_run_a_test [uses readline]]\n'Popen(..., shell=True)' at line 12 enables shell expansion (e.g command injection).\nPass a list of arguments instead and remove shell=True.",
+    "line": 126,
+    "score": null
+   }
+  ],
+  "parse": {
+   "tests/sitl/__main__.py": true
+  },
+  "diff_files": [
+   "tests/sitl/__main__.py"
+  ]
+ },
+ {
+  "sha": "f5a8e5973601bdaef007725806d810fd2ff46024",
+  "date": "2015-07-27",
+  "subject": "v1.4.1",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "38b2e12fdc79f73c650e89a3cba63fb342e63585",
+  "seconds": 0.114,
+  "returncode": 0,
+  "stderr": "",
+  "added": 11,
+  "removed": 14,
+  "items": [],
+  "parse": {
+   "setup.py": true
+  },
+  "diff_files": [
+   "docs/about/github_latest_release.txt",
+   "setup.py"
+  ]
+ },
+ {
+  "sha": "c9e9096a62f54b0231a0c00dc3c11e99c8065c30",
+  "date": "2015-08-12",
+  "subject": "Improve documentation now we can unset notification for raw mavlink messages",
+  "py": [
+   "droneapi/lib/__init__.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "7558d7b6a0f6cabf2b77826663ce949a6f317a35",
+  "seconds": 0.408,
+  "returncode": 0,
+  "stderr": "",
+  "added": 57,
+  "removed": 9,
+  "items": [
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Mission, clear) = 1.00  'Mission' (line 769) and 'clear' (line 949) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 769,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical classs in __init__.py",
+    "detail": "SD(Command, clear) = 1.00  'Command' (line 810) and 'clear' (line 949) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 810,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(commands, message_factory) = 1.00  'commands' (line 592) and 'message_factory' (line 640) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 592,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(delete, clear) = 1.00  'delete' (line 610) and 'clear' (line 949) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 610,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(send_mavlink, clear) = 1.00  'send_mavlink' (line 672) and 'clear' (line 949) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 672,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(flush, clear) = 1.00  'flush' (line 734) and 'clear' (line 949) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 734,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(download, clear) = 1.00  'download' (line 914) and 'clear' (line 949) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 914,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(wait_valid, clear) = 1.00  'wait_valid' (line 922) and 'clear' (line 949) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 922,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(goto, clear) = 1.00  'goto' (line 931) and 'clear' (line 949) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 931,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(clear, add) = 1.00  'clear' (line 949) and 'add' (line 962) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 949,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(clear, next) = 1.00  'clear' (line 949) and 'next' (line 989) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 949,
+    "score": 1.0
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in vehicle_state.py",
+    "detail": "[scope: line:69]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   }
+  ],
+  "parse": {
+   "droneapi/lib/__init__.py": true,
+   "examples/vehicle_state/vehicle_state.py": false
+  },
+  "diff_files": [
+   "docs/examples/vehicle_state.rst",
+   "docs/guide/vehicle_state_and_parameters.rst",
+   "droneapi/lib/__init__.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ]
+ },
+ {
+  "sha": "7d7b9c8f67ed183d352fdb32d974552c91267933",
+  "date": "2015-09-21",
+  "subject": "Updates to add test_110.",
+  "py": [
+   "tests/sitl/test_110.py"
+  ],
+  "parent": "3c0c5df67361a40e12d1d5332d588282ee4f9293",
+  "seconds": 0.127,
+  "returncode": 0,
+  "stderr": "",
+  "added": 6,
+  "removed": 3,
+  "items": [
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_110.py",
+    "detail": "[scope: function:test_110]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 19,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_110.py",
+    "detail": "[scope: function:test_110]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 38,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_110.py",
+    "detail": "[scope: function:test_110]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 56,
+    "score": null
+   }
+  ],
+  "parse": {
+   "tests/sitl/test_110.py": true
+  },
+  "diff_files": [
+   "tests/sitl/test_110.py"
+  ]
+ },
+ {
+  "sha": "f352d4f4a83b72e91357d0ab974c4c994f9f4540",
+  "date": "2015-10-22",
+  "subject": "Updates test to pass locally.",
+  "py": [
+   "dronekit/__init__.py",
+   "tests/sitl/test_localposition.py"
+  ],
+  "parent": "bdd0b06152201257b09d2c1c73af0c472dee5719",
+  "seconds": 0.139,
+  "returncode": 0,
+  "stderr": "",
+  "added": 22,
+  "removed": 18,
+  "items": [
+   {
+    "category": "magic",
+    "message": "Magic number 4 in __init__.py",
+    "detail": "[scope: function:connect [uses prepare]]\nBare literal 4 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 604,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 24,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nHandle from 'connect()' at line 2 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.",
+    "line": 9,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Lifecycle completeness: 0% in test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nLC_score = |O| / |R| = 0 / 1 = 0.00\n  R (declared resources): ['vehicle']\n  O (properly managed):   []\n  Unmanaged:              ['vehicle']",
+    "line": null,
+    "score": 0.0
+   }
+  ],
+  "parse": {
+   "dronekit/__init__.py": true,
+   "tests/sitl/test_localposition.py": true
+  },
+  "diff_files": [
+   "dronekit/__init__.py",
+   "tests/sitl/test_localposition.py"
+  ]
+ },
+ {
+  "sha": "96dac34198c3994c729e544b12c950394e7bf359",
+  "date": "2015-10-22",
+  "subject": "Updates API, adds backward compatibility to local/global loc.",
+  "py": [
+   "dronekit/__main__.py",
+   "dronekit/lib/__init__.py",
+   "dronekit/module/api.py",
+   "examples/vehicle_state/vehicle_state.py",
+   "tests/sitl/test_goto.py",
+   "tests/sitl/test_localposition.py"
+  ],
+  "parent": "7d9eb8b367506f11a52d34af86f83e273382ad41",
+  "seconds": 0.228,
+  "returncode": 0,
+  "stderr": "",
+  "added": 20,
+  "removed": 16,
+  "items": [
+   {
+    "category": "magic",
+    "message": "Magic number 10 in test_goto.py",
+    "detail": "[scope: function:test_goto [uses arm_and_takeoff]]\nBare literal 10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 84,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 149.165218 in test_goto.py",
+    "detail": "[scope: function:test_goto [uses arm_and_takeoff]]\nBare literal 149.165218 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 87,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_goto.py",
+    "detail": "[scope: function:test_goto [uses arm_and_takeoff]]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 92,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 149.168801 in test_goto.py",
+    "detail": "[scope: function:test_goto [uses arm_and_takeoff]]\nBare literal 149.168801 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 95,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_goto.py",
+    "detail": "[scope: function:test_goto [uses arm_and_takeoff]]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 100,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.95 in test_goto.py",
+    "detail": "[scope: function:test_goto [uses arm_and_takeoff]]\nBare literal 0.95 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 77,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in test_goto.py",
+    "detail": "[scope: function:test_goto [uses arm_and_takeoff]]\nHandle from 'connect()' at line 2 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.",
+    "line": 19,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Lifecycle completeness: 0% in test_goto.py",
+    "detail": "[scope: function:test_goto [uses arm_and_takeoff]]\nLC_score = |O| / |R| = 0 / 1 = 0.00\n  R (declared resources): ['vehicle']\n  O (properly managed):   []\n  Unmanaged:              ['vehicle']",
+    "line": null,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'v' in test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nHandle from 'connect()' at line 2 is never explicitly closed.\nUse 'with connect(...) as v:' or call 'v.close()'.",
+    "line": 8,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Lifecycle completeness: 0% in test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nLC_score = |O| / |R| = 0 / 1 = 0.00\n  R (declared resources): ['v']\n  O (properly managed):   []\n  Unmanaged:              ['v']",
+    "line": null,
+    "score": 0.0
+   }
+  ],
+  "parse": {
+   "dronekit/__main__.py": false,
+   "dronekit/lib/__init__.py": true,
+   "dronekit/module/api.py": true,
+   "examples/vehicle_state/vehicle_state.py": false,
+   "tests/sitl/test_goto.py": true,
+   "tests/sitl/test_localposition.py": true
+  },
+  "diff_files": [
+   "dronekit/__main__.py",
+   "dronekit/lib/__init__.py",
+   "dronekit/module/api.py",
+   "examples/vehicle_state/vehicle_state.py",
+   "tests/sitl/test_goto.py",
+   "tests/sitl/test_localposition.py"
+  ]
+ },
+ {
+  "sha": "881f661b4a46d12ca0b76ba06503414415080d82",
+  "date": "2015-10-22",
+  "subject": "Update guided-set-speed-yaw-demo with new connect and vehicle.close. Test.",
+  "py": [
+   "examples/guided_set_speed_yaw/guided_set_speed_yaw.py"
+  ],
+  "parent": "ebbf4a8a400d6aa14ccf380e8ee67c0bacee3cf5",
+  "seconds": 0.121,
+  "returncode": 0,
+  "stderr": "",
+  "added": 76,
+  "removed": 51,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:91]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:95]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:144]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:147]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:150]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:168]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:173]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:184]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:237]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:242]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:243]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:250]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:281]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:286]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:297]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:298]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:304]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:311]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:314]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:319]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:324]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:325]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:338]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:344]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:348]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:420]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:422]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:423]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in guided_set_speed_yaw.py",
+    "detail": "[scope: line:598]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   }
+  ],
+  "parse": {
+   "examples/guided_set_speed_yaw/guided_set_speed_yaw.py": false
+  },
+  "diff_files": [
+   "docs/examples/guided-set-speed-yaw-demo.rst",
+   "examples/guided_set_speed_yaw/guided_set_speed_yaw.py"
+  ]
+ },
+ {
+  "sha": "35d0604e3274a5487e2fc2f38831306870cf0e7c",
+  "date": "2015-10-22",
+  "subject": "Updates mission examples/docs/guide to DKPY2. Further testing/update required when #355 fixed",
+  "py": [
+   "examples/mission_basic/mission_basic.py",
+   "examples/mission_import_export/mission_import_export.py"
+  ],
+  "parent": "881f661b4a46d12ca0b76ba06503414415080d82",
+  "seconds": 0.096,
+  "returncode": 0,
+  "stderr": "",
+  "added": 170,
+  "removed": 67,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in mission_basic.rst",
+    "detail": "[scope: line:197]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in mission_basic.rst",
+    "detail": "[scope: line:200]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in mission_import_export.rst",
+    "detail": "[scope: line:149]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in mission_import_export.rst",
+    "detail": "[scope: line:152]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in auto_mode.rst",
+    "detail": "[scope: line:303]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in auto_mode.rst",
+    "detail": "[scope: line:304]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in auto_mode.rst",
+    "detail": "[scope: line:305]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in auto_mode.rst",
+    "detail": "[scope: line:306]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in auto_mode.rst",
+    "detail": "[scope: line:307]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in auto_mode.rst",
+    "detail": "[scope: line:308]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in mission_basic.py",
+    "detail": "[scope: line:24]\nHandle from 'connect()' at line 1 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.",
+    "line": 24,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Resource 'vehicle' created but never used in mission_basic.py",
+    "detail": "[scope: line:24]\n'connect()' result assigned to 'vehicle' at line 1 but 'vehicle' is never read after assignment.\nVerify intentionality \u2014 the resource may be leaking silently.",
+    "line": 24,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Lifecycle completeness: 0% in mission_basic.py",
+    "detail": "[scope: line:24]\nLC_score = |O| / |R| = 0 / 1 = 0.00\n  R (declared resources): ['vehicle']\n  O (properly managed):   []\n  Unmanaged:              ['vehicle']",
+    "line": null,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in mission_import_export.py",
+    "detail": "[scope: line:29]\nHandle from 'connect()' at line 1 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.",
+    "line": 29,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Resource 'vehicle' created but never used in mission_import_export.py",
+    "detail": "[scope: line:29]\n'connect()' result assigned to 'vehicle' at line 1 but 'vehicle' is never read after assignment.\nVerify intentionality \u2014 the resource may be leaking silently.",
+    "line": 29,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Lifecycle completeness: 0% in mission_import_export.py",
+    "detail": "[scope: line:29]\nLC_score = |O| / |R| = 0 / 1 = 0.00\n  R (declared resources): ['vehicle']\n  O (properly managed):   []\n  Unmanaged:              ['vehicle']",
+    "line": null,
+    "score": 0.0
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in mission_import_export.py",
+    "detail": "[scope: line:60]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in mission_import_export.py",
+    "detail": "[scope: line:61]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in mission_import_export.py",
+    "detail": "[scope: line:85]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   }
+  ],
+  "parse": {
+   "examples/mission_basic/mission_basic.py": false,
+   "examples/mission_import_export/mission_import_export.py": false
+  },
+  "diff_files": [
+   "docs/examples/mission_basic.rst",
+   "docs/examples/mission_import_export.rst",
+   "docs/guide/auto_mode.rst",
+   "examples/mission_basic/mission_basic.py",
+   "examples/mission_import_export/mission_import_export.py",
+   "examples/mission_import_export/mpmission.txt"
+  ]
+ },
+ {
+  "sha": "a16546e1990bead7a4a087e05d5d635e9666163c",
+  "date": "2015-10-26",
+  "subject": "2.0.0c1",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "1badabe8b43731f2d42b10f3ee4f3f02140803ee",
+  "seconds": 0.079,
+  "returncode": 0,
+  "stderr": "",
+  "added": 1,
+  "removed": 1,
+  "items": [],
+  "parse": {
+   "setup.py": true
+  },
+  "diff_files": [
+   "setup.py"
+  ]
+ },
+ {
+  "sha": "71de7e8a8ecd90b9a2e029b703fc6b3a84ec7048",
+  "date": "2015-10-27",
+  "subject": "Merges MPCommandSequence into CommandSequence.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "dronekit/module/api.py"
+  ],
+  "parent": "ebcf7346da29486aabc74a819d710434f8e0623a",
+  "seconds": 0.666,
+  "returncode": 0,
+  "stderr": "",
+  "added": 75,
+  "removed": 98,
+  "items": [
+   {
+    "category": "magic",
+    "message": "Magic number 3 in __init__.py",
+    "detail": "[scope: class:Parameters]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 751,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.2 in __init__.py",
+    "detail": "[scope: class:Parameters]\nBare literal 0.2 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 761,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.1 in __init__.py",
+    "detail": "[scope: class:CommandSequence]\nBare literal 0.1 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 887,
+    "score": null
+   }
+  ],
+  "parse": {
+   "dronekit/lib/__init__.py": true,
+   "dronekit/module/api.py": true
+  },
+  "diff_files": [
+   "dronekit/lib/__init__.py",
+   "dronekit/module/api.py"
+  ]
+ },
+ {
+  "sha": "01b7183d768d349ed06772642eee222bf393634f",
+  "date": "2015-11-02",
+  "subject": "Merges all handling code into Vehicle.",
+  "py": [
+   "dronekit/__init__.py",
+   "dronekit/lib/__init__.py"
+  ],
+  "parent": "4a170ecf2a79ea8ec1831bd432720dbcd420223e",
+  "seconds": 2.609,
+  "returncode": 0,
+  "stderr": "",
+  "added": 111,
+  "removed": 127,
+  "items": [
+   {
+    "category": "naming",
+    "message": "Name inconsistency (variable) in __init__.py",
+    "detail": "Did you mean 'Vehicle' or 'vehicle'?\nBoth are variable names with the same normalised key 'vehicle'.\nFound 2 variant(s): Vehicle, vehicle",
+    "line": 21,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.1 in __init__.py",
+    "detail": "[scope: class:MAVHandler]\nBare literal 0.1 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 172,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.05 in __init__.py",
+    "detail": "[scope: class:MAVHandler]\nBare literal 0.05 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 70,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Concurrency construct in __init__.py",
+    "detail": "[scope: class:MAVHandler]\nConcurrency construct 'Queue' at line 9.\nVerify thread-safety and absence of deadlocks:\n  * Are all shared variables accessed under the appropriate lock?\n  * Is lock acquisition order consistent to prevent deadlock?\n  * Are daemon threads explicitly joined or their lifecycle managed?",
+    "line": 48,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Concurrency construct in __init__.py",
+    "detail": "[scope: class:MAVHandler]\nConcurrency construct 'Thread' at line 101.\nVerify thread-safety and absence of deadlocks:\n  * Are all shared variables accessed under the appropriate lock?\n  * Is lock acquisition order consistent to prevent deadlock?\n  * Are daemon threads explicitly joined or their lifecycle managed?",
+    "line": 140,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 4 in __init__.py",
+    "detail": "[scope: function:connect [uses MAVHandler]]\nBare literal 4 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 175,
+    "score": null
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in __init__.py",
+    "detail": "SD(count, __len__) = 1.00  'count' (line 1476) and '__len__' (line 1498) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 1476,
+    "score": 1.0
+   }
+  ],
+  "parse": {
+   "dronekit/__init__.py": true,
+   "dronekit/lib/__init__.py": true
+  },
+  "diff_files": [
+   "dronekit/__init__.py",
+   "dronekit/lib/__init__.py"
+  ]
+ },
+ {
+  "sha": "e4201bb9aff6626b8d43440fc2689927f21224b5",
+  "date": "2015-11-02",
+  "subject": "Adds upload() command.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "tests/sitl/test_waypoints.py"
+  ],
+  "parent": "c1f497aad7ddba98fd2a67a00a415d35d2f620f6",
+  "seconds": 0.866,
+  "returncode": 0,
+  "stderr": "",
+  "added": 25,
+  "removed": 15,
+  "items": [
+   {
+    "category": "magic",
+    "message": "Magic number 0.1 in __init__.py",
+    "detail": "[scope: class:CommandSequence]\nBare literal 0.1 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 1005,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in test_waypoints.py",
+    "detail": "[scope: function:test_empty_clear]\nHandle from 'connect()' at line 2 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.",
+    "line": 9,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Lifecycle completeness: 0% in test_waypoints.py",
+    "detail": "[scope: function:test_empty_clear]\nLC_score = |O| / |R| = 0 / 1 = 0.00\n  R (declared resources): ['vehicle']\n  O (properly managed):   []\n  Unmanaged:              ['vehicle']",
+    "line": null,
+    "score": 0.0
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 10 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 26,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 8 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 8 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 61,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 8 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 8 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 68,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 6 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 6 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 76,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 16 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 16 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 46,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 47,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 48,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 49,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 50,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 51,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 52,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 53,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 72,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nHandle from 'connect()' at line 2 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.",
+    "line": 19,
+    "score": 0.0
+   }
+  ],
+  "parse": {
+   "dronekit/lib/__init__.py": true,
+   "tests/sitl/test_waypoints.py": true
+  },
+  "diff_files": [
+   "dronekit/lib/__init__.py",
+   "tests/sitl/test_waypoints.py"
+  ]
+ },
+ {
+  "sha": "f5e71145114b90485b4e8525b167972e79377194",
+  "date": "2015-11-09",
+  "subject": "Add attributes docs for system_status, heading as per #305",
+  "py": [
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "32f14fdaacbb4e5ba01a26e3ff26a710df06420c",
+  "seconds": 0.095,
+  "returncode": 0,
+  "stderr": "",
+  "added": 21,
+  "removed": 3,
+  "items": [],
+  "parse": {
+   "examples/vehicle_state/vehicle_state.py": false
+  },
+  "diff_files": [
+   "docs/examples/vehicle_state.rst",
+   "docs/guide/migrating.rst",
+   "docs/guide/vehicle_state_and_parameters.rst",
+   "examples/vehicle_state/vehicle_state.py"
+  ]
+ },
+ {
+  "sha": "ed56dda2e9214c48fbcda795b4c2b68bd73cc28e",
+  "date": "2015-11-09",
+  "subject": "Addition file changes (this should have been part of last commit)",
+  "py": [
+   "dronekit/lib/__init__.py"
+  ],
+  "parent": "f5e71145114b90485b4e8525b167972e79377194",
+  "seconds": 0.111,
+  "returncode": 0,
+  "stderr": "",
+  "added": 19,
+  "removed": 0,
+  "items": [],
+  "parse": {
+   "dronekit/lib/__init__.py": false
+  },
+  "diff_files": [
+   "dronekit/lib/__init__.py"
+  ]
+ },
+ {
+  "sha": "c2c9240cc1097eba4485fdaaf8af53f7f3f7ff70",
+  "date": "2015-11-10",
+  "subject": "Updates to docs for is_armable attribute. Update to two main examples.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "examples/simple_goto/simple_goto.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "5f3f223de71a0947065871623b2549cb8ebe6637",
+  "seconds": 0.123,
+  "returncode": 0,
+  "stderr": "",
+  "added": 65,
+  "removed": 26,
+  "items": [],
+  "parse": {
+   "dronekit/lib/__init__.py": false,
+   "examples/simple_goto/simple_goto.py": false,
+   "examples/vehicle_state/vehicle_state.py": false
+  },
+  "diff_files": [
+   "docs/examples/simple_goto.rst",
+   "docs/examples/vehicle_state.rst",
+   "docs/guide/migrating.rst",
+   "docs/guide/taking_off.rst",
+   "docs/guide/vehicle_state_and_parameters.rst",
+   "dronekit/lib/__init__.py",
+   "examples/simple_goto/simple_goto.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ]
+ },
+ {
+  "sha": "06446d27c694e2f91a4f4a1ed8fb764680d37408",
+  "date": "2015-11-11",
+  "subject": "Makes parameters case-insensitive.",
+  "py": [
+   "dronekit/lib/__init__.py"
+  ],
+  "parent": "a3dad03934bbedcc53f732e29ba6693ea4262659",
+  "seconds": 0.123,
+  "returncode": 0,
+  "stderr": "",
+  "added": 20,
+  "removed": 1,
+  "items": [],
+  "parse": {
+   "dronekit/lib/__init__.py": false
+  },
+  "diff_files": [
+   "dronekit/lib/__init__.py"
+  ]
+ },
+ {
+  "sha": "a3dad03934bbedcc53f732e29ba6693ea4262659",
+  "date": "2015-11-11",
+  "subject": "Enables vehicle.parameters to be observed.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "dronekit/test/sitl/test_parameters.py"
+  ],
+  "parent": "1ea2032a5d6ce784306712cec442364e1137075f",
+  "seconds": 0.15,
+  "returncode": 0,
+  "stderr": "",
+  "added": 35,
+  "removed": 9,
+  "items": [
+   {
+    "category": "magic",
+    "message": "Magic number 3.0 in test_parameters.py",
+    "detail": "[scope: function:test_setting]\nBare literal 3.0 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 52,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3.0 in test_parameters.py",
+    "detail": "[scope: function:test_setting]\nBare literal 3.0 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 50,
+    "score": null
+   }
+  ],
+  "parse": {
+   "dronekit/lib/__init__.py": false,
+   "dronekit/test/sitl/test_parameters.py": true
+  },
+  "diff_files": [
+   "dronekit/lib/__init__.py",
+   "dronekit/test/sitl/test_parameters.py"
+  ]
+ },
+ {
+  "sha": "89b89bd0a9ae87f17fa7c28a8b5ff714aa2c22fc",
+  "date": "2015-11-17",
+  "subject": "Fixes localposition. Allows wait_ready on location.local_frame.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "dronekit/test/sitl/test_localposition.py"
+  ],
+  "parent": "dbc39dae7b27580d42c9974675d256eeba923cbb",
+  "seconds": 0.158,
+  "returncode": 0,
+  "stderr": "",
+  "added": 5,
+  "removed": 2,
+  "items": [
+   {
+    "category": "magic",
+    "message": "Magic number 10 in test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nBare literal 10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 62,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 60 in test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nBare literal 60 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 63,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.95 in test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nBare literal 0.95 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 55,
+    "score": null
+   }
+  ],
+  "parse": {
+   "dronekit/lib/__init__.py": false,
+   "dronekit/test/sitl/test_localposition.py": true
+  },
+  "diff_files": [
+   "dronekit/lib/__init__.py",
+   "dronekit/test/sitl/test_localposition.py"
+  ]
+ },
+ {
+  "sha": "bcfff544d34672190168fd80d61db3cbef640fb7",
+  "date": "2015-11-17",
+  "subject": "Fixes to API ref, example, documentation",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "5bf2d4e2a1d47251cfb02e063c0481a6419d3059",
+  "seconds": 0.163,
+  "returncode": 0,
+  "stderr": "",
+  "added": 93,
+  "removed": 31,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in vehicle_state.rst",
+    "detail": "[scope: line:195]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in vehicle_state.rst",
+    "detail": "[scope: line:196]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   }
+  ],
+  "parse": {
+   "dronekit/lib/__init__.py": false,
+   "examples/vehicle_state/vehicle_state.py": false
+  },
+  "diff_files": [
+   "docs/examples/vehicle_state.rst",
+   "docs/guide/vehicle_state_and_parameters.rst",
+   "dronekit/lib/__init__.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ]
+ },
+ {
+  "sha": "2ff3bae2f1ed9628b2c7878deeb84c2c0a49e1df",
+  "date": "2015-11-20",
+  "subject": "Fixes to lots of examples and docs for new settable speed, simple_takeoff and simple_goto",
+  "py": [
+   "dronekit/__init__.py",
+   "examples/drone_delivery/drone_delivery.py",
+   "examples/simple_goto/simple_goto.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "292327f53de2dc091c65091b04054e3ad7ac5479",
+  "seconds": 0.163,
+  "returncode": 0,
+  "stderr": "",
+  "added": 129,
+  "removed": 51,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in vehicle_state.rst",
+    "detail": "[scope: line:77]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in vehicle_state.rst",
+    "detail": "[scope: line:78]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 10 in simple_goto.py",
+    "detail": "[scope: line:59]\nBare literal 10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 59,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in simple_goto.py",
+    "detail": "[scope: line:62]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 62,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 10 in simple_goto.py",
+    "detail": "[scope: line:73]\nBare literal 10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 73,
+    "score": null
+   }
+  ],
+  "parse": {
+   "dronekit/__init__.py": false,
+   "examples/drone_delivery/drone_delivery.py": false,
+   "examples/simple_goto/simple_goto.py": false,
+   "examples/vehicle_state/vehicle_state.py": false
+  },
+  "diff_files": [
+   "docs/examples/follow_me.rst",
+   "docs/examples/guided-set-speed-yaw-demo.rst",
+   "docs/examples/simple_goto.rst",
+   "docs/examples/vehicle_state.rst",
+   "docs/guide/copter/guided_mode.rst",
+   "docs/guide/migrating.rst",
+   "docs/guide/taking_off.rst",
+   "docs/guide/vehicle_state_and_parameters.rst",
+   "dronekit/__init__.py",
+   "examples/drone_delivery/drone_delivery.py",
+   "examples/simple_goto/simple_goto.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ]
+ },
+ {
+  "sha": "61922591d590490fd486e6cb3f3271e9677b4b43",
+  "date": "2015-11-23",
+  "subject": "Fixes to follow_me example docs due to changed LocationGlobalRelative",
+  "py": [
+   "examples/follow_me/follow_me.py"
+  ],
+  "parent": "21c9bcd077dcf63c8482ceb89f330e8ecbf20581",
+  "seconds": 0.103,
+  "returncode": 0,
+  "stderr": "",
+  "added": 2,
+  "removed": 2,
+  "items": [],
+  "parse": {
+   "examples/follow_me/follow_me.py": false
+  },
+  "diff_files": [
+   "docs/examples/follow_me.rst",
+   "examples/follow_me/follow_me.py"
+  ]
+ },
+ {
+  "sha": "0dde190ad535b7ddcb2f801e662c549a89f359af",
+  "date": "2015-12-10",
+  "subject": "Gimbal: Added gimbal control",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "75e1d8b11271d6f9a95097cfff19e56954f7475b",
+  "seconds": 0.122,
+  "returncode": 0,
+  "stderr": "",
+  "added": 115,
+  "removed": 0,
+  "items": [],
+  "parse": {
+   "dronekit/__init__.py": false
+  },
+  "diff_files": [
+   "dronekit/__init__.py"
+  ]
+ },
+ {
+  "sha": "66a0523bceb44e867cab3cddb89b11354198af82",
+  "date": "2016-02-03",
+  "subject": "Fix incorrect property marker for airspeed",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "59383874f89d6a7728936d615361f31c299b6c44",
+  "seconds": 0.115,
+  "returncode": 0,
+  "stderr": "",
+  "added": 1,
+  "removed": 1,
+  "items": [],
+  "parse": {
+   "dronekit/__init__.py": false
+  },
+  "diff_files": [
+   "dronekit/__init__.py"
+  ]
+ },
+ {
+  "sha": "dd196378cea92a274fb65ee1d399d65424a852d7",
+  "date": "2016-02-11",
+  "subject": "Fix doc strings in library",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "d65471b44e720583a6ef3728dcb44a01050a50ab",
+  "seconds": 0.119,
+  "returncode": 0,
+  "stderr": "",
+  "added": 29,
+  "removed": 14,
+  "items": [],
+  "parse": {
+   "dronekit/__init__.py": false
+  },
+  "diff_files": [
+   "dronekit/__init__.py"
+  ]
+ },
+ {
+  "sha": "b1207a170ecbecb465ae52a63ca7c95da35951c5",
+  "date": "2016-02-11",
+  "subject": "Fix up examples for new version and capabilities attributes",
+  "py": [
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "dd196378cea92a274fb65ee1d399d65424a852d7",
+  "seconds": 0.114,
+  "returncode": 0,
+  "stderr": "",
+  "added": 213,
+  "removed": 145,
+  "items": [
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in vehicle_state.py",
+    "detail": "[scope: line:35]\nHandle from 'connect()' at line 1 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.",
+    "line": 35,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Resource 'vehicle' created but never used in vehicle_state.py",
+    "detail": "[scope: line:35]\n'connect()' result assigned to 'vehicle' at line 1 but 'vehicle' is never read after assignment.\nVerify intentionality \u2014 the resource may be leaking silently.",
+    "line": 35,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Lifecycle completeness: 0% in vehicle_state.py",
+    "detail": "[scope: line:35]\nLC_score = |O| / |R| = 0 / 1 = 0.00\n  R (declared resources): ['vehicle']\n  O (properly managed):   []\n  Unmanaged:              ['vehicle']",
+    "line": null,
+    "score": 0.0
+   }
+  ],
+  "parse": {
+   "examples/vehicle_state/vehicle_state.py": false
+  },
+  "diff_files": [
+   "docs/examples/vehicle_state.rst",
+   "docs/guide/vehicle_state_and_parameters.rst",
+   "examples/vehicle_state/vehicle_state.py"
+  ]
+ },
+ {
+  "sha": "fe6226fb087301b058824916568d88ec0d4607e5",
+  "date": "2016-08-29",
+  "subject": "there is no :cloud:",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "fac629cff66a92a63017e96f7c8a8d27a06a6189",
+  "seconds": 0.103,
+  "returncode": 0,
+  "stderr": "",
+  "added": 30,
+  "removed": 171,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:9]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:11]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:12]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:18]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:48]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:53]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:61]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:75]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:78]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:81]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:82]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:88]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:95]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:98]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:99]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:100]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:102]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:103]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:131]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:132]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:162]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:163]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:164]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:167]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:186]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in contributions_api.rst",
+    "detail": "[scope: line:192]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   }
+  ],
+  "parse": {
+   "setup.py": true
+  },
+  "diff_files": [
+   ".travis.yml",
+   "appveyor.yml",
+   "circle.yml",
+   "docs/contributing/contributions_api.rst",
+   "dronekit/cloud/CloudClient.py",
+   "dronekit/cloud/__init__.py",
+   "dronekit/test/web/__init__.py",
+   "dronekit/test/web/cloud_client_test.py",
+   "setup.py"
+  ]
+ },
+ {
+  "sha": "270e9d7502e256c4182506591bb9a86541540a4a",
+  "date": "2017-03-03",
+  "subject": "adding *args to send method in case pymavlink modifies its send method signature",
+  "py": [
+   "dronekit/mavlink.py"
+  ],
+  "parent": "0d77e600de0a97afe887b2b2fa9d864e959f9dc7",
+  "seconds": 0.182,
+  "returncode": 0,
+  "stderr": "",
+  "added": 2,
+  "removed": 2,
+  "items": [],
+  "parse": {
+   "dronekit/mavlink.py": true
+  },
+  "diff_files": [
+   "dronekit/mavlink.py"
+  ]
+ },
+ {
+  "sha": "c633a5ca514ac6464a00814f578237e031fef486",
+  "date": "2017-04-21",
+  "subject": "Python 3: define basestring, use bytes.decode() (#705)",
+  "py": [
+   "dronekit/__init__.py",
+   "examples/drone_delivery/drone_delivery.py",
+   "examples/simple_goto/simple_goto.py"
+  ],
+  "parent": "4d05c05363cf2300ddcc2b60af729f66c8f18fd4",
+  "seconds": 0.486,
+  "returncode": 0,
+  "stderr": "",
+  "added": 92,
+  "removed": 80,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in drone_delivery.py",
+    "detail": "[scope: function:arm]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in drone_delivery.py",
+    "detail": "[scope: function:get_template]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "Formatting-only change in drone_delivery.py",
+    "detail": "[scope: line:199]\nThis change is purely cosmetic (line splitting, indentation, trailing whitespace).\nNo logic, identifiers, or values were modified.",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.95 in simple_goto.py",
+    "detail": "[scope: function:arm_and_takeoff]\nBare literal 0.95 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 71,
+    "score": null
+   }
+  ],
+  "parse": {
+   "dronekit/__init__.py": false,
+   "examples/drone_delivery/drone_delivery.py": true,
+   "examples/simple_goto/simple_goto.py": true
+  },
+  "diff_files": [
+   ".travis.yml",
+   "dronekit/__init__.py",
+   "examples/drone_delivery/drone_delivery.py",
+   "examples/simple_goto/simple_goto.py"
+  ]
+ },
+ {
+  "sha": "9f6572a9ea20cdeaeba93c4029b5409966d25535",
+  "date": "2018-03-31",
+  "subject": "examples: add a reboot example",
+  "py": [
+   "examples/reboot/reboot.py"
+  ],
+  "parent": "689aa2240b86d8c5903768c47553869632ed2415",
+  "seconds": 0.172,
+  "returncode": 0,
+  "stderr": "",
+  "added": 36,
+  "removed": 0,
+  "items": [
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in reboot.py",
+    "detail": "[scope: global:connect]\nHandle from 'connect()' at line 2 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.",
+    "line": 7,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Resource 'vehicle' created but never used in reboot.py",
+    "detail": "[scope: global:connect]\n'connect()' result assigned to 'vehicle' at line 2 but 'vehicle' is never read after assignment.\nVerify intentionality \u2014 the resource may be leaking silently.",
+    "line": 7,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Lifecycle completeness: 0% in reboot.py",
+    "detail": "[scope: global:connect]\nLC_score = |O| / |R| = 0 / 1 = 0.00\n  R (declared resources): ['vehicle']\n  O (properly managed):   []\n  Unmanaged:              ['vehicle']",
+    "line": null,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in reboot.py",
+    "detail": "[scope: global:vehicle]\nHandle from 'connect()' at line 1 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.",
+    "line": 29,
+    "score": 0.0
+   }
+  ],
+  "parse": {
+   "examples/reboot/reboot.py": true
+  },
+  "diff_files": [
+   "examples/reboot/reboot.py"
+  ]
+ },
+ {
+  "sha": "c89175ac941d29f7e0f0b5d42f97f96ec268fd6d",
+  "date": "2018-11-15",
+  "subject": "param_request_read_send wants bytes, not str",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "f786a6323191ab1fe0cf252111262287ff511adb",
+  "seconds": 0.308,
+  "returncode": 0,
+  "stderr": "",
+  "added": 1,
+  "removed": 1,
+  "items": [],
+  "parse": {
+   "dronekit/__init__.py": true
+  },
+  "diff_files": [
+   "dronekit/__init__.py"
+  ]
+ },
+ {
+  "sha": "e412e95d24169c606edcd87fa1dc309af305eb0e",
+  "date": "2018-12-28",
+  "subject": "incase None > int in python3",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "a80a9bdbcfd7b80ba60a9fa860478cb748a4de16",
+  "seconds": 0.653,
+  "returncode": 0,
+  "stderr": "",
+  "added": 1,
+  "removed": 1,
+  "items": [],
+  "parse": {
+   "dronekit/__init__.py": true
+  },
+  "diff_files": [
+   "dronekit/__init__.py"
+  ]
+ },
+ {
+  "sha": "22ae381f188167d45157b574993bdaaf80778658",
+  "date": "2019-02-01",
+  "subject": "Set a timeout for uploading missions",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "ed132cce3588b5a9b0fa93e50f255a284fb8a0f7",
+  "seconds": 0.409,
+  "returncode": 0,
+  "stderr": "",
+  "added": 4,
+  "removed": 1,
+  "items": [],
+  "parse": {
+   "dronekit/__init__.py": true
+  },
+  "diff_files": [
+   "dronekit/__init__.py"
+  ]
+ }
+]

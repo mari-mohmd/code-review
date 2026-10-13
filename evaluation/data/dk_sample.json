@@ -1,0 +1,431 @@
+{
+ "repo": "/home/claude/work/dronekit-python",
+ "population": 587,
+ "seed": 2026,
+ "sample": [
+  {
+   "sha": "df279718d69e48cde056ba56df0e03bce0174b37",
+   "date": "2014-03-27",
+   "subject": "make HasAttributeObservers work",
+   "py": [
+    "droneapi/lib/DroneApi.py"
+   ]
+  },
+  {
+   "sha": "f5e44e8f731ee3002b041f00987ff0b5d8d21f82",
+   "date": "2014-03-29",
+   "subject": "A minimal API example",
+   "py": [
+    "example/small-demo.py"
+   ]
+  },
+  {
+   "sha": "b16fe4d68dd691bda859c02e59b0c859f90e0266",
+   "date": "2014-04-02",
+   "subject": "update release script",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "bb6f073476408bb5161fc8dcc9eec4e2fc957031",
+   "date": "2014-05-10",
+   "subject": "better docs",
+   "py": [
+    "droneapi/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "36aa54f4edf16f6cb3dec2416b0893118d430b1d",
+   "date": "2014-07-05",
+   "subject": "implement v.rc_readback per spec",
+   "py": [
+    "droneapi/module/api.py",
+    "example/small_demo.py"
+   ]
+  },
+  {
+   "sha": "937d74b01a8bd879f4febcd5a5c520c953b9ee86",
+   "date": "2014-07-31",
+   "subject": "update to latest protobufs",
+   "py": [
+    "droneapi/lib/webapi_pb2.py"
+   ]
+  },
+  {
+   "sha": "dbc369177c96f8f7303a08a26c86338641163d3a",
+   "date": "2014-08-01",
+   "subject": "remote commands are now accepted by the local vehicle",
+   "py": [
+    "droneapi/module/api.py"
+   ]
+  },
+  {
+   "sha": "241bacd3ec4d1ac720e0c45c5e562a0c08f3afa4",
+   "date": "2014-12-05",
+   "subject": "Wait on reading params until after they have been fetched from vehicle.",
+   "py": [
+    "droneapi/module/api.py"
+   ]
+  },
+  {
+   "sha": "8b6189d1d3fd2421c9a653f2911e449c64bbb2e0",
+   "date": "2014-12-19",
+   "subject": "api takeoff",
+   "py": [
+    "droneapi/module/api.py"
+   ]
+  },
+  {
+   "sha": "6eef088446a710a8266b757b7c4c462badf76795",
+   "date": "2014-12-29",
+   "subject": "use abspath of the script to derive local_path",
+   "py": [
+    "droneapi/module/api.py"
+   ]
+  },
+  {
+   "sha": "b05a9999e44a1e90ddf59ac2dbad7ce88ee74c35",
+   "date": "2015-02-23",
+   "subject": "tests are now a package",
+   "py": [
+    "tests/__init__.py",
+    "tests/web_integration_test.py"
+   ]
+  },
+  {
+   "sha": "2a3ab95d082c29a7bcd8e2193cbae06953672240",
+   "date": "2015-04-10",
+   "subject": "bump mavproxy and update version",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "9b9b303e1ddcebb7cb75d3e364faa226dc18742c",
+   "date": "2015-04-30",
+   "subject": "Significant changes to API reference - including addition of introductory section and code snippets throughout API. Also put warnings for APIs that are still not implemented or not intended for third party use",
+   "py": [
+    "droneapi/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "d78abc112302d92b8394bbdd3388216abba4173d",
+   "date": "2015-05-06",
+   "subject": "Hide Vehicle.delete from api docs, as discussed in #65. Update source file to also make usage clear for people reading that directly",
+   "py": [
+    "droneapi/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "7e9dc44155dd8eb57166991b33ebe98271547098",
+   "date": "2015-05-19",
+   "subject": "Update instructions for preferred VehicleMode on Plane/Rover",
+   "py": [
+    "droneapi/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "406757653d2ad1e04720ba827f715dbd4fb62952",
+   "date": "2015-05-19",
+   "subject": "First draft of example .py file and documentation",
+   "py": [
+    "example/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "bbf7d95f8115ae9ba862cd4b3defe59bcd7168fc",
+   "date": "2015-06-03",
+   "subject": "Tidy documentation for addition of Battery class #137",
+   "py": [
+    "droneapi/lib/__init__.py",
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "272dc266b4f13cd8abd8a9598662e3aabaa03e5e",
+   "date": "2015-07-10",
+   "subject": "Fixes MSG_WAITALL implementation for Windows.",
+   "py": [
+    "droneapi/lib/WebClient.py"
+   ]
+  },
+  {
+   "sha": "2db66b66bbc4dd5125da256a31e5e41d84d48b9b",
+   "date": "2015-07-16",
+   "subject": "Allows TEST_VERBOSE to be set to enable verbose messaging.",
+   "py": [
+    "tests/sitl/__main__.py"
+   ]
+  },
+  {
+   "sha": "f5a8e5973601bdaef007725806d810fd2ff46024",
+   "date": "2015-07-27",
+   "subject": "v1.4.1",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "c9e9096a62f54b0231a0c00dc3c11e99c8065c30",
+   "date": "2015-08-12",
+   "subject": "Improve documentation now we can unset notification for raw mavlink messages",
+   "py": [
+    "droneapi/lib/__init__.py",
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "7d7b9c8f67ed183d352fdb32d974552c91267933",
+   "date": "2015-09-21",
+   "subject": "Updates to add test_110.",
+   "py": [
+    "tests/sitl/test_110.py"
+   ]
+  },
+  {
+   "sha": "f352d4f4a83b72e91357d0ab974c4c994f9f4540",
+   "date": "2015-10-22",
+   "subject": "Updates test to pass locally.",
+   "py": [
+    "dronekit/__init__.py",
+    "tests/sitl/test_localposition.py"
+   ]
+  },
+  {
+   "sha": "96dac34198c3994c729e544b12c950394e7bf359",
+   "date": "2015-10-22",
+   "subject": "Updates API, adds backward compatibility to local/global loc.",
+   "py": [
+    "dronekit/__main__.py",
+    "dronekit/lib/__init__.py",
+    "dronekit/module/api.py",
+    "examples/vehicle_state/vehicle_state.py",
+    "tests/sitl/test_goto.py",
+    "tests/sitl/test_localposition.py"
+   ]
+  },
+  {
+   "sha": "881f661b4a46d12ca0b76ba06503414415080d82",
+   "date": "2015-10-22",
+   "subject": "Update guided-set-speed-yaw-demo with new connect and vehicle.close. Test.",
+   "py": [
+    "examples/guided_set_speed_yaw/guided_set_speed_yaw.py"
+   ]
+  },
+  {
+   "sha": "35d0604e3274a5487e2fc2f38831306870cf0e7c",
+   "date": "2015-10-22",
+   "subject": "Updates mission examples/docs/guide to DKPY2. Further testing/update required when #355 fixed",
+   "py": [
+    "examples/mission_basic/mission_basic.py",
+    "examples/mission_import_export/mission_import_export.py"
+   ]
+  },
+  {
+   "sha": "a16546e1990bead7a4a087e05d5d635e9666163c",
+   "date": "2015-10-26",
+   "subject": "2.0.0c1",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "71de7e8a8ecd90b9a2e029b703fc6b3a84ec7048",
+   "date": "2015-10-27",
+   "subject": "Merges MPCommandSequence into CommandSequence.",
+   "py": [
+    "dronekit/lib/__init__.py",
+    "dronekit/module/api.py"
+   ]
+  },
+  {
+   "sha": "01b7183d768d349ed06772642eee222bf393634f",
+   "date": "2015-11-02",
+   "subject": "Merges all handling code into Vehicle.",
+   "py": [
+    "dronekit/__init__.py",
+    "dronekit/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "e4201bb9aff6626b8d43440fc2689927f21224b5",
+   "date": "2015-11-02",
+   "subject": "Adds upload() command.",
+   "py": [
+    "dronekit/lib/__init__.py",
+    "tests/sitl/test_waypoints.py"
+   ]
+  },
+  {
+   "sha": "f5e71145114b90485b4e8525b167972e79377194",
+   "date": "2015-11-09",
+   "subject": "Add attributes docs for system_status, heading as per #305",
+   "py": [
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "ed56dda2e9214c48fbcda795b4c2b68bd73cc28e",
+   "date": "2015-11-09",
+   "subject": "Addition file changes (this should have been part of last commit)",
+   "py": [
+    "dronekit/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "c2c9240cc1097eba4485fdaaf8af53f7f3f7ff70",
+   "date": "2015-11-10",
+   "subject": "Updates to docs for is_armable attribute. Update to two main examples.",
+   "py": [
+    "dronekit/lib/__init__.py",
+    "examples/simple_goto/simple_goto.py",
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "06446d27c694e2f91a4f4a1ed8fb764680d37408",
+   "date": "2015-11-11",
+   "subject": "Makes parameters case-insensitive.",
+   "py": [
+    "dronekit/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "a3dad03934bbedcc53f732e29ba6693ea4262659",
+   "date": "2015-11-11",
+   "subject": "Enables vehicle.parameters to be observed.",
+   "py": [
+    "dronekit/lib/__init__.py",
+    "dronekit/test/sitl/test_parameters.py"
+   ]
+  },
+  {
+   "sha": "89b89bd0a9ae87f17fa7c28a8b5ff714aa2c22fc",
+   "date": "2015-11-17",
+   "subject": "Fixes localposition. Allows wait_ready on location.local_frame.",
+   "py": [
+    "dronekit/lib/__init__.py",
+    "dronekit/test/sitl/test_localposition.py"
+   ]
+  },
+  {
+   "sha": "bcfff544d34672190168fd80d61db3cbef640fb7",
+   "date": "2015-11-17",
+   "subject": "Fixes to API ref, example, documentation",
+   "py": [
+    "dronekit/lib/__init__.py",
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "2ff3bae2f1ed9628b2c7878deeb84c2c0a49e1df",
+   "date": "2015-11-20",
+   "subject": "Fixes to lots of examples and docs for new settable speed, simple_takeoff and simple_goto",
+   "py": [
+    "dronekit/__init__.py",
+    "examples/drone_delivery/drone_delivery.py",
+    "examples/simple_goto/simple_goto.py",
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "61922591d590490fd486e6cb3f3271e9677b4b43",
+   "date": "2015-11-23",
+   "subject": "Fixes to follow_me example docs due to changed LocationGlobalRelative",
+   "py": [
+    "examples/follow_me/follow_me.py"
+   ]
+  },
+  {
+   "sha": "0dde190ad535b7ddcb2f801e662c549a89f359af",
+   "date": "2015-12-10",
+   "subject": "Gimbal: Added gimbal control",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "66a0523bceb44e867cab3cddb89b11354198af82",
+   "date": "2016-02-03",
+   "subject": "Fix incorrect property marker for airspeed",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "dd196378cea92a274fb65ee1d399d65424a852d7",
+   "date": "2016-02-11",
+   "subject": "Fix doc strings in library",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "b1207a170ecbecb465ae52a63ca7c95da35951c5",
+   "date": "2016-02-11",
+   "subject": "Fix up examples for new version and capabilities attributes",
+   "py": [
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "fe6226fb087301b058824916568d88ec0d4607e5",
+   "date": "2016-08-29",
+   "subject": "there is no :cloud:",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "270e9d7502e256c4182506591bb9a86541540a4a",
+   "date": "2017-03-03",
+   "subject": "adding *args to send method in case pymavlink modifies its send method signature",
+   "py": [
+    "dronekit/mavlink.py"
+   ]
+  },
+  {
+   "sha": "c633a5ca514ac6464a00814f578237e031fef486",
+   "date": "2017-04-21",
+   "subject": "Python 3: define basestring, use bytes.decode() (#705)",
+   "py": [
+    "dronekit/__init__.py",
+    "examples/drone_delivery/drone_delivery.py",
+    "examples/simple_goto/simple_goto.py"
+   ]
+  },
+  {
+   "sha": "9f6572a9ea20cdeaeba93c4029b5409966d25535",
+   "date": "2018-03-31",
+   "subject": "examples: add a reboot example",
+   "py": [
+    "examples/reboot/reboot.py"
+   ]
+  },
+  {
+   "sha": "c89175ac941d29f7e0f0b5d42f97f96ec268fd6d",
+   "date": "2018-11-15",
+   "subject": "param_request_read_send wants bytes, not str",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "e412e95d24169c606edcd87fa1dc309af305eb0e",
+   "date": "2018-12-28",
+   "subject": "incase None > int in python3",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "22ae381f188167d45157b574993bdaaf80778658",
+   "date": "2019-02-01",
+   "subject": "Set a timeout for uploading missions",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  }
+ ]
+}

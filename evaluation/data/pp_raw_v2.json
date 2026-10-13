@@ -1,0 +1,2048 @@
+[
+ {
+  "sha": "62702b120b7a0bf85c4f33b36614f3792afc732b",
+  "date": "2016-11-02",
+  "subject": "fixed line geodata bug in to_excel / from_excel",
+  "py": [
+   "pandapower/file_io.py",
+   "pandapower/test/test_file_io.py"
+  ],
+  "parent": "666b3e5654f3ec10c55af6e80e26f8029133ed73",
+  "seconds": 0.38,
+  "returncode": 0,
+  "stderr": "doc/conf.py:196: SyntaxWarning: invalid escape sequence '\\ '\ndoc/report/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\ndoc/report/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\ndoc/report/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\npandapower/build_opf.py:75: SyntaxWarning: invalid escape sequence '\\{'\npandapower/create.py:725: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1115: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1319: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower_extensions/opf_model.py:283: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower_extensions/opf_model.py:514: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 18,
+  "removed": 3,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/toolbox.py\n  - pandapower/create.py\n  - pandapower/auxiliary.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/test_file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/test/toolbox.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "381acb293522b32386d06f3b93d002d8933feb22",
+  "date": "2017-02-16",
+  "subject": "numpy 1.10",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "5c19e141b16876aa0102526a9481935b5a979807",
+  "seconds": 0.392,
+  "returncode": 0,
+  "stderr": "doc/conf.py:196: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:839: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1261: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1470: SyntaxWarning: invalid escape sequence '\\*'\npandapower/make_objective.py:36: SyntaxWarning: invalid escape sequence '\\{'\npandapower/pypower_extensions/opf_model.py:283: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower_extensions/opf_model.py:514: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 3,
+  "removed": 3,
+  "items": []
+ },
+ {
+  "sha": "1e2a9fa26f1b16d4cc3464e955f8dddaf01f3e16",
+  "date": "2017-03-29",
+  "subject": "plotly.py added in pandapower.plotting",
+  "py": [
+   "pandapower/plotting/generic_geodata.py",
+   "pandapower/plotting/plotly.py"
+  ],
+  "parent": "e1bff04c88638ca3734fdb2156de8d2812ae0ccc",
+  "seconds": 2.386,
+  "returncode": 0,
+  "stderr": "doc/conf.py:205: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:803: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1219: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1439: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower_extensions/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower_extensions/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 534,
+  "removed": 1,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/generic_geodata.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/topology/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/plotly.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/plotting/__init__.py\n  - pandapower/topology/__init__.py\n  - pandapower/__init__.py\n  - pandapower/networks/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 255 in pandapower/plotting/plotly.py",
+    "detail": "[scope: function:seaborn_to_plotly_palette]\nBare literal 255 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 31,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 255 in pandapower/plotting/plotly.py",
+    "detail": "[scope: function:seaborn_to_plotly_color]\nBare literal 255 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 37,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 255 in pandapower/plotting/plotly.py",
+    "detail": "[scope: function:seaborn_to_plotly_color]\nBare literal 255 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 39,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 255.0 in pandapower/plotting/plotly.py",
+    "detail": "[scope: function:get_cmap_matplotlib_for_plotly]\nBare literal 255.0 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 51,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 700 in pandapower/plotting/plotly.py",
+    "detail": "[scope: function:draw_traces]\nBare literal 700 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 348,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 700 in pandapower/plotting/plotly.py",
+    "detail": "[scope: function:draw_traces]\nBare literal 700 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 349,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in pandapower/plotting/plotly.py",
+    "detail": "[scope: function:simple_plotly]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 399,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "b2ecc5dc5c15970e0a1b0e0b1fbd21df607880cb",
+  "date": "2017-04-20",
+  "subject": "no need to call function for empty element table",
+  "py": [
+   "pandapower/auxiliary.py"
+  ],
+  "parent": "869e04f1c327e1df8d33c5355361f37b61ccac38",
+  "seconds": 0.83,
+  "returncode": 0,
+  "stderr": "doc/conf.py:205: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:810: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1226: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1446: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 6,
+  "removed": 4,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/auxiliary.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/pd2ppc.py  (uses _select_is_elements_numba)\nFiles this file imports or opens (not in the diff):\n  - pandapower/idx_brch.py\n  - pandapower/idx_bus.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "233854cdfe6de3a938591fc265adaa217ff56204",
+  "date": "2017-04-20",
+  "subject": "second step; small fixes and refactorings; all tests pass",
+  "py": [
+   "pandapower/auxiliary.py",
+   "pandapower/pd2ppc.py"
+  ],
+  "parent": "113b98e951f4dfba12884e9b8d7720dc7dffc5e7",
+  "seconds": 1.266,
+  "returncode": 0,
+  "stderr": "doc/conf.py:205: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:810: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1226: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1446: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower_extensions/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower_extensions/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 85,
+  "removed": 16,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/auxiliary.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/test/loadflow/test_rundcpp.py  (uses _check_connectivity)\n  - pandapower/test/loadflow/test_runpp.py  (uses _check_connectivity)",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/pd2ppc.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/build_branch.py\n  - pandapower/build_bus.py\n  - pandapower/build_gen.py\n  - pandapower/make_objective.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in pandapower/auxiliary.py",
+    "detail": "SD(_create_ppc2pd_bus_lookup, _create_ppc2pd_bus_lookup) = 1.00  '_create_ppc2pd_bus_lookup' (line 390) and '_create_ppc2pd_bus_lookup' (line 444) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 390,
+    "score": 1.0
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/auxiliary.py",
+    "detail": "[scope: function:_check_connectivity]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 337,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/auxiliary.py",
+    "detail": "[scope: function:_check_connectivity]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 415,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 4 in pandapower/auxiliary.py",
+    "detail": "[scope: function:_check_connectivity]\nBare literal 4 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 426,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1000.0 in pandapower/auxiliary.py",
+    "detail": "[scope: function:_check_connectivity]\nBare literal 1000.0 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 435,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1000.0 in pandapower/auxiliary.py",
+    "detail": "[scope: function:_check_connectivity]\nBare literal 1000.0 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 436,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "No functional change in pandapower/pd2ppc.py",
+    "detail": "1 hunk(s): 0 layout/whitespace only, 1 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "2be4d9c8546170c67644d0c4b5964d9c8c48b4db",
+  "date": "2017-05-03",
+  "subject": "mock scipy.linalg",
+  "py": [
+   "doc/conf.py"
+  ],
+  "parent": "a01c549cdb1de19f697dbb583e8621e872555f2b",
+  "seconds": 0.537,
+  "returncode": 0,
+  "stderr": "doc/conf.py:204: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:822: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1238: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1458: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 1,
+  "removed": 1,
+  "items": []
+ },
+ {
+  "sha": "d585dfa0a22be1d03468384e4d3c7bae860604f4",
+  "date": "2017-05-10",
+  "subject": "fixed possible issue",
+  "py": [
+   "pandapower/html.py"
+  ],
+  "parent": "03f6dc63c03ac27e2b176c5d00c0eb21f00f8d21",
+  "seconds": 0.609,
+  "returncode": 0,
+  "stderr": "doc/conf.py:205: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:877: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1295: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1515: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:288: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:519: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 1,
+  "removed": 1,
+  "items": []
+ },
+ {
+  "sha": "0124975f557e27deda6c84b9a4c56a74c2e2033f",
+  "date": "2017-05-21",
+  "subject": "repickled with column as list #35",
+  "py": [
+   "pandapower/file_io.py",
+   "pandapower/test/converter/test_from_ppc.py"
+  ],
+  "parent": "7274a159439c1d45b9c202e92682c4cd04af6138",
+  "seconds": 0.519,
+  "returncode": 0,
+  "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:883: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1311: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1539: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:288: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:519: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 2,
+  "removed": 23,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/create.py\n  - pandapower/toolbox.py\n  - pandapower/html.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/converter/test_from_ppc.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/converter/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "0442ff9fe5f4ea5d005690c728193059399f5de0",
+  "date": "2017-06-09",
+  "subject": "tiny bug fix in log controllables; improve coding style",
+  "py": [
+   "pandapower/toolbox.py"
+  ],
+  "parent": "eb5c7949859e1fc0dc407288a3f16bf111cb6492",
+  "seconds": 1.547,
+  "returncode": 0,
+  "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:893: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1321: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1549: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:288: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:519: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 15,
+  "removed": 13,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/toolbox.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/create.py\n  - pandapower/topology/__init__.py\n  - pandapower/run.py\n  - pandapower/__init__.py\n  - pandapower/std_types.py\n  - pandapower/powerflow.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "f3e38997e034cfd9bd8a6df9ffcdd40f3184fcd9",
+  "date": "2017-06-28",
+  "subject": "improve geodata of simple_mv_open_ring",
+  "py": [
+   "pandapower/networks/simple_pandapower_test_networks.py"
+  ],
+  "parent": "8912a42c3c9a673b86800c5f17244738bde97968",
+  "seconds": 0.67,
+  "returncode": 0,
+  "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:893: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1321: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1549: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:288: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:519: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 2,
+  "removed": 2,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/networks/simple_pandapower_test_networks.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "b57ab904047a7449f2d2980253d4c2caf7cf6772",
+  "date": "2017-07-18",
+  "subject": "numba makeYbus for state estimation",
+  "py": [
+   "pandapower/estimation/wls_matrix_ops.py",
+   "pandapower/estimation/wls_ppc_conversions.py"
+  ],
+  "parent": "6902105f31aa50407f5250d33d6eb1241091e826",
+  "seconds": 0.699,
+  "returncode": 0,
+  "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:928: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1360: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1591: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 8,
+  "removed": 8,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/estimation/wls_matrix_ops.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/estimation/idx_bus.py\n  - pandapower/estimation/idx_brch.py\n  - pandapower/idx_brch.py\n  - pandapower/idx_bus.py\n  - pandapower/pf/makeYbus.py\n  - pandapower/pf/makeYbus_pypower.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/estimation/wls_ppc_conversions.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/estimation/state_estimation.py  (uses _init_ppc)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/pd2ppc.py\n  - pandapower/estimation/idx_bus.py\n  - pandapower/estimation/idx_brch.py\n  - pandapower/idx_brch.py\n  - pandapower/idx_bus.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "55c5061278e99e509bf1b16ccbeb58c2db1b1a8b",
+  "date": "2017-07-20",
+  "subject": "adapted line_collections and trafo_collections to new plotting",
+  "py": [
+   "pandapower/plotting/collections.py"
+  ],
+  "parent": "219083f0bdd984e6d0c6191acb0f9a13c93bd874",
+  "seconds": 0.694,
+  "returncode": 0,
+  "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:928: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1360: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1591: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 37,
+  "removed": 25,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/collections.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/plotting/simple_plot.py  (uses create_bus_collection, create_line_collection)\nFiles this file imports or opens (not in the diff):\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "af9dea9c19004c0957a108c078ee8ddd174aee06",
+  "date": "2017-08-09",
+  "subject": "When pickling we now save shapely data as primitive datatypes and convert them to shapely on loading if geopandas is installed",
+  "py": [
+   "pandapower/file_io.py",
+   "pandapower/plotting/__init__.py",
+   "pandapower/plotting/geo.py"
+  ],
+  "parent": "e3a190e943db6b1a3bba07470086666640ff13bf",
+  "seconds": 0.834,
+  "returncode": 0,
+  "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:928: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1360: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1591: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 93,
+  "removed": 13,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/toolbox.py\n  - pandapower/html_net.py\n  - pandapower/io_utils.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/__init__.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/plotting/collections.py\n  - pandapower/plotting/colormaps.py\n  - pandapower/plotting/generic_geodata.py\n  - pandapower/plotting/powerflow_results.py\n  - pandapower/plotting/simple_plot.py\n  - pandapower/plotting/plotly/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_pickle]\nCall at line 226: 'pickle.load()' can execute code embedded in the data.\nVerify the input is trusted or validated.",
+    "line": 226,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_pickle]\nCall at line 228: 'pickle.load()' can execute code embedded in the data.\nVerify the input is trusted or validated.",
+    "line": 228,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "f16f7faa044ad5738a00913595f189188a09d4f6",
+  "date": "2017-10-20",
+  "subject": "added flag for articulation points to find_bridges",
+  "py": [
+   "pandapower/topology/graph_searches.py"
+  ],
+  "parent": "cc16c6cbe96eb80eabb832bbb5b2c369c9f58b4f",
+  "seconds": 0.674,
+  "returncode": 0,
+  "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:958: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1404: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1646: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
+  "added": 8,
+  "removed": 4,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/topology/graph_searches.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/topology/create_graph.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "2fa58623d5c3ef1d014a22d82df89a260ba61795",
+  "date": "2017-12-11",
+  "subject": "improved creation of line switch collection and added plotting of line switches to simple_plot",
+  "py": [
+   "pandapower/plotting/collections.py",
+   "pandapower/plotting/simple_plot.py",
+   "pandapower/topology/graph_searches.py"
+  ],
+  "parent": "65c13a37bd6c98328ed6ebc6c1f8b5bdfb977f4c",
+  "seconds": 0.677,
+  "returncode": 0,
+  "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:965: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1422: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1665: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 58,
+  "removed": 14,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/collections.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/simple_plot.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/plotting/generic_geodata.py\n  - pandapower/networks/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/topology/graph_searches.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/topology/create_graph.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.01 in pandapower/plotting/collections.py",
+    "detail": "[scope: function:create_line_switch_symbol_collection]\nBare literal 0.01 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 414,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "No functional change in pandapower/topology/graph_searches.py",
+    "detail": "1 hunk(s): 1 layout/whitespace only, 0 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "8dbeda7d42387850061a0d7ab0a0f82510d8fcb9",
+  "date": "2018-04-17",
+  "subject": "isolated buses in zero sequence",
+  "py": [
+   "pandapower/auxiliary.py",
+   "pandapower/pd2ppc_zero.py",
+   "pandapower/test/shortcircuit/test_1ph.py"
+  ],
+  "parent": "0d5910ae58310a16ce3257945020d9b74e440a79",
+  "seconds": 0.705,
+  "returncode": 0,
+  "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1113: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1575: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1830: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:26: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 18,
+  "removed": 14,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/auxiliary.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/pd2ppc.py  (uses _set_isolated_buses_out_of_service)\nFiles this file imports or opens (not in the diff):\n  - pandapower/idx_brch.py\n  - pandapower/idx_bus.py\n  - pandapower/pf/no_numba.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/pd2ppc_zero.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/shortcircuit/calc_sc.py  (uses _pd2ppc_zero)\nFiles this file imports or opens (not in the diff):\n  - pandapower/pd2ppc.py\n  - pandapower/build_bus.py\n  - pandapower/build_gen.py\n  - pandapower/idx_brch.py\n  - pandapower/idx_bus.py\n  - pandapower/build_branch.py\n  - pandapower/shortcircuit/idx_brch.py\n  - pandapower/shortcircuit/idx_bus.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/shortcircuit/test_1ph.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/shortcircuit/__init__.py\n  - pandapower/test/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 4.0 in pandapower/auxiliary.py",
+    "detail": "[scope: function:_set_isolated_buses_out_of_service]\nBare literal 4.0 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 518,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/auxiliary.py",
+    "detail": "[scope: function:_set_isolated_buses_out_of_service]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 517,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 4.0 in pandapower/pd2ppc_zero.py",
+    "detail": "[scope: function:_pd2ppc_zero]\nBare literal 4.0 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 44,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1e-09 in pandapower/pd2ppc_zero.py",
+    "detail": "[scope: function:_add_line_sc_impedance_zero]\nBare literal 1e-09 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 267,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "c8653df59326c6fe689c40d6c6888e8847e14965",
+  "date": "2018-07-19",
+  "subject": " YNyn V comp: Pass PQ comparison: Fail",
+  "py": [
+   "pandapower/test/loadflow/test_runpp_3ph.py"
+  ],
+  "parent": "5a50b93c8c38467c21e9fb0d5a52bd047f41252e",
+  "seconds": 0.855,
+  "returncode": 0,
+  "stderr": "doc/conf.py:203: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1371: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1835: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:2092: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:26: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 16,
+  "removed": 5,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/loadflow/test_runpp_3ph.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/pf/runpp_3ph.py\n  - pandapower/create.py\n  - pandapower/pf/makeYbus.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "09253c832305149cefe7219d3acacd18196b3846",
+  "date": "2018-10-12",
+  "subject": "t3 switches #30",
+  "py": [
+   "pandapower/build_branch.py",
+   "pandapower/create.py",
+   "pandapower/test/loadflow/test_scenarios.py"
+  ],
+  "parent": "de7788088ae857a401aca492d2ff8dff5cca5167",
+  "seconds": 1.883,
+  "returncode": 0,
+  "stderr": "doc/conf.py:200: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1100: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1555: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1813: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 176,
+  "removed": 52,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/build_branch.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/pd2ppc.py  (uses _switch_branches)\n  - pandapower/pd2ppc_zero.py  (uses _switch_branches)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/idx_brch.py\n  - pandapower/idx_bus.py\n  - pandapower/shortcircuit/idx_bus.py\n  - pandapower/shortcircuit/idx_brch.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/create.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/toolbox.py  (uses create_switch)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/results.py\n  - pandapower/std_types.py\n  - pandapower/__init__.py\n  - pandapower/toolbox.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/loadflow/test_scenarios.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/test/consistency_checks.py\n  - pandapower/test/loadflow/result_test_network_generator.py\n  - pandapower/test/toolbox.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/build_branch.py",
+    "detail": "[scope: function:_gather_branch_switch_info]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 568,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/build_branch.py",
+    "detail": "[scope: function:_gather_branch_switch_info]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 571,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "73507bc869912c8734683c9dff5739e85461aca5",
+  "date": "2019-01-19",
+  "subject": "using csr matrix in calculation subjacobian matrix (+1 squashed commits)",
+  "py": [
+   "pandapower/estimation/estimator/wls_matrix_ops.py"
+  ],
+  "parent": "f29d71787edc270232750c59fed19b984cefe173",
+  "seconds": 0.839,
+  "returncode": 0,
+  "stderr": "doc/conf.py:200: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1134: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1589: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1847: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 48,
+  "removed": 50,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/estimation/estimator/wls_matrix_ops.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/estimation/estimator/lav.py  (uses WLSAlgebra)\n  - pandapower/estimation/estimator/wls.py  (uses WLSAlgebra)\nFiles this file imports or opens (not in the diff):\n  - pandapower/idx_brch.py\n  - pandapower/idx_bus.py\n  - pandapower/pf/makeYbus.py\n  - pandapower/pf/makeYbus_pypower.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "ecaf32d7909ddbd1e410a08faaa3b41db6c8446a",
+  "date": "2019-03-13",
+  "subject": "remove unused pypower code #325",
+  "py": [
+   "pandapower/pypower/opf_costfcn.py",
+   "pandapower/pypower/opf_setup.py",
+   "pandapower/pypower/qps_pypower.py"
+  ],
+  "parent": "7537edc8879dcb1ad115d43c1667dd82b96bc226",
+  "seconds": 0.986,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1134: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1603: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1851: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 2,
+  "removed": 108,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/pypower/opf_costfcn.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/pypower/opf_execute.py  (uses opf_costfcn)\n  - pandapower/pypower/opf_hessfcn.py  (uses opf_costfcn)\n  - pandapower/pypower/pipsopf_solver.py  (uses opf_costfcn)\nFiles this file imports or opens (not in the diff):\n  - pandapower/pypower/idx_cost.py\n  - pandapower/pypower/totcost.py\n  - pandapower/pypower/polycost.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/pypower/opf_setup.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/pypower/opf.py  (uses opf_setup)\nFiles this file imports or opens (not in the diff):\n  - pandapower/pypower/idx_brch.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/pypower/idx_cost.py\n  - pandapower/pypower/idx_gen.py\n  - pandapower/pypower/makeAang.py\n  - pandapower/pypower/makeApq.py\n  - pandapower/pypower/makeAvl.py\n  - pandapower/pypower/makeAy.py\n  - pandapower/pypower/makeBdc.py\n  - pandapower/pypower/opf_args.py\n  - pandapower/pypower/pqcost.py\n  - pandapower/pypower/run_userfcn.py\n  - pandapower/pypower/opf_model.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/pypower/qps_pypower.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/pypower/dcopf_solver.py  (uses qps_pypower)\nFiles this file imports or opens (not in the diff):\n  - pandapower/pypower/qps_pips.py\n  - pandapower/pypower/util.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 545 in pandapower/pypower/opf_setup.py",
+    "detail": "[scope: function:opf_setup]\nBare literal 545 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 182,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 10000000000.0 in pandapower/pypower/opf_setup.py",
+    "detail": "[scope: function:opf_setup]\nBare literal 10000000000.0 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 149,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 200 in pandapower/pypower/qps_pypower.py",
+    "detail": "[scope: function:qps_pypower]\nBare literal 200 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 139,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 200 in pandapower/pypower/qps_pypower.py",
+    "detail": "[scope: function:qps_pypower]\nBare literal 200 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 149,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "e7ff57a95dc0ad094f5d0eafaec0d0d94c890673",
+  "date": "2019-03-20",
+  "subject": "replace deprecated numpy.assscalar() with ndarray.item()",
+  "py": [
+   "pandapower/pypower/dSbr_dV.py",
+   "pandapower/pypower/gausspf.py"
+  ],
+  "parent": "332c1788b093d84919510f912e03a884461b4414",
+  "seconds": 0.793,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1135: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1604: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1852: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 9,
+  "removed": 10,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/pypower/dSbr_dV.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/pypower/opf_consfcn.py  (uses dSbr_dV)\n  - pandapower/pypower/opf_hessfcn.py  (uses dSbr_dV)\nFiles this file imports or opens (not in the diff):\n  - pandapower/pypower/idx_brch.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/pypower/gausspf.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/pf/runpf_pypower.py  (uses gausspf)\nFiles this file imports or opens (not in the diff):\n  - pandapower/pypower/ppoption.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "e4ffd7aeec63ea8a2c81d7d103ee3d62a6462266",
+  "date": "2019-03-26",
+  "subject": " Convergence tests and fix for mismatch check #96",
+  "py": [
+   "pandapower/pf/runpp_3ph.py",
+   "pandapower/test/loadflow/test_runpp_3ph.py"
+  ],
+  "parent": "12fb7cca13f76a59a0223546d36f89a431b82a39",
+  "seconds": 1.642,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1496: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1965: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:2213: SyntaxWarning: invalid escape sequence '\\*'\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 16,
+  "removed": 18,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/pf/runpp_3ph.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/pypower/pfsoln.py\n  - pandapower/pypower/idx_gen.py\n  - pandapower/pd2ppc.py\n  - pandapower/pd2ppc_zero.py\n  - pandapower/pypower/makeYbus.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/auxiliary.py\n  - pandapower/pf/run_newton_raphson_pf.py\n  - pandapower/build_bus.py\n  - pandapower/pypower/bustypes.py\n  - pandapower/run.py\n  - pandapower/results.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/loadflow/test_runpp_3ph.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/create.py\n  - pandapower/pypower/makeYbus.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in pandapower/pf/runpp_3ph.py",
+    "detail": "[scope: function:runpp_3ph]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 249,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 70 in pandapower/pf/runpp_3ph.py",
+    "detail": "[scope: function:runpp_3ph]\nBare literal 70 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 174,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "5bc13727d6f4c0085cc0991c9368b773d94d5262",
+  "date": "2019-10-25",
+  "subject": "add toolbox functions replace_ext_grid_by_gen, replace_gen_by_ext_grid, get_connected_elements_dict",
+  "py": [
+   "pandapower/test/api/test_toolbox.py",
+   "pandapower/toolbox.py"
+  ],
+  "parent": "cf747b61a4b60dee9d6b92d2653112bfdd12a0a5",
+  "seconds": 3.27,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1143: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1736: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1984: SyntaxWarning: invalid escape sequence '\\*'\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 171,
+  "removed": 2,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/api/test_toolbox.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/estimation/util.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/toolbox.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/create.py\n  - pandapower/opf/validate_opf_input.py\n  - pandapower/run.py\n  - pandapower/topology/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "cc5df47c33c1c9ed7603384048072ec1e1b0081d",
+  "date": "2019-11-17",
+  "subject": "few more corrections",
+  "py": [
+   "pandapower/plotting/collections.py"
+  ],
+  "parent": "7767720f4fdcf05bd785022a17db7b0ea366bac7",
+  "seconds": 1.137,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1274: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1867: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:2115: SyntaxWarning: invalid escape sequence '\\*'\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 14,
+  "removed": 13,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/collections.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/plotting/simple_plot.py  (uses create_bus_collection, create_line_collection, create_trafo_collection)\nFiles this file imports or opens (not in the diff):\n  - pandapower/plotting/patch_makers.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1.7 in pandapower/plotting/collections.py",
+    "detail": "[scope: function:create_ext_grid_collection]\nBare literal 1.7 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 844,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "fce3b39c9cb2ebd53cea6543cbcd329df1ed9c6c",
+  "date": "2020-02-25",
+  "subject": "add merge_results to merge_nets(); fasten _select_cost_df()",
+  "py": [
+   "pandapower/toolbox.py"
+  ],
+  "parent": "1fa3a359643204b6ed4dd00bfebaae7e48df218f",
+  "seconds": 1.875,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 16,
+  "removed": 15,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/toolbox.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/create.py\n  - pandapower/opf/validate_opf_input.py\n  - pandapower/run.py\n  - pandapower/topology/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "d95df5f30a8020f77bf1e2426fdc7cccdf88e30b",
+  "date": "2020-07-29",
+  "subject": "Minimum short circuit branch current ignore 0, update tests",
+  "py": [
+   "pandapower/shortcircuit/currents.py",
+   "pandapower/test/shortcircuit/test_gen.py",
+   "pandapower/test/shortcircuit/test_motor.py",
+   "pandapower/test/shortcircuit/test_sgen.py"
+  ],
+  "parent": "dccfa702e813c201b27e35776c6828c2f771610d",
+  "seconds": 1.168,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 12,
+  "removed": 8,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/shortcircuit/currents.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/shortcircuit/calc_sc.py  (uses _calc_branch_currents)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/pypower/idx_gen.py\n  - pandapower/shortcircuit/idx_brch.py\n  - pandapower/shortcircuit/idx_bus.py\n  - pandapower/pypower/pfsoln.py\n  - pandapower/pf/ppci_variables.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/shortcircuit/test_gen.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/shortcircuit/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/shortcircuit/test_motor.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/shortcircuit/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/shortcircuit/test_sgen.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/shortcircuit/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1e-10 in pandapower/shortcircuit/currents.py",
+    "detail": "[scope: function:_calc_branch_currents]\nBare literal 1e-10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 99,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1e-10 in pandapower/shortcircuit/currents.py",
+    "detail": "[scope: function:_calc_branch_currents]\nBare literal 1e-10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 100,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1e-10 in pandapower/shortcircuit/currents.py",
+    "detail": "[scope: function:_calc_branch_currents]\nBare literal 1e-10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 118,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1e-10 in pandapower/shortcircuit/currents.py",
+    "detail": "[scope: function:_calc_branch_currents]\nBare literal 1e-10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 119,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1e-10 in pandapower/shortcircuit/currents.py",
+    "detail": "[scope: function:_calc_branch_currents]\nBare literal 1e-10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 132,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1e-10 in pandapower/shortcircuit/currents.py",
+    "detail": "[scope: function:_calc_branch_currents]\nBare literal 1e-10 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 133,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "dd962149c61897cec9b3cebb5a56290b0e146df0",
+  "date": "2020-08-09",
+  "subject": "Fixed failed test which used \"results\" as init option",
+  "py": [
+   "pandapower/build_bus.py",
+   "pandapower/test/converter/test_from_ppc.py",
+   "pandapower/test/converter/test_to_ppc_and_mpc.py",
+   "pandapower/test/estimation/test_wls_estimation.py"
+  ],
+  "parent": "5556534084b20ea6b7a9b6326de1e7da3acbbc66",
+  "seconds": 1.411,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 11,
+  "removed": 7,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/build_bus.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/shortcircuit/idx_bus.py\n  - pandapower/pf/no_numba.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/converter/test_from_ppc.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/converter/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/converter/test_to_ppc_and_mpc.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/converter/__init__.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/powerflow.py\n  - pandapower/results.py\n  - pandapower/pf/runpf_pypower.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/estimation/test_wls_estimation.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/estimation/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "No functional change in pandapower/build_bus.py",
+    "detail": "1 hunk(s): 0 layout/whitespace only, 1 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "c3090c6ae5c17d81242f61faba63e62445f67f44",
+  "date": "2021-02-22",
+  "subject": "Update setup.py",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "c06a1c22a54dc4d1691d0645adafbf1976e10fe2",
+  "seconds": 1.03,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 1,
+  "removed": 1,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'setup.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - .github/workflows/github_test_action.yml",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "e32bbc95c95609a54b10d3c802e62a1c7b66f66a",
+  "date": "2021-03-25",
+  "subject": "Add auto_open parameter",
+  "py": [
+   "pandapower/plotting/plotly/pf_res_plotly.py",
+   "pandapower/plotting/plotly/simple_plotly.py",
+   "pandapower/plotting/plotly/traces.py",
+   "pandapower/plotting/plotly/vlevel_plotly.py"
+  ],
+  "parent": "1b85987696e67841abc00bd48e0e5ebf4f191bb1",
+  "seconds": 1.184,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 21,
+  "removed": 11,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/plotly/pf_res_plotly.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/plotting/generic_geodata.py\n  - pandapower/plotting/plotly/mapbox_plot.py\n  - pandapower/run.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/plotly/simple_plotly.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/plotting/generic_geodata.py\n  - pandapower/plotting/plotly/mapbox_plot.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/plotly/traces.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/plotting/plotly/get_colors.py\n  - pandapower/plotting/plotly/mapbox_plot.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/plotly/vlevel_plotly.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/plotting/generic_geodata.py\n  - pandapower/plotting/plotly/get_colors.py\n  - pandapower/plotting/plotly/mapbox_plot.py\n  - pandapower/topology/__init__.py\n  - pandapower/networks/mv_oberrhein.py\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 20 in pandapower/plotting/plotly/pf_res_plotly.py",
+    "detail": "[scope: function:pf_res_plotly]\nBare literal 20 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 103,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "fdbb5deafd2eb901599c7d5d01cb856acecebbab",
+  "date": "2021-04-28",
+  "subject": "added docstring for CharacteristicControl and updated CHANGELOG.rst",
+  "py": [
+   "pandapower/control/controller/characteristic_controller.py"
+  ],
+  "parent": "a7fb133696c64ec493e717e9c6eb8c75db146491",
+  "seconds": 0.986,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 42,
+  "removed": 0,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/control/controller/characteristic_controller.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/control/basic_controller.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "No functional change in pandapower/control/controller/characteristic_controller.py",
+    "detail": "1 hunk(s): 0 layout/whitespace only, 1 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "87aab1e5c088656a4043d345b344655e62f3d344",
+  "date": "2021-08-04",
+  "subject": "adaptions of tests",
+  "py": [
+   "pandapower/test/api/test_convert_format.py",
+   "pandapower/test/api/test_file_io.py"
+  ],
+  "parent": "bbd50d069dd8ace071fad8e5f4a33e24df52ec0e",
+  "seconds": 1.205,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 5,
+  "removed": 5,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/api/test_convert_format.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/api/test_file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/control/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/topology/__init__.py\n  - pandapower/io_utils.py\n  - pandapower/test/toolbox.py\n  - pandapower/timeseries/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "289fb4f63bdd49ccd450294f95a16eb6a709f88f",
+  "date": "2021-11-15",
+  "subject": "consolidate and revise comparison methods #505",
+  "py": [
+   "pandapower/test/api/test_file_io.py",
+   "pandapower/test/toolbox.py",
+   "pandapower/toolbox.py"
+  ],
+  "parent": "087a94569fb51e2f1479e21301f4576eb3c641df",
+  "seconds": 2.771,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 78,
+  "removed": 156,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/api/test_file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/control/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/topology/__init__.py\n  - pandapower/io_utils.py\n  - pandapower/timeseries/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/toolbox.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/test/loadflow/test_PTDF_LODF.py  (uses assert_net_equal)\n  - pandapower/test/loadflow/test_dist_slack.py  (uses assert_res_equal)\n  - pandapower/test/loadflow/test_rundcpp.py  (uses assert_net_equal)\n  - pandapower/test/loadflow/test_runpp.py  (uses assert_net_equal)\n  - pandapower/test/plotting/test_generic_coordinates.py  (uses create_test_network)\n  - pandapower/test/plotting/test_to_html.py  (uses create_test_network)\nFiles this file imports or opens (not in the diff):\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/toolbox.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/test/api/test_toolbox.py  (uses nets_equal)\n  - pandapower/test/loadflow/result_test_network_generator.py  (uses nets_equal)\n  - pandapower/test/loadflow/test_runpp.py  (uses nets_equal)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/create.py\n  - pandapower/opf/validate_opf_input.py\n  - pandapower/run.py\n  - pandapower/std_types.py\n  - pandapower/topology/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 4 in pandapower/toolbox.py",
+    "detail": "[scope: function:nets_equal]\nBare literal 4 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 736,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 4 in pandapower/toolbox.py",
+    "detail": "[scope: function:nets_equal]\nBare literal 4 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 737,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "735ed762b8fcc8c2f51a867d602f92d04196577d",
+  "date": "2021-12-14",
+  "subject": "bugfix",
+  "py": [
+   "pandapower/control/basic_controller.py"
+  ],
+  "parent": "40bdc4058eba0c17a0638a8b04ddd2a0a862a4ee",
+  "seconds": 1.231,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 1,
+  "removed": 1,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/control/basic_controller.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/control/controller/characteristic_control.py  (uses Controller)\n  - pandapower/control/controller/const_control.py  (uses Controller)\n  - pandapower/control/controller/trafo_control.py  (uses Controller)\n  - pandapower/test/control/test_control.py  (uses Controller)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/control/util/auxiliary.py\n  - pandapower/io_utils.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "8a9d76806e07a974845e15cdb344922a42ccae44",
+  "date": "2022-02-23",
+  "subject": "change simple_plotly_generic call from positional args to kwargs",
+  "py": [
+   "pandapower/plotting/plotly/simple_plotly.py"
+  ],
+  "parent": "fc10cac532157657e4ba424de02be101c7f8bcd1",
+  "seconds": 1.303,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 26,
+  "removed": 6,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/plotly/simple_plotly.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/plotting/generic_geodata.py\n  - pandapower/plotting/plotly/traces.py\n  - pandapower/plotting/plotly/mapbox_plot.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "1fe5b65bd734c4317fc07af569f5e3d2727acc6c",
+  "date": "2022-07-18",
+  "subject": "random id",
+  "py": [
+   "pandapower/test/api/test_file_io.py"
+  ],
+  "parent": "54f009252cd75374b019f7010c802b8e5e682d93",
+  "seconds": 1.369,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 2,
+  "removed": 1,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/api/test_file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/control/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/topology/__init__.py\n  - pandapower/io_utils.py\n  - pandapower/test/toolbox.py\n  - pandapower/timeseries/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "f9c801539fec895be51d171dac094fbee69a610e",
+  "date": "2022-08-02",
+  "subject": "json io generalization",
+  "py": [
+   "pandapower/file_io.py",
+   "pandapower/io_utils.py",
+   "pandapower/test/api/test_file_io.py"
+  ],
+  "parent": "5fb9d7409c21bb725ae8640a92f39939fa782de1",
+  "seconds": 2.025,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 112,
+  "removed": 20,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/convert_format.py\n  - pandapower/create.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/io_utils.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/create.py\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/api/test_file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/control/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/topology/__init__.py\n  - pandapower/test/toolbox.py\n  - pandapower/timeseries/__init__.py\n  - pandapower/toolbox.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_json_string]\nCall at line 364: 'json.loads()' with a custom decoder (cls) - check what the hook may import or instantiate.\nVerify the input is trusted or validated.",
+    "line": 364,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_json_string]\nCall at line 367: 'json.loads()' with a custom decoder (cls) - check what the hook may import or instantiate.\nVerify the input is trusted or validated.",
+    "line": 367,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_json_string]\nCall at line 375: 'json.loads()' with a custom decoder (cls) - check what the hook may import or instantiate.\nVerify the input is trusted or validated.",
+    "line": 375,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_json_string]\nCall at line 386: 'json.loads()' with a custom decoder (cls) - check what the hook may import or instantiate.\nVerify the input is trusted or validated.",
+    "line": 386,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/io_utils.py",
+    "detail": "[scope: class:FromSerializableRegistry]\nCall at line 494: 'import_module()' imports a module whose name is computed at runtime.\nVerify the input is trusted or validated.",
+    "line": 494,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/io_utils.py",
+    "detail": "[scope: class:FromSerializableRegistry]\nCall at line 503: 'import_module()' imports a module whose name is computed at runtime.\nVerify the input is trusted or validated.",
+    "line": 503,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/io_utils.py",
+    "detail": "[scope: class:FromSerializableRegistry]\nCall at line 507: 'json.loads()' with a custom decoder (cls, object_hook) - check what the hook may import or instantiate.\nVerify the input is trusted or validated.",
+    "line": 507,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "96496d271d8cc00df84bab49752886452e95a1c0",
+  "date": "2022-08-09",
+  "subject": "bugfix in auxiliary.py for dealing with user_pf_options",
+  "py": [
+   "pandapower/auxiliary.py",
+   "pandapower/test/loadflow/test_dist_slack.py",
+   "pandapower/test/loadflow/test_tdpf.py"
+  ],
+  "parent": "f803666962668b5764a289cfe55ef9324da71556",
+  "seconds": 1.793,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:26: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:100: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:129: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:371: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:477: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:541: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:609: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:671: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:732: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 59,
+  "removed": 2,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/auxiliary.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/grid_equivalents/auxiliary.py  (uses _init_runpp_options)\n  - pandapower/run.py  (uses _init_runpp_options)\nFiles this file imports or opens (not in the diff):\n  - pandapower/pypower/idx_brch.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/pypower/idx_gen.py\n  - pandapower/create.py\n  - pandapower/pf/no_numba.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/loadflow/test_dist_slack.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/control/__init__.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/pypower/idx_brch.py\n  - pandapower/test/toolbox.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/loadflow/test_tdpf.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/pf/create_jacobian_tdpf.py\n  - pandapower/test/toolbox.py\n  - pandapower/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/pypower/idx_brch.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 70 in pandapower/auxiliary.py",
+    "detail": "[scope: function:_init_runpp_options]\nBare literal 70 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 1094,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "9f12d0685faa87046fa6a74f4e1864d4403d0bd5",
+  "date": "2022-09-02",
+  "subject": "add subfunctions of add_basic_std_types",
+  "py": [
+   "pandapower/__init__.py",
+   "pandapower/file_io.py",
+   "pandapower/std_types.py"
+  ],
+  "parent": "9eb78b22b45564cae0748f378f5957094fe26a13",
+  "seconds": 1.858,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:26: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:100: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:129: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:371: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:477: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:541: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:609: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:671: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:732: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 47,
+  "removed": 9,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/__init__.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/convert_format.py\n  - pandapower/create.py\n  - pandapower/diagnostic.py\n  - pandapower/sql_io.py\n  - pandapower/run.py\n  - pandapower/runpm.py\n  - pandapower/toolbox.py\n  - pandapower/powerflow.py\n  - pandapower/opf/__init__.py\n  - pandapower/optimal_powerflow.py\n  - pandapower/pf/runpp_3ph.py\n  - pandapower/groups.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/file_io.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/convert_format.py\n  - pandapower/create.py\n  - pandapower/io_utils.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/std_types.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/create.py  (uses add_basic_std_types)",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_json_string]\nCall at line 360: 'json.loads()' with a custom decoder (cls) - check what the hook may import or instantiate.\nVerify the input is trusted or validated.",
+    "line": 360,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_json_string]\nCall at line 363: 'json.loads()' with a custom decoder (cls) - check what the hook may import or instantiate.\nVerify the input is trusted or validated.",
+    "line": 363,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_json_string]\nCall at line 371: 'json.loads()' with a custom decoder (cls) - check what the hook may import or instantiate.\nVerify the input is trusted or validated.",
+    "line": 371,
+    "score": null
+   },
+   {
+    "category": "injection",
+    "message": "Runtime evaluation risk in pandapower/file_io.py",
+    "detail": "[scope: function:from_json_string]\nCall at line 382: 'json.loads()' with a custom decoder (cls) - check what the hook may import or instantiate.\nVerify the input is trusted or validated.",
+    "line": 382,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "910b589b1222e3d47faada6dfb58231304f23179",
+  "date": "2022-11-16",
+  "subject": "Oc relay relase with DTOC, IDMT",
+  "py": [
+   "pandapower/protection/oc_relay_model.py",
+   "pandapower/test/protection/test_oc_relay_model.py"
+  ],
+  "parent": "3d06bc71ae5432650b5d50e1126e77ce4c8b0010",
+  "seconds": 7.494,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:26: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:100: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:129: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:371: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:477: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:541: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:609: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:671: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:732: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 1082,
+  "removed": 886,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/protection/example_grids.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/networks/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/protection/oc_relay_model.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/shortcircuit/__init__.py\n  - pandapower/__init__.py\n  - pandapower/plotting/simple_plot.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/protection/utility_functions.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/shortcircuit/__init__.py\n  - pandapower/plotting/__init__.py\n  - pandapower/topology/create_graph.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/protection/test_oc_relay_model.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/networks/__init__.py\n  - pandapower/shortcircuit/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "structural",
+    "message": "High structural similarity in pandapower/protection/example_grids.py",
+    "detail": "SD(load_4bus_net, load_4bus_net_oc_doc) = 1.00  (info threshold >= 0.97)\n'load_4bus_net' (line 12) and 'load_4bus_net_oc_doc' (line 66) share 100% structural similarity.\nVerify whether the divergence is intentional.",
+    "line": 12,
+    "score": 0.9971830985915493
+   },
+   {
+    "category": "structural",
+    "message": "Almost identical functions in pandapower/protection/example_grids.py",
+    "detail": "SD(load_4bus_net, doc_relay_net) = 1.00  'load_4bus_net' (line 12) and 'doc_relay_net' (line 927) are 100% structurally identical.\nThese two blocks of code are almost identical - is this the intended design?\nConsider extracting shared logic into a single reusable function.",
+    "line": 12,
+    "score": 1.0
+   },
+   {
+    "category": "structural",
+    "message": "High structural similarity in pandapower/protection/example_grids.py",
+    "detail": "SD(load_4bus_net_oc_doc, doc_relay_net) = 1.00  (info threshold >= 0.97)\n'load_4bus_net_oc_doc' (line 66) and 'doc_relay_net' (line 927) share 100% structural similarity.\nVerify whether the divergence is intentional.",
+    "line": 66,
+    "score": 0.9971830985915493
+   },
+   {
+    "category": "structural",
+    "message": "High structural similarity in pandapower/protection/example_grids.py",
+    "detail": "SD(load_6bus_net_non_directional, load_6bus_net_directional) = 0.99  (info threshold >= 0.97)\n'load_6bus_net_non_directional' (line 295) and 'load_6bus_net_directional' (line 393) share 99% structural similarity.\nVerify whether the divergence is intentional.",
+    "line": 295,
+    "score": 0.9883614489342226
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in pandapower/protection/oc_relay_model.py",
+    "detail": "[scope: function:oc_parameters]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 164,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/protection/oc_relay_model.py",
+    "detail": "[scope: function:oc_parameters]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 172,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/protection/oc_relay_model.py",
+    "detail": "[scope: function:time_grading]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 313,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "74abfd14154c33124feb3c755e4bf687829b4f5d",
+  "date": "2022-11-17",
+  "subject": "works",
+  "py": [
+   "pandapower/contingency/contingency.py"
+  ],
+  "parent": "b9438d71db1a140f6ac8c47b321e059d7e298f91",
+  "seconds": 1.491,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:26: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:100: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:129: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:371: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:477: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:541: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:609: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:671: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:732: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 9,
+  "removed": 4,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/contingency/contingency.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "c31bb6d63cfc210213c01b70445d4527267fb490",
+  "date": "2023-04-12",
+  "subject": "try with julia 1.8 (#1970)",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "4e34b4bb2d5dfc5b0f2417ebe4289eeaa33b5d34",
+  "seconds": 1.998,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/grid_equivalents/rei_generation.py:264: SyntaxWarning: invalid escape sequence '\\d'\npandapower/pf/create_jacobian_tdpf.py:31: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:105: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:134: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:376: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:482: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:546: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:614: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:676: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:737: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 4,
+  "removed": 4,
+  "items": []
+ },
+ {
+  "sha": "66d56e72b8598cdfaea349e1a1ec88282159c75a",
+  "date": "2023-08-07",
+  "subject": "0.7.3 finish test_oc_relay",
+  "py": [
+   "pandapower/protection/protection_devices/ocrelay.py",
+   "pandapower/test/protection/test_oc_relay.py"
+  ],
+  "parent": "279923e1e1884a9ac732afa3ec9e95eb1e0db081",
+  "seconds": 2.653,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/grid_equivalents/rei_generation.py:264: SyntaxWarning: invalid escape sequence '\\d'\npandapower/pf/create_jacobian_tdpf.py:31: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:105: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:134: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:376: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:482: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:546: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:614: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:676: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:737: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 85,
+  "removed": 78,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/protection/protection_devices/ocrelay.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/control/util/characteristic.py\n  - pandapower/protection/basic_protection_device.py\n  - pandapower/auxiliary.py\n  - pandapower/shortcircuit/__init__.py\n  - pandapower/protection/oc_relay_model.py\n  - pandapower/protection/utility_functions.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/protection/test_oc_relay.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/control/__init__.py\n  - pandapower/protection/protection_devices/fuse.py\n  - pandapower/protection/run_protection.py\n  - pandapower/shortcircuit/__init__.py\n  - pandapower/test/helper_functions.py\n  - pandapower/protection/utility_functions.py\n  - pandapower/protection/oc_relay_model.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "7ee6d904dbbff8898ce4ff7c7293be08783f5f2a",
+  "date": "2024-04-24",
+  "subject": "finished shunt conversions",
+  "py": [
+   "pandapower/converter/powerfactory/pp_import_functions.py"
+  ],
+  "parent": "60bd2aa3504d36f96e42567f2457871b95a62532",
+  "seconds": 3.443,
+  "returncode": 0,
+  "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/grid_equivalents/rei_generation.py:264: SyntaxWarning: invalid escape sequence '\\d'\npandapower/pf/create_jacobian_tdpf.py:31: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:105: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:134: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:376: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:482: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:546: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:614: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:676: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:737: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 17,
+  "removed": 12,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/converter/powerfactory/pp_import_functions.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/auxiliary.py\n  - pandapower/control/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/converter/powerfactory/pp_import_functions.py",
+    "detail": "[scope: function:create_shunt]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 2523,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 4 in pandapower/converter/powerfactory/pp_import_functions.py",
+    "detail": "[scope: function:create_shunt]\nBare literal 4 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 2537,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1e-06 in pandapower/converter/powerfactory/pp_import_functions.py",
+    "detail": "[scope: function:create_shunt]\nBare literal 1e-06 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 2543,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 1e-06 in pandapower/converter/powerfactory/pp_import_functions.py",
+    "detail": "[scope: function:create_shunt]\nBare literal 1e-06 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 2544,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "a76f1992c333bb3390a071aae3ccdf3a91081260",
+  "date": "2024-09-08",
+  "subject": "Replacing deprecated in1d with isin",
+  "py": [
+   "pandapower/build_branch.py",
+   "pandapower/pf/run_bfswpf.py",
+   "pandapower/shortcircuit/ppc_conversion.py",
+   "pandapower/shortcircuit/toolbox.py",
+   "pandapower/test/loadflow/test_results.py",
+   "pandapower/topology/create_graph.py"
+  ],
+  "parent": "11af12cd3db5a85135c7c022e8f5ac2e7a5b4086",
+  "seconds": 3.261,
+  "returncode": 0,
+  "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 14,
+  "removed": 14,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/build_branch.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/pd2ppc.py  (uses _branches_with_oos_buses)\n  - pandapower/pd2ppc_zero.py  (uses _branches_with_oos_buses)\nFiles this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/auxiliary.py\n  - pandapower/pypower/idx_brch.py\n  - pandapower/pypower/idx_brch_dc.py\n  - pandapower/pypower/idx_brch_tdpf.py\n  - pandapower/pypower/idx_brch_sc.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/pypower/idx_bus_dc.py\n  - pandapower/pypower/idx_bus_sc.py\n  - pandapower/pypower/idx_tcsc.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/pf/run_bfswpf.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/pypower/idx_brch.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/pypower/idx_gen.py\n  - pandapower/pypower/makeSbus.py\n  - pandapower/auxiliary.py\n  - pandapower/pypower/bustypes.py\n  - pandapower/pypower/newtonpf.py\n  - pandapower/pypower/pfsoln.py\n  - pandapower/pf/run_newton_raphson_pf.py\n  - pandapower/pf/runpf_pypower.py\n  - pandapower/pf/ppci_variables.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/shortcircuit/ppc_conversion.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/shortcircuit/calc_sc.py  (uses _get_is_ppci_bus)\nFiles this file imports or opens (not in the diff):\n  - pandapower/pd2ppc.py\n  - pandapower/auxiliary.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/pypower/idx_brch.py\n  - pandapower/pypower/idx_bus_sc.py\n  - pandapower/pypower/idx_brch_sc.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/shortcircuit/toolbox.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/test/shortcircuit/test_iec60909_4.py  (uses detect_power_station_unit)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/__init__.py\n  - pandapower/topology/__init__.py\n  - pandapower/shortcircuit/__init__.py\n  - pandapower/create.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/pypower/idx_brch.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/loadflow/test_results.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/control/__init__.py\n  - pandapower/test/consistency_checks.py\n  - pandapower/test/loadflow/result_test_network_generator.py\n  - pandapower/test/helper_functions.py\n  - pandapower/test/conftest.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/topology/create_graph.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/protection/utility_functions.py  (uses create_nxgraph)\n  - pandapower/topology/graph_searches.py  (uses create_nxgraph)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/build_bus.py\n  - pandapower/pd2ppc.py\n  - pandapower/pf/makeYbus_facts.py\n  - pandapower/pypower/idx_bus.py\n  - pandapower/topology/graph_tool_interface.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/pf/run_bfswpf.py",
+    "detail": "[scope: function:_make_bibc_bcbv]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 44,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/pf/run_bfswpf.py",
+    "detail": "[scope: function:_bfswpf]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 249,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "7cade729e093c085fb2f117e1b9a1f0a4fa425f8",
+  "date": "2024-11-22",
+  "subject": "address Mario's comments; update create.py lib for trafo/trafo3w parameter changes",
+  "py": [
+   "pandapower/control/util/auxiliary.py",
+   "pandapower/converter/cim/cim2pp/converter_classes/shunts/linearShuntCompensatorCim16.py",
+   "pandapower/converter/cim/cim2pp/converter_classes/shunts/nonLinearShuntCompensatorCim16.py",
+   "pandapower/converter/cim/cim2pp/converter_classes/shunts/staticVarCompensatorCim16.py",
+   "pandapower/converter/cim/cim2pp/converter_classes/transformers/powerTransformersCim16.py",
+   "pandapower/converter/cim/cim_tools.py",
+   "pandapower/converter/cim/pp_tools.py",
+   "pandapower/create.py",
+   "pandapower/std_types.py",
+   "pandapower/test/control/test_tap_dependent_impedance.py"
+  ],
+  "parent": "ad1c6a07535160e46facf43b41c749f778ad6d06",
+  "seconds": 9.717,
+  "returncode": 0,
+  "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 199,
+  "removed": 344,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/control/util/auxiliary.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/control/util/characteristic.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/converter/cim/cim2pp/converter_classes/shunts/linearShuntCompensatorCim16.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/converter/cim/cim2pp/build_pp_net.py\n  - pandapower/converter/cim/other_classes.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/converter/cim/cim2pp/converter_classes/shunts/nonLinearShuntCompensatorCim16.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/converter/cim/cim2pp/build_pp_net.py\n  - pandapower/converter/cim/other_classes.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/converter/cim/cim2pp/converter_classes/shunts/staticVarCompensatorCim16.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/converter/cim/cim2pp/build_pp_net.py\n  - pandapower/converter/cim/other_classes.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/converter/cim/cim2pp/converter_classes/transformers/powerTransformersCim16.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/converter/cim/cim2pp/build_pp_net.py\n  - pandapower/converter/cim/other_classes.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/converter/cim/cim_tools.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/converter/cim/cim2pp/build_pp_net.py  (uses extend_pp_net_cim)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/converter/cim/pp_tools.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/converter/cim/cim2pp/build_pp_net.py  (uses set_pp_col_types)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/create.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/convert_format.py  (uses create_empty_network)\n  - pandapower/converter/pypower/from_ppc.py  (uses create_empty_network, create_transformers_from_parameters)\n  - pandapower/file_io.py  (uses create_empty_network)\n  - pandapower/groups.py  (uses create_empty_network)\n  - pandapower/io_utils.py  (uses create_empty_network)\n  - pandapower/toolbox/data_modification.py  (uses create_empty_network)\n  - pandapower/toolbox/grid_modification.py  (uses create_empty_network)\nFiles this file imports or opens (not in the diff):\n  - pandapower/_version.py\n  - pandapower/auxiliary.py\n  - pandapower/results.py\n  - pandapower/toolbox/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/test/control/test_tap_dependent_impedance.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/control/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "No functional change in pandapower/test/control/test_tap_dependent_impedance.py",
+    "detail": "1 hunk(s): 0 layout/whitespace only, 1 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "26dbbb02a38a27213780dd6a097f0b1d2ed17b67",
+  "date": "2024-11-25",
+  "subject": "fixed formatting issues switched to f-strings instead of % notation added some type hints and docstrings",
+  "py": [
+   "pandapower/converter/powerfactory/pp_import_functions.py"
+  ],
+  "parent": "d8486f6ad5381fcb469d06d3ff0e8a0599755068",
+  "seconds": 7.558,
+  "returncode": 0,
+  "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\n",
+  "added": 152,
+  "removed": 91,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/converter/powerfactory/pp_import_functions.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/converter/powerfactory/export_pfd_to_pp.py  (uses from_pf)\n  - pandapower/converter/powerfactory/main_pf.py  (uses from_pf)\nFiles this file imports or opens (not in the diff):\n  - pandapower/__init__.py\n  - pandapower/results.py\n  - pandapower/auxiliary.py\n  - pandapower/control/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 3 in pandapower/converter/powerfactory/pp_import_functions.py",
+    "detail": "[scope: function:create_sgen_genstat]\nBare literal 3 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 1958,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "92e78c0a810792a46734dc5bddc1b36963726e1f",
+  "date": "2024-12-20",
+  "subject": "panos comment, change not necessary",
+  "py": [
+   "pandapower/convert_format.py"
+  ],
+  "parent": "85bf778ecb96398b4869b84424e00e9113d20377",
+  "seconds": 1.904,
+  "returncode": 0,
+  "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\npandapower/auxiliary.py:1277: SyntaxWarning: invalid escape sequence '\\p'\n",
+  "added": 3,
+  "removed": 4,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/convert_format.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/_version.py\n  - pandapower/create.py\n  - pandapower/plotting/geo.py\n  - pandapower/results.py\n  - pandapower/control/__init__.py\n  - pandapower/toolbox/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 90 in pandapower/convert_format.py",
+    "detail": "[scope: function:convert_trafo_pst_logic]\nBare literal 90 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 574,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 90 in pandapower/convert_format.py",
+    "detail": "[scope: function:convert_trafo_pst_logic]\nBare literal 90 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 579,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "cb967fec9880a845cd9a459f9d648528c0a4c2e1",
+  "date": "2025-02-06",
+  "subject": "Update convert_measurements.py",
+  "py": [
+   "pandapower/converter/cim/cim2pp/convert_measurements.py"
+  ],
+  "parent": "cc87ca97a60e5dd522964a7f8caf3212409d0186",
+  "seconds": 2.098,
+  "returncode": 0,
+  "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\npandapower/auxiliary.py:1290: SyntaxWarning: invalid escape sequence '\\p'\n",
+  "added": 1,
+  "removed": 1,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/converter/cim/cim2pp/convert_measurements.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/converter/cim/cim2pp/build_pp_net.py  (uses CreateMeasurements)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/converter/cim/cim_tools.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "7a09ae953adef07870b8c6c557c210b9fe97add0",
+  "date": "2025-07-29",
+  "subject": "added a source_dc object to pandapower",
+  "py": [
+   "pandapower/pypower/idx_source_dc.py"
+  ],
+  "parent": "9560ce994c33ea291d6a5e2e0239eef6ae962c15",
+  "seconds": 1.665,
+  "returncode": 0,
+  "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:2281: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:3669: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:3888: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:4377: SyntaxWarning: invalid escape sequence '\\*'\n",
+  "added": 90,
+  "removed": 0,
+  "items": []
+ },
+ {
+  "sha": "dd3f6166d4443043a8e7e5baa0c862a6cb18a774",
+  "date": "2025-09-12",
+  "subject": "Plotting map, add 'zoomlevel' parameter to vlevel and pf_res",
+  "py": [
+   "pandapower/plotting/plotly/pf_res_plotly.py",
+   "pandapower/plotting/plotly/traces.py",
+   "pandapower/plotting/plotly/vlevel_plotly.py"
+  ],
+  "parent": "eb9687b4c6e468144f01dfaaa7899b85ecf29952",
+  "seconds": 1.852,
+  "returncode": 0,
+  "stderr": "",
+  "added": 13,
+  "removed": 8,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/plotly/pf_res_plotly.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/run.py\n  - pandapower/plotting/generic_geodata.py\n  - pandapower/plotting/plotly/mapbox_plot.py\n  - pandapower/plotting/geo.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/plotly/traces.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/plotting/plotly/simple_plotly.py  (uses draw_traces)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/plotting/plotly/get_colors.py\n  - pandapower/plotting/plotly/mapbox_plot.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'pandapower/plotting/plotly/vlevel_plotly.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - pandapower/plotting/generic_geodata.py\n  - pandapower/plotting/plotly/get_colors.py\n  - pandapower/plotting/geo.py\n  - pandapower/topology/__init__.py\n  - pandapower/plotting/plotly/simple_plotly.py\n  - pandapower/networks/mv_oberrhein.py\n  - pandapower/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 11 in pandapower/plotting/plotly/traces.py",
+    "detail": "[scope: function:draw_traces]\nBare literal 11 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 1167,
+    "score": null
+   }
+  ]
+ }
+]

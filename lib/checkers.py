@@ -215,18 +215,62 @@ class LifecycleChecker:
                 closed.add(call.func.value.id)
         return closed
 
-    def check(self, source: str, filename: str) -> list:
+    # Calls whose handle must be closed even if the result is not bound
+    UNBOUND_LEAK_CALLS = {"mkstemp", "socket", "TemporaryFile",
+                          "NamedTemporaryFile", "SpooledTemporaryFile"}
+
+    def _transferred(self, tree) -> set[str]:
+        """Names whose ownership leaves the scope (returned / yielded /
+        stored on an attribute) - the caller is responsible for release."""
+        out: set[str] = set()
+        for node in ast.walk(tree):
+            if isinstance(node, (ast.Return, ast.Yield, ast.YieldFrom)) and node.value is not None:
+                vals = node.value.elts if isinstance(node.value, (ast.Tuple, ast.List)) else [node.value]
+                for n in vals:
+                    if isinstance(n, ast.Name):
+                        out.add(n.id)
+            elif isinstance(node, ast.Assign) and isinstance(node.value, ast.Name):
+                if any(isinstance(t, (ast.Attribute, ast.Subscript)) for t in node.targets):
+                    out.add(node.value.id)
+        return out
+
+    def _unbound(self, tree) -> list:
+        """Resource calls whose result is never bound to a name, e.g.
+        tempfile.mkstemp()[1] which leaks the OS-level file descriptor."""
+        parents = {}
+        for n in ast.walk(tree):
+            for ch in ast.iter_child_nodes(n):
+                parents[ch] = n
+        found = []
+        for n in ast.walk(tree):
+            if isinstance(n, ast.Call) and self._call_name(n) in self.UNBOUND_LEAK_CALLS:
+                p = parents.get(n)
+                if isinstance(p, (ast.Subscript, ast.Attribute, ast.Expr)) or \
+                        (isinstance(p, ast.Call) and n is not p.func) or isinstance(p, ast.BinOp):
+                    found.append((getattr(n, "lineno", None), self._call_name(n)))
+        return found
+
+    def check(self, source: str, filename: str, context_source: str = None) -> list:
+        """context_source: when the fragment being checked is part of a larger
+        scope (e.g. one module-level statement), release calls and later
+        usages are looked up in the full context, not just the fragment."""
         items = []
         try:
             tree = ast.parse(source)
         except SyntaxError:
             return items
+        ctx_tree = tree
+        if context_source is not None:
+            try:
+                ctx_tree = ast.parse(context_source)
+            except SyntaxError:
+                ctx_tree = tree
 
-        cm_names   = self._cm_class_names(tree)
+        cm_names   = self._cm_class_names(ctx_tree) | self._cm_class_names(tree)
         with_lines = self._with_managed_lines(tree)
         resources  = self._collect_resources(tree, cm_names, with_lines)
 
-        closed  = self._collect_closed(tree)
+        closed  = self._collect_closed(ctx_tree) | self._transferred(ctx_tree)
         managed = {
             v for v, (ln, cn, iw) in resources.items()
             if iw or v in closed
@@ -236,6 +280,7 @@ class LifecycleChecker:
         r_count  = len(resources)
         o_count  = len(managed)
         lc_score = o_count / r_count if r_count > 0 else 1.0
+        lc_line  = (f"LC_score = |O| / |R| = {o_count} / {r_count} = {lc_score:.2f}")
 
         # unmanaged resources
         for var, (ln, cn, _) in unmanaged.items():
@@ -257,14 +302,14 @@ class LifecycleChecker:
             items.append(ChecklistItem(
                 category="lifecycle",
                 message=f"Unmanaged resource '{var}' in {filename}",
-                detail=detail,
+                detail=detail + "\n" + lc_line,
                 line=ln, score=lc_score,
             ))
 
-        # Warnings: dead handles (U_y)
+        # Warnings: dead handles (U_y) - usages are counted in the full context
         for var, (ln, cn, _) in resources.items():
             load_count = sum(
-                1 for node in ast.walk(tree)
+                1 for node in ast.walk(ctx_tree)
                 if isinstance(node, ast.Name)
                 and node.id == var
                 and isinstance(node.ctx, ast.Load)
@@ -281,13 +326,24 @@ class LifecycleChecker:
                     line=ln, score=lc_score,
                 ))
 
-        # Info: LC score summary
-        if r_count > 0 and lc_score < 1.0:
+        # Unbound resource handles
+        for ln, cn in self._unbound(tree):
+            items.append(ChecklistItem(
+                category="lifecycle",
+                message=f"Unreleasable resource from '{cn}()' in {filename}",
+                detail=(f"The handle returned by '{cn}()' at line {ln} is never bound to a name,\n"
+                        f"so it can never be closed (e.g. mkstemp() returns an open file descriptor).\n"
+                        f"Bind it and close it, or use a context manager."),
+                line=ln,
+            ))
+
+        # Info: LC score summary - only when it adds information (>1 resource)
+        if r_count > 1 and lc_score < 1.0:
             items.append(ChecklistItem(
                 category="lifecycle",
                 message=f"Lifecycle completeness: {lc_score:.0%} in {filename}",
                 detail=(
-                    f"LC_score = |O| / |R| = {o_count} / {r_count} = {lc_score:.2f}\n"
+                    f"{lc_line}\n"
                     f"  R (declared resources): {list(resources)}\n"
                     f"  O (properly managed):   {list(managed)}\n"
                     f"  Unmanaged:              {list(unmanaged)}"
@@ -401,6 +457,12 @@ class NameSimilarityChecker:
                     for v in unique
                 )
                 if not has_style_diff:
+                    continue
+                # '_x' vs 'x' is the private/public convention, not a typo
+                if len({v.lstrip("_") for v in unique}) == 1:
+                    continue
+                # 'Vehicle' vs 'vehicle' is a class (alias) vs an instance
+                if len({v[:1].lower() + v[1:] for v in unique}) == 1:
                     continue
 
                 frozen = frozenset(unique)
@@ -526,63 +588,98 @@ class MagicNumberChecker:
     Detects bare numeric literals used directly in expressions - "magic numbers"
     - whose meaning is not self-evident from context.
 
-    A literal is flagged when:
-      - It is an integer or float constant
-      - It is NOT 0, 1, -1, 2, or 100 (universally understood sentinels)
-      - It is NOT the sole value in a simple assignment  (x = 42  is fine;
-        the name provides context)
-      - It appears inside an expression: comparison, arithmetic, function call
-        argument, return value, or list/dict/set literal
+    A literal is NOT flagged when its meaning is documented by its context:
+      - it is 0, 1, -1, 2, 100, 0.5 (universally understood values)
+      - it is the sole value of a simple assignment       x = 42
+      - it is the value of a keyword argument or a parameter default
+                                                          f(tol=1e-8), def f(n=3)
+      - it is an element of a numeric data display holding >= 3 numbers
+                                                          [0.4, 0.11, 240]
+      - it is compared against a version                  sys.version_info >= (3, 8)
 
-    In safety-critical code, magic numbers make intent opaque and make the
-    code fragile to specification changes.  Named constants (MAX_RETRIES = 5)
-    or enum members are the preferred alternative.
+    Diff mode (changed_lines given): literals are reported when they are on a
+    changed line.  On unchanged lines of a modified scope only comparison
+    operands (x == 3, v > 70) are reported, because a bare code in a
+    condition is the most common place where a named constant was intended.
 
     Severity: INFO (not always wrong, but always worth a reviewer glance).
     """
 
-    # Numeric values so common they carry obvious meaning everywhere
     _TRIVIAL = {0, 1, -1, 2, 100, 0.0, 1.0, -1.0, 0.5}
 
-    def check(self, source: str, filename: str) -> list:
+    @staticmethod
+    def _is_num(n) -> bool:
+        return isinstance(n, ast.Constant) and isinstance(n.value, (int, float)) \
+            and not isinstance(n.value, bool)
+
+    def _context(self, node, parents) -> str:
+        child, p = node, parents.get(node)
+        if isinstance(p, ast.UnaryOp):
+            child, p = p, parents.get(p)
+        if isinstance(p, (ast.keyword, ast.arguments)):
+            return "named"
+        q = p
+        while isinstance(q, (ast.Tuple, ast.List, ast.Set, ast.Dict, ast.UnaryOp)):
+            if sum(1 for n in ast.walk(q) if self._is_num(n)) >= 3:
+                return "data"
+            q = parents.get(q)
+        if isinstance(q, ast.keyword):
+            return "named"
+        if isinstance(q, ast.Compare) and "version" in ast.unparse(q).lower():
+            return "version"
+        if isinstance(p, ast.Compare):
+            return "compare"
+        return "expr"
+
+    def check(self, source: str, filename: str, changed_lines: set = None) -> list:
         items = []
         try:
             tree = ast.parse(source)
         except SyntaxError:
             return items
 
-        # Build set of line numbers that are simple named assignments (x = <literal>)
+        parents = {}
+        for n in ast.walk(tree):
+            for ch in ast.iter_child_nodes(n):
+                parents[ch] = n
+
         simple_assign_lines: set[int] = set()
         for node in ast.walk(tree):
             if isinstance(node, ast.Assign):
                 if (len(node.targets) == 1
                         and isinstance(node.targets[0], ast.Name)
-                        and isinstance(node.value, ast.Constant)
-                        and isinstance(node.value.value, (int, float))):
+                        and isinstance(node.value, (ast.Constant, ast.UnaryOp))
+                        and (self._is_num(node.value) or self._is_num(getattr(node.value, "operand", None)))):
                     simple_assign_lines.add(node.lineno)
-            # Also exempt augmented assignments: x += 1
+            elif isinstance(node, ast.AnnAssign) and node.value is not None and self._is_num(node.value):
+                simple_assign_lines.add(node.lineno)
             elif isinstance(node, ast.AugAssign):
                 if isinstance(node.value, ast.Constant):
                     simple_assign_lines.add(node.lineno)
 
         seen_lines: set[int] = set()
         for node in ast.walk(tree):
-            if not isinstance(node, ast.Constant):
+            if not self._is_num(node):
                 continue
             val = node.value
-            if not isinstance(val, (int, float)) or isinstance(val, bool):
-                continue
             if val in self._TRIVIAL:
                 continue
             ln = getattr(node, "lineno", None)
             if ln is None or ln in simple_assign_lines or ln in seen_lines:
                 continue
+            ctx = self._context(node, parents)
+            if ctx in ("named", "data", "version"):
+                continue
+            on_changed = changed_lines is None or ln in changed_lines
+            if not on_changed and ctx != "compare":
+                continue
             seen_lines.add(ln)
+            note = "" if on_changed else "\n(Unchanged line inside the modified scope - comparison operand.)"
             items.append(ChecklistItem(
                 category="magic",
                 message=f"Magic number {val!r} in {filename}",
                 detail=(f"Bare literal {val!r} - intent is not self-evident.\n"
-                        f"Named constants improve readability and make future changes safer."),
+                        f"Named constants improve readability and make future changes safer.{note}"),
                 line=ln,
             ))
         return items
@@ -595,23 +692,25 @@ class StructuralDivergenceChecker:
 
       B_i, B_j  - normalised token sequences (AST unparse of body, docstring stripped)
       LCS       - longest common subsequence (Ratcliff/Obershelp via SequenceMatcher)
-      2*        - normalises the result so the score sits between 0.0 and 1.0
-      SD(·) ∈ [0, 1];  1.0 = structurally identical
+      SD(.) in [0, 1];  1.0 = structurally identical
 
-    Thresholds:
-      SD ≥ 0.95  -> WARNING  ("almost identical - is this intended?")
+    Only meaningful pairs are compared:
+      - both blocks are of the same kind (function/function or class/class)
+      - neither block contains the other
+      - both bodies contain at least MIN_STATEMENTS statements once the
+        docstring is removed (empty stubs such as 'pass', 'None' or a single
+        delegating return are identical by construction, not by copy-paste)
 
-    Two comparison modes:
+    Thresholds: SD = 1.0 -> WARNING,  SD >= 0.97 -> INFO
 
-      check()          — compares all pairs in the file (used by --files / --all)
-      check_diff()     — only compares pairs where at least one block's name
-                         appears in diff_names, i.e. was touched by the diff
-                         (used by --diff). Pre-existing pairs that are both
-                         outside the diff are suppressed.
+      check()          - compares all pairs in the file (--files / --all)
+      check_diff()     - only pairs where at least one block contains a line
+                         of changed *code* (docstring/comment edits ignored)
     """
 
     WARN_THRESHOLD = 1
     INFO_THRESHOLD = 0.97
+    MIN_STATEMENTS = 2
     NAMING_SKIP = ["__init__", "__str__", "__repr__"]
 
     def _extract(self, tree) -> list:
@@ -619,35 +718,26 @@ class StructuralDivergenceChecker:
         for node in ast.walk(tree):
             if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
                 kind = "class" if isinstance(node, ast.ClassDef) else "function"
-                if node.name not in self.NAMING_SKIP:
-                    blocks.append((node.name, self._normalise(node), node.lineno, kind))
+                if node.name in self.NAMING_SKIP:
+                    continue
+                body = self._body(node)
+                if len(body) < self.MIN_STATEMENTS:
+                    continue
+                blocks.append((node.name, self._normalise(node), node.lineno, kind,
+                               getattr(node, "end_lineno", node.lineno)))
         return blocks
 
-    def _build_items(self, blocks: list, filename: str,
-                     diff_names: set = None) -> list:
-        """
-        Compare all block pairs and emit checklist items.
-
-        diff_names — if provided, at least one of the two block names in a
-                     flagged pair must appear in this set (diff-aware mode).
-        """
+    def _build_items(self, blocks: list, filename: str, touched_lines: set = None) -> list:
         items = []
-        seen: set = set()
-
-        for i, (na, ta, la, ka) in enumerate(blocks):
-            for j, (nb, tb, lb, kb) in enumerate(blocks):
-                if i >= j:
+        for i, (na, ta, la, ka, ea) in enumerate(blocks):
+            for j, (nb, tb, lb, kb, eb) in enumerate(blocks):
+                if i >= j or ka != kb:
                     continue
-                pair = (i, j)
-                if pair in seen:
+                if (la <= lb <= ea) or (lb <= la <= eb):   # nested
                     continue
-                seen.add(pair)
-
-                # Diff-aware gate: skip if neither block was touched by the diff
-                if diff_names is not None:
-                    if na not in diff_names and nb not in diff_names:
+                if touched_lines is not None:
+                    if not any(la <= t <= ea or lb <= t <= eb for t in touched_lines):
                         continue
-
                 score = self._sd(ta, tb)
                 if score >= self.WARN_THRESHOLD:
                     items.append(ChecklistItem(
@@ -669,7 +759,7 @@ class StructuralDivergenceChecker:
                         message=f"High structural similarity in {filename}",
                         detail=(
                             f"SD({na}, {nb}) = {score:.2f}  "
-                            f"(info threshold ≥ {self.INFO_THRESHOLD})\n"
+                            f"(info threshold >= {self.INFO_THRESHOLD})\n"
                             f"'{na}' (line {la}) and '{nb}' (line {lb}) "
                             f"share {score*100:.0f}% structural similarity.\n"
                             f"Verify whether the divergence is intentional."
@@ -679,31 +769,30 @@ class StructuralDivergenceChecker:
         return items
 
     def check(self, source: str, filename: str) -> list:
-        """Full-file mode."""
         try:
             tree = ast.parse(source)
         except SyntaxError:
             return []
-        return self._build_items(self._extract(tree), filename, diff_names=None)
+        return self._build_items(self._extract(tree), filename)
 
-    def check_diff(self, source: str, filename: str, diff_names: set) -> list:
-        """
-        Diff-aware mode: only report pairs where at least one block's name
-        appears in the set of identifiers touched by the diff.
-        """
+    def check_diff(self, source: str, filename: str, touched_lines: set) -> list:
         try:
             tree = ast.parse(source)
         except SyntaxError:
             return []
-        return self._build_items(self._extract(tree), filename, diff_names=diff_names)
+        return self._build_items(self._extract(tree), filename, touched_lines=touched_lines)
 
     @staticmethod
-    def _normalise(node) -> str:
+    def _body(node) -> list:
         body = list(node.body) if hasattr(node, "body") else []
         if body and isinstance(body[0], ast.Expr) and isinstance(body[0].value, ast.Constant):
             body = body[1:]
+        return body
+
+    @classmethod
+    def _normalise(cls, node) -> str:
         try:
-            return "\n".join(ast.unparse(s) for s in body)
+            return "\n".join(ast.unparse(s) for s in cls._body(node))
         except Exception:
             return ""
 
@@ -716,7 +805,61 @@ class StructuralDivergenceChecker:
 # ------------------------------------------------------------------------------------------------
 
 class InjectionRiskChecker:
-    RISKY = {"eval", "exec", "compile", "__import__", "pickle", "loads"}
+    """
+    Flags runtime evaluation and unsafe deserialisation:
+      - builtins eval / exec / compile (bare names only; re.compile is fine)
+      - __import__ / importlib.import_module with a non-constant module name
+      - pickle / cPickle / dill / cloudpickle / marshal / shelve / jsonpickle
+        load(s), whether called qualified or imported bare
+      - yaml.load without an explicit SafeLoader / BaseLoader
+      - json.load(s) only when a custom decoder or object hook is supplied
+        (plain JSON parsing cannot execute code; a custom hook may)
+    """
+    _BUILTIN_EVAL = {"eval", "exec", "compile"}
+    _UNSAFE_MODULES = {"pickle", "cPickle", "_pickle", "dill", "cloudpickle",
+                       "marshal", "shelve", "jsonpickle"}
+    _HOOK_KWARGS = {"cls", "object_hook", "object_pairs_hook"}
+
+    def _imported_from(self, tree) -> dict:
+        out = {}
+        for n in ast.walk(tree):
+            if isinstance(n, ast.ImportFrom) and n.module:
+                for a in n.names:
+                    out[a.asname or a.name] = n.module.split(".")[0]
+            elif isinstance(n, ast.Import):
+                for a in n.names:
+                    out[a.asname or a.name.split(".")[0]] = a.name.split(".")[0]
+        return out
+
+    def _reason(self, node, origin) -> Optional[str]:
+        f = node.func
+        if isinstance(f, ast.Name):
+            name, qual = f.id, None
+            mod = origin.get(name)
+        elif isinstance(f, ast.Attribute):
+            name = f.attr
+            qual = f.value.id if isinstance(f.value, ast.Name) else None
+            mod = origin.get(qual, qual)
+        else:
+            return None
+        kw = {k.arg for k in node.keywords}
+        if isinstance(f, ast.Name) and name in self._BUILTIN_EVAL and mod is None:
+            return f"'{name}()' evaluates code at runtime"
+        if name in ("__import__", "import_module"):
+            if node.args and not isinstance(node.args[0], ast.Constant):
+                return f"'{name}()' imports a module whose name is computed at runtime"
+            return None
+        if name in ("load", "loads", "Unpickler") and mod in self._UNSAFE_MODULES:
+            return f"'{mod}.{name}()' can execute code embedded in the data"
+        if name in ("load", "load_all") and mod in ("yaml", "ruamel"):
+            loader = [k for k in node.keywords if k.arg == "Loader"]
+            if not loader or "Safe" not in ast.unparse(loader[0].value) and "Base" not in ast.unparse(loader[0].value):
+                return "'yaml.load()' without SafeLoader can construct arbitrary objects"
+            return None
+        if name in ("load", "loads") and mod in ("json", "simplejson") and kw & self._HOOK_KWARGS:
+            hook = ", ".join(sorted(kw & self._HOOK_KWARGS))
+            return f"'json.{name}()' with a custom decoder ({hook}) - check what the hook may import or instantiate"
+        return None
 
     def check(self, source: str, filename: str) -> list:
         items = []
@@ -724,22 +867,20 @@ class InjectionRiskChecker:
             tree = ast.parse(source)
         except SyntaxError:
             return items
+        origin = self._imported_from(tree)
         for node in ast.walk(tree):
-            if isinstance(node, ast.Call):
-                name = None
-                if isinstance(node.func, ast.Name):
-                    name = node.func.id
-                elif isinstance(node.func, ast.Attribute):
-                    name = node.func.attr
-                if name in self.RISKY:
-                    items.append(ChecklistItem(
-                        category="injection",
-                        message=f"Runtime evaluation risk in {filename}",
-                        detail=(f"Call to '{name}()' at line {getattr(node,'lineno','?')} "
-                                f"introduces potential code injection or deserialisation risk. \n"
-                                f"Verify that no potential security risks are introduced here"),
-                        line=getattr(node, "lineno", None),
-                    ))
+            if not isinstance(node, ast.Call):
+                continue
+            why = self._reason(node, origin)
+            if why:
+                ln = getattr(node, "lineno", None)
+                items.append(ChecklistItem(
+                    category="injection",
+                    message=f"Runtime evaluation risk in {filename}",
+                    detail=(f"Call at line {ln}: {why}.\n"
+                            f"Verify the input is trusted or validated."),
+                    line=ln,
+                ))
         return items
 
 # ------------------------------------------------------------------------------------------------
