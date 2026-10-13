@@ -8,7 +8,7 @@
    "pandapower/test/test_file_io.py"
   ],
   "parent": "666b3e5654f3ec10c55af6e80e26f8029133ed73",
-  "seconds": 0.38,
+  "seconds": 0.481,
   "returncode": 0,
   "stderr": "doc/conf.py:196: SyntaxWarning: invalid escape sequence '\\ '\ndoc/report/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\ndoc/report/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\ndoc/report/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\npandapower/build_opf.py:75: SyntaxWarning: invalid escape sequence '\\{'\npandapower/create.py:725: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1115: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1319: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower_extensions/opf_model.py:283: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower_extensions/opf_model.py:514: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 18,
@@ -38,7 +38,7 @@
    "setup.py"
   ],
   "parent": "5c19e141b16876aa0102526a9481935b5a979807",
-  "seconds": 0.392,
+  "seconds": 0.421,
   "returncode": 0,
   "stderr": "doc/conf.py:196: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:839: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1261: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1470: SyntaxWarning: invalid escape sequence '\\*'\npandapower/make_objective.py:36: SyntaxWarning: invalid escape sequence '\\{'\npandapower/pypower_extensions/opf_model.py:283: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower_extensions/opf_model.py:514: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 3,
@@ -54,7 +54,7 @@
    "pandapower/plotting/plotly.py"
   ],
   "parent": "e1bff04c88638ca3734fdb2156de8d2812ae0ccc",
-  "seconds": 2.386,
+  "seconds": 2.672,
   "returncode": 0,
   "stderr": "doc/conf.py:205: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:803: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1219: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1439: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower_extensions/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower_extensions/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 534,
@@ -133,7 +133,7 @@
    "pandapower/auxiliary.py"
   ],
   "parent": "869e04f1c327e1df8d33c5355361f37b61ccac38",
-  "seconds": 0.83,
+  "seconds": 0.969,
   "returncode": 0,
   "stderr": "doc/conf.py:205: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:810: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1226: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1446: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 6,
@@ -157,7 +157,7 @@
    "pandapower/pd2ppc.py"
   ],
   "parent": "113b98e951f4dfba12884e9b8d7720dc7dffc5e7",
-  "seconds": 1.266,
+  "seconds": 1.718,
   "returncode": 0,
   "stderr": "doc/conf.py:205: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:810: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1226: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1446: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower_extensions/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower_extensions/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 85,
@@ -236,7 +236,7 @@
    "doc/conf.py"
   ],
   "parent": "a01c549cdb1de19f697dbb583e8621e872555f2b",
-  "seconds": 0.537,
+  "seconds": 0.736,
   "returncode": 0,
   "stderr": "doc/conf.py:204: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:822: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1238: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1458: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n<unknown>:204: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 1,
@@ -251,7 +251,7 @@
    "pandapower/html.py"
   ],
   "parent": "03f6dc63c03ac27e2b176c5d00c0eb21f00f8d21",
-  "seconds": 0.609,
+  "seconds": 0.777,
   "returncode": 0,
   "stderr": "doc/conf.py:205: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:877: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1295: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1515: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:288: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:519: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 1,
@@ -267,7 +267,7 @@
    "pandapower/test/converter/test_from_ppc.py"
   ],
   "parent": "7274a159439c1d45b9c202e92682c4cd04af6138",
-  "seconds": 0.519,
+  "seconds": 0.793,
   "returncode": 0,
   "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:883: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1311: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1539: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:288: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:519: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 2,
@@ -297,7 +297,7 @@
    "pandapower/toolbox.py"
   ],
   "parent": "eb5c7949859e1fc0dc407288a3f16bf111cb6492",
-  "seconds": 1.547,
+  "seconds": 1.977,
   "returncode": 0,
   "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:893: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1321: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1549: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:288: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:519: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 15,
@@ -320,7 +320,7 @@
    "pandapower/networks/simple_pandapower_test_networks.py"
   ],
   "parent": "8912a42c3c9a673b86800c5f17244738bde97968",
-  "seconds": 0.67,
+  "seconds": 0.648,
   "returncode": 0,
   "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:893: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1321: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1549: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:288: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:519: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 2,
@@ -344,7 +344,7 @@
    "pandapower/estimation/wls_ppc_conversions.py"
   ],
   "parent": "6902105f31aa50407f5250d33d6eb1241091e826",
-  "seconds": 0.699,
+  "seconds": 1.232,
   "returncode": 0,
   "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:928: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1360: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1591: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 8,
@@ -360,7 +360,7 @@
    {
     "category": "linkage",
     "message": "Linked files to 'pandapower/estimation/wls_ppc_conversions.py' - have they been checked?",
-    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/estimation/state_estimation.py  (uses _init_ppc)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/pd2ppc.py\n  - pandapower/estimation/idx_bus.py\n  - pandapower/estimation/idx_brch.py\n  - pandapower/idx_brch.py\n  - pandapower/idx_bus.py",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/estimation/state_estimation.py  (uses _add_measurements_to_ppc, _init_ppc)\nFiles this file imports or opens (not in the diff):\n  - pandapower/auxiliary.py\n  - pandapower/pd2ppc.py\n  - pandapower/estimation/idx_bus.py\n  - pandapower/estimation/idx_brch.py\n  - pandapower/idx_brch.py\n  - pandapower/idx_bus.py",
     "line": null,
     "score": null
    }
@@ -374,7 +374,7 @@
    "pandapower/plotting/collections.py"
   ],
   "parent": "219083f0bdd984e6d0c6191acb0f9a13c93bd874",
-  "seconds": 0.694,
+  "seconds": 1.082,
   "returncode": 0,
   "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:928: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1360: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1591: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 37,
@@ -399,7 +399,7 @@
    "pandapower/plotting/geo.py"
   ],
   "parent": "e3a190e943db6b1a3bba07470086666640ff13bf",
-  "seconds": 0.834,
+  "seconds": 1.017,
   "returncode": 0,
   "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:928: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1360: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1591: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 93,
@@ -443,7 +443,7 @@
    "pandapower/topology/graph_searches.py"
   ],
   "parent": "cc16c6cbe96eb80eabb832bbb5b2c369c9f58b4f",
-  "seconds": 0.674,
+  "seconds": 0.682,
   "returncode": 0,
   "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:958: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1404: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1646: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\nreport/latex_postprocessing.py:36: SyntaxWarning: invalid escape sequence '\\i'\nreport/latex_postprocessing.py:72: SyntaxWarning: invalid escape sequence '\\s'\nreport/latex_postprocessing.py:73: SyntaxWarning: invalid escape sequence '\\s'\n",
   "added": 8,
@@ -468,7 +468,7 @@
    "pandapower/topology/graph_searches.py"
   ],
   "parent": "65c13a37bd6c98328ed6ebc6c1f8b5bdfb977f4c",
-  "seconds": 0.677,
+  "seconds": 1.198,
   "returncode": 0,
   "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:965: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1422: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1665: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:20: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 58,
@@ -521,7 +521,7 @@
    "pandapower/test/shortcircuit/test_1ph.py"
   ],
   "parent": "0d5910ae58310a16ce3257945020d9b74e440a79",
-  "seconds": 0.705,
+  "seconds": 1.131,
   "returncode": 0,
   "stderr": "doc/conf.py:209: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1113: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1575: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1830: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:26: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 18,
@@ -586,7 +586,7 @@
    "pandapower/test/loadflow/test_runpp_3ph.py"
   ],
   "parent": "5a50b93c8c38467c21e9fb0d5a52bd047f41252e",
-  "seconds": 0.855,
+  "seconds": 1.109,
   "returncode": 0,
   "stderr": "doc/conf.py:203: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1371: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1835: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:2092: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:26: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 16,
@@ -611,7 +611,7 @@
    "pandapower/test/loadflow/test_scenarios.py"
   ],
   "parent": "de7788088ae857a401aca492d2ff8dff5cca5167",
-  "seconds": 1.883,
+  "seconds": 2.365,
   "returncode": 0,
   "stderr": "doc/conf.py:200: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1100: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1555: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1813: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1100: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1555: SyntaxWarning: invalid escape sequence '\\*'\n<unknown>:1813: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 176,
@@ -662,7 +662,7 @@
    "pandapower/estimation/estimator/wls_matrix_ops.py"
   ],
   "parent": "f29d71787edc270232750c59fed19b984cefe173",
-  "seconds": 0.839,
+  "seconds": 0.965,
   "returncode": 0,
   "stderr": "doc/conf.py:200: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1134: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1589: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1847: SyntaxWarning: invalid escape sequence '\\*'\npandapower/opf/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/opf/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 48,
@@ -687,7 +687,7 @@
    "pandapower/pypower/qps_pypower.py"
   ],
   "parent": "7537edc8879dcb1ad115d43c1667dd82b96bc226",
-  "seconds": 0.986,
+  "seconds": 0.968,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1134: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1603: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1851: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 2,
@@ -753,7 +753,7 @@
    "pandapower/pypower/gausspf.py"
   ],
   "parent": "332c1788b093d84919510f912e03a884461b4414",
-  "seconds": 0.793,
+  "seconds": 1.067,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1135: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1604: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1852: SyntaxWarning: invalid escape sequence '\\*'\npandapower/pypower/opf_model.py:282: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pypower/opf_model.py:513: SyntaxWarning: invalid escape sequence '\\ '\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 9,
@@ -784,7 +784,7 @@
    "pandapower/test/loadflow/test_runpp_3ph.py"
   ],
   "parent": "12fb7cca13f76a59a0223546d36f89a431b82a39",
-  "seconds": 1.642,
+  "seconds": 2.382,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1496: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1965: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:2213: SyntaxWarning: invalid escape sequence '\\*'\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 16,
@@ -829,7 +829,7 @@
    "pandapower/toolbox.py"
   ],
   "parent": "cf747b61a4b60dee9d6b92d2653112bfdd12a0a5",
-  "seconds": 3.27,
+  "seconds": 3.766,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1143: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1736: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1984: SyntaxWarning: invalid escape sequence '\\*'\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 171,
@@ -859,7 +859,7 @@
    "pandapower/plotting/collections.py"
   ],
   "parent": "7767720f4fdcf05bd785022a17db7b0ea366bac7",
-  "seconds": 1.137,
+  "seconds": 1.543,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:1274: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:1867: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:2115: SyntaxWarning: invalid escape sequence '\\*'\npandapower/std_types.py:28: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 14,
@@ -889,7 +889,7 @@
    "pandapower/toolbox.py"
   ],
   "parent": "1fa3a359643204b6ed4dd00bfebaae7e48df218f",
-  "seconds": 1.875,
+  "seconds": 2.388,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 16,
@@ -915,7 +915,7 @@
    "pandapower/test/shortcircuit/test_sgen.py"
   ],
   "parent": "dccfa702e813c201b27e35776c6828c2f771610d",
-  "seconds": 1.168,
+  "seconds": 1.29,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 12,
@@ -1004,7 +1004,7 @@
    "pandapower/test/estimation/test_wls_estimation.py"
   ],
   "parent": "5556534084b20ea6b7a9b6326de1e7da3acbbc66",
-  "seconds": 1.411,
+  "seconds": 1.806,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 11,
@@ -1055,7 +1055,7 @@
    "setup.py"
   ],
   "parent": "c06a1c22a54dc4d1691d0645adafbf1976e10fe2",
-  "seconds": 1.03,
+  "seconds": 0.9,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 1,
@@ -1081,7 +1081,7 @@
    "pandapower/plotting/plotly/vlevel_plotly.py"
   ],
   "parent": "1b85987696e67841abc00bd48e0e5ebf4f191bb1",
-  "seconds": 1.184,
+  "seconds": 1.457,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 21,
@@ -1132,7 +1132,7 @@
    "pandapower/control/controller/characteristic_controller.py"
   ],
   "parent": "a7fb133696c64ec493e717e9c6eb8c75db146491",
-  "seconds": 0.986,
+  "seconds": 1.226,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 42,
@@ -1163,7 +1163,7 @@
    "pandapower/test/api/test_file_io.py"
   ],
   "parent": "bbd50d069dd8ace071fad8e5f4a33e24df52ec0e",
-  "seconds": 1.205,
+  "seconds": 1.385,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 5,
@@ -1195,7 +1195,7 @@
    "pandapower/toolbox.py"
   ],
   "parent": "087a94569fb51e2f1479e21301f4576eb3c641df",
-  "seconds": 2.771,
+  "seconds": 3.85,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 78,
@@ -1246,7 +1246,7 @@
    "pandapower/control/basic_controller.py"
   ],
   "parent": "40bdc4058eba0c17a0638a8b04ddd2a0a862a4ee",
-  "seconds": 1.231,
+  "seconds": 1.235,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 1,
@@ -1269,7 +1269,7 @@
    "pandapower/plotting/plotly/simple_plotly.py"
   ],
   "parent": "fc10cac532157657e4ba424de02be101c7f8bcd1",
-  "seconds": 1.303,
+  "seconds": 1.466,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 26,
@@ -1292,7 +1292,7 @@
    "pandapower/test/api/test_file_io.py"
   ],
   "parent": "54f009252cd75374b019f7010c802b8e5e682d93",
-  "seconds": 1.369,
+  "seconds": 1.805,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 2,
@@ -1317,7 +1317,7 @@
    "pandapower/test/api/test_file_io.py"
   ],
   "parent": "5fb9d7409c21bb725ae8640a92f39939fa782de1",
-  "seconds": 2.025,
+  "seconds": 2.296,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 112,
@@ -1405,7 +1405,7 @@
    "pandapower/test/loadflow/test_tdpf.py"
   ],
   "parent": "f803666962668b5764a289cfe55ef9324da71556",
-  "seconds": 1.793,
+  "seconds": 2.264,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:26: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:100: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:129: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:371: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:477: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:541: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:609: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:671: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:732: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 59,
@@ -1451,7 +1451,7 @@
    "pandapower/std_types.py"
   ],
   "parent": "9eb78b22b45564cae0748f378f5957094fe26a13",
-  "seconds": 1.858,
+  "seconds": 2.306,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:26: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:100: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:129: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:371: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:477: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:541: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:609: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:671: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:732: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 47,
@@ -1517,7 +1517,7 @@
    "pandapower/test/protection/test_oc_relay_model.py"
   ],
   "parent": "3d06bc71ae5432650b5d50e1126e77ce4c8b0010",
-  "seconds": 7.494,
+  "seconds": 7.591,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:26: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:100: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:129: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:371: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:477: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:541: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:609: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:671: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:732: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 1082,
@@ -1554,7 +1554,7 @@
    {
     "category": "structural",
     "message": "High structural similarity in pandapower/protection/example_grids.py",
-    "detail": "SD(load_4bus_net, load_4bus_net_oc_doc) = 1.00  (info threshold >= 0.97)\n'load_4bus_net' (line 12) and 'load_4bus_net_oc_doc' (line 66) share 100% structural similarity.\nVerify whether the divergence is intentional.",
+    "detail": "SD(load_4bus_net, load_4bus_net_oc_doc) = 0.997  (info threshold >= 0.97)\n'load_4bus_net' (line 12) and 'load_4bus_net_oc_doc' (line 66) share 99.7% structural similarity (not identical).\nVerify whether the divergence is intentional.",
     "line": 12,
     "score": 0.9971830985915493
    },
@@ -1568,14 +1568,14 @@
    {
     "category": "structural",
     "message": "High structural similarity in pandapower/protection/example_grids.py",
-    "detail": "SD(load_4bus_net_oc_doc, doc_relay_net) = 1.00  (info threshold >= 0.97)\n'load_4bus_net_oc_doc' (line 66) and 'doc_relay_net' (line 927) share 100% structural similarity.\nVerify whether the divergence is intentional.",
+    "detail": "SD(load_4bus_net_oc_doc, doc_relay_net) = 0.997  (info threshold >= 0.97)\n'load_4bus_net_oc_doc' (line 66) and 'doc_relay_net' (line 927) share 99.7% structural similarity (not identical).\nVerify whether the divergence is intentional.",
     "line": 66,
     "score": 0.9971830985915493
    },
    {
     "category": "structural",
     "message": "High structural similarity in pandapower/protection/example_grids.py",
-    "detail": "SD(load_6bus_net_non_directional, load_6bus_net_directional) = 0.99  (info threshold >= 0.97)\n'load_6bus_net_non_directional' (line 295) and 'load_6bus_net_directional' (line 393) share 99% structural similarity.\nVerify whether the divergence is intentional.",
+    "detail": "SD(load_6bus_net_non_directional, load_6bus_net_directional) = 0.988  (info threshold >= 0.97)\n'load_6bus_net_non_directional' (line 295) and 'load_6bus_net_directional' (line 393) share 98.8% structural similarity (not identical).\nVerify whether the divergence is intentional.",
     "line": 295,
     "score": 0.9883614489342226
    },
@@ -1610,7 +1610,7 @@
    "pandapower/contingency/contingency.py"
   ],
   "parent": "b9438d71db1a140f6ac8c47b321e059d7e298f91",
-  "seconds": 1.491,
+  "seconds": 1.539,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:26: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:100: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:129: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:371: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:477: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:541: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:609: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:671: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:732: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 9,
@@ -1633,7 +1633,7 @@
    "setup.py"
   ],
   "parent": "4e34b4bb2d5dfc5b0f2417ebe4289eeaa33b5d34",
-  "seconds": 1.998,
+  "seconds": 1.846,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/grid_equivalents/rei_generation.py:264: SyntaxWarning: invalid escape sequence '\\d'\npandapower/pf/create_jacobian_tdpf.py:31: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:105: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:134: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:376: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:482: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:546: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:614: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:676: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:737: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 4,
@@ -1649,7 +1649,7 @@
    "pandapower/test/protection/test_oc_relay.py"
   ],
   "parent": "279923e1e1884a9ac732afa3ec9e95eb1e0db081",
-  "seconds": 2.653,
+  "seconds": 2.415,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/grid_equivalents/rei_generation.py:264: SyntaxWarning: invalid escape sequence '\\d'\npandapower/pf/create_jacobian_tdpf.py:31: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:105: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:134: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:376: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:482: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:546: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:614: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:676: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:737: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 85,
@@ -1679,7 +1679,7 @@
    "pandapower/converter/powerfactory/pp_import_functions.py"
   ],
   "parent": "60bd2aa3504d36f96e42567f2457871b95a62532",
-  "seconds": 3.443,
+  "seconds": 3.156,
   "returncode": 0,
   "stderr": "doc/conf.py:197: SyntaxWarning: invalid escape sequence '\\ '\npandapower/grid_equivalents/rei_generation.py:264: SyntaxWarning: invalid escape sequence '\\d'\npandapower/pf/create_jacobian_tdpf.py:31: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:105: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:134: SyntaxWarning: invalid escape sequence '\\T'\npandapower/pf/create_jacobian_tdpf.py:376: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:482: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:546: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:614: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:676: SyntaxWarning: invalid escape sequence '\\ '\npandapower/pf/create_jacobian_tdpf.py:737: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 17,
@@ -1735,7 +1735,7 @@
    "pandapower/topology/create_graph.py"
   ],
   "parent": "11af12cd3db5a85135c7c022e8f5ac2e7a5b4086",
-  "seconds": 3.261,
+  "seconds": 4.24,
   "returncode": 0,
   "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 14,
@@ -1816,7 +1816,7 @@
    "pandapower/test/control/test_tap_dependent_impedance.py"
   ],
   "parent": "ad1c6a07535160e46facf43b41c749f778ad6d06",
-  "seconds": 9.717,
+  "seconds": 12.427,
   "returncode": 0,
   "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 199,
@@ -1874,7 +1874,7 @@
    {
     "category": "linkage",
     "message": "Linked files to 'pandapower/create.py' - have they been checked?",
-    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/convert_format.py  (uses create_empty_network)\n  - pandapower/converter/pypower/from_ppc.py  (uses create_empty_network, create_transformers_from_parameters)\n  - pandapower/file_io.py  (uses create_empty_network)\n  - pandapower/groups.py  (uses create_empty_network)\n  - pandapower/io_utils.py  (uses create_empty_network)\n  - pandapower/toolbox/data_modification.py  (uses create_empty_network)\n  - pandapower/toolbox/grid_modification.py  (uses create_empty_network)\nFiles this file imports or opens (not in the diff):\n  - pandapower/_version.py\n  - pandapower/auxiliary.py\n  - pandapower/results.py\n  - pandapower/toolbox/__init__.py",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - pandapower/convert_format.py  (uses create_empty_network)\n  - pandapower/converter/pypower/from_ppc.py  (uses create_empty_network, create_impedances, create_transformers_from_parameters)\n  - pandapower/file_io.py  (uses create_empty_network)\n  - pandapower/groups.py  (uses create_empty_network)\n  - pandapower/io_utils.py  (uses create_empty_network)\n  - pandapower/toolbox/data_modification.py  (uses create_empty_network)\n  - pandapower/toolbox/grid_modification.py  (uses create_empty_network)\nFiles this file imports or opens (not in the diff):\n  - pandapower/_version.py\n  - pandapower/auxiliary.py\n  - pandapower/results.py\n  - pandapower/toolbox/__init__.py",
     "line": null,
     "score": null
    },
@@ -1902,7 +1902,7 @@
    "pandapower/converter/powerfactory/pp_import_functions.py"
   ],
   "parent": "d8486f6ad5381fcb469d06d3ff0e8a0599755068",
-  "seconds": 7.558,
+  "seconds": 9.841,
   "returncode": 0,
   "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\n",
   "added": 152,
@@ -1932,7 +1932,7 @@
    "pandapower/convert_format.py"
   ],
   "parent": "85bf778ecb96398b4869b84424e00e9113d20377",
-  "seconds": 1.904,
+  "seconds": 2.393,
   "returncode": 0,
   "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\npandapower/auxiliary.py:1277: SyntaxWarning: invalid escape sequence '\\p'\n",
   "added": 3,
@@ -1969,7 +1969,7 @@
    "pandapower/converter/cim/cim2pp/convert_measurements.py"
   ],
   "parent": "cc87ca97a60e5dd522964a7f8caf3212409d0186",
-  "seconds": 2.098,
+  "seconds": 2.236,
   "returncode": 0,
   "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\npandapower/auxiliary.py:1290: SyntaxWarning: invalid escape sequence '\\p'\n",
   "added": 1,
@@ -1992,7 +1992,7 @@
    "pandapower/pypower/idx_source_dc.py"
   ],
   "parent": "9560ce994c33ea291d6a5e2e0239eef6ae962c15",
-  "seconds": 1.665,
+  "seconds": 2.034,
   "returncode": 0,
   "stderr": "doc/conf.py:201: SyntaxWarning: invalid escape sequence '\\ '\npandapower/create.py:2281: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:3669: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:3888: SyntaxWarning: invalid escape sequence '\\*'\npandapower/create.py:4377: SyntaxWarning: invalid escape sequence '\\*'\n",
   "added": 90,
@@ -2009,7 +2009,7 @@
    "pandapower/plotting/plotly/vlevel_plotly.py"
   ],
   "parent": "eb9687b4c6e468144f01dfaaa7899b85ecf29952",
-  "seconds": 1.852,
+  "seconds": 2.667,
   "returncode": 0,
   "stderr": "",
   "added": 13,

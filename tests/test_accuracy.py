@@ -89,6 +89,27 @@ class TestFormatting(Case):
         self.assertNotIn("formatting", self.cats(items))
         self.assertTrue(any("777" in i.message for i in items))
 
+    def test_reindent_into_block_is_a_logic_change(self):
+        old = ("def f(x, el):\n"
+               "    for i in x:\n"
+               "        if i:\n"
+               "            n = 1\n"
+               "        c = g(el)\n"
+               "        h(c)\n"
+               "    return 1\n")
+        new = old.replace("        c = g(el)\n        h(c)\n", "            c = g(el)\n            h(c)\n")
+        items = self.run_tool({"m.py": old}, {"m.py": new})
+        self.assertNotIn("formatting", self.cats(items))
+
+    def test_continuation_realignment_is_cosmetic(self):
+        old = ("def a():\n    return 1\n\n\n"
+               "def create(net, vn, name=None,\n"
+               "           zone=None, **kw):\n"
+               "    return net\n")
+        new = old.replace("           zone=None", "              zone=None")
+        items = self.run_tool({"m.py": old}, {"m.py": new})
+        self.assertEqual(self.cats(items), ["formatting"])
+
     def test_moved_import_is_not_cosmetic(self):
         old = "import os\nfrom a import *\nfrom b import *\nX = 1\n"
         new = "import os\nfrom b import *\nfrom a import *\nX = 1\n"

@@ -2,8 +2,10 @@
 
 This document reports an evaluation of IntentCheck on 100 randomly sampled
 commits from two open-source Python projects, the accuracy problems it
-exposed, the fixes made in response (branch `accuracy-fixes`), and a
-re-evaluation of the fixed tool on the **same** commits.
+exposed, the fixes made in response (branch `accuracy-fixes`), a
+re-evaluation of the fixed tool on the **same** commits, and a validation on
+**100 fresh commits** with a blind second rater and a comparison against
+diff-scoped pyflakes, Ruff and Pylint (§8–§11).
 
 All numbers below are produced by the scripts in `evaluation/scripts/` from
 the data in `evaluation/data/` (see [Reproducing](#reproducing)).
@@ -31,13 +33,23 @@ Per project:
 | False | 170 (57.2%) | 0 | 5 (0.3%) | 0 |
 | Commits with ≥1 item | 24 | 42 | 34 | 45 |
 | Commits with ≥1 actionable | 6 | 6 | 13 | 16 |
-| Runtime / commit, median – max (s) | 0.13 – 2.61 | 0.11 – 1.12 | 1.07 – 8.41 | 1.28 – 9.72 |
+| Runtime / commit, median – max (s) | 0.13 – 2.61 | 0.12 – 1.49 | 1.07 – 8.41 | 1.54 – 12.43 |
 
 Of the 63 baseline actionable items, 45 are still reported, 18 are no longer
 reported (all by design; see §5.3), and 17 new actionable items appear. All
 six findings that the projects' developers later fixed themselves are still
 detected, and a seventh — a cross-file API breakage in pandapower — is newly
 detected by the repaired linkage checker (§5.4).
+
+**Validation on 100 fresh commits (§8–§11).** The improvement holds but is
+smaller than on the tuning sample: 204 items, **20 actionable (9.8%)**, 0
+false (after fixing one bug the fresh sample exposed). Excluding
+informational notices, 22.9% of findings are actionable (50.8% on the tuning
+sample). A blind second rater agreed on 95% of 80 items (Cohen's κ = 0.90).
+Against diff-scoped pyflakes / Ruff / Pylint, 77 of IntentCheck's 82
+actionable items are reported by none of them, while the linters find a
+different set of real defects (undefined names, duplicate definitions) that
+IntentCheck misses: the tools are complementary.
 
 ---
 
@@ -209,7 +221,9 @@ E0102).
 | 10 | Injection matched by name | `eval/exec/compile` only as builtins; `__import__`/`import_module` only with computed names; `pickle`-family and unsafe `yaml.load` always; `json.load(s)` only with `cls=`/`object_hook=` | `InjectionRiskChecker` |
 | 11 | Linkage found nothing in packaged projects | Package-aware resolution (`a.b.c` → `a/b/c.py` or `a/b/c/__init__.py`, relative imports, unambiguous `src/`-layout suffixes, `open()` paths relative to root or file). Files already in the diff are excluded. **New:** files that use a definition changed in the diff are listed ("reverse linkage") | `graph_builder.py`, `analyzer._linkage` |
 | 12 | Wrong line numbers; ambiguous base names | Fragment line numbers (in `item.line` and in detail text) are mapped back to file lines; messages use project-relative paths | `analyzer._translate` |
-| 13 | Regression risk | 23 unit tests, one per failure mode above (`tests/test_accuracy.py`); the six demo scenarios still produce their documented findings (scenario 5 no longer reports two empty `pass` methods as duplicates) | `tests/` |
+| 13 | Regression risk | Unit tests, one per failure mode above (`tests/test_accuracy.py`, 25 tests); the six demo scenarios still produce their documented findings (scenario 5 no longer reports two empty `pass` methods as duplicates) | `tests/` |
+| 14 | *Found on the fresh sample (§8):* re-indenting a block into an `if` was classified as layout-only, because the hunk comparison ignored indentation tokens | Indentation is part of the comparison (only on lines that start a statement; continuation lines inside brackets are still layout); additionally every hunk judged non-functional must leave the AST of its enclosing scope unchanged, otherwise it is treated as code | `diff_model.classify_hunk`, `confirm_non_functional` |
+| 15 | SD message said "100%" for scores just below 1.0 | Scores are truncated, not rounded, and INFO items say "not identical" | `StructuralDivergenceChecker` |
 
 ### 5.2 Items per checker after the fixes
 
@@ -276,10 +290,15 @@ All five baseline defects (§4.3) are still reported, plus the pandapower
   would recover some lost items without the noise.
 * **Python 2 is not analysed.** Unparseable files are now reported
   explicitly (35 items in dronekit), but not checked.
-* **Runtime** for pandapower rose from 1.07 s to 1.28 s median (max 9.7 s)
-  because the dependency graph now also records attribute usage for reverse
-  linkage. The graph is rebuilt on every run; caching it would remove most of
-  this cost.
+* **Runtime** for pandapower rose from 1.07 s to about 1.5 s median (max
+  12–17 s; medians varied between 1.28 s and 1.68 s across repeated runs on
+  the shared 2-vCPU container) because the dependency graph now also records
+  attribute usage for reverse linkage. The graph is rebuilt on every run;
+  caching it would remove most of this cost.
+* **Repeated literals.** The same literal used several times in one function
+  produces one item per line; the second rater treated repeats as redundant
+  (§9). Grouping them per scope would shorten checklists further.
+* **Precision on unseen commits is lower** than on the tuning sample (§8).
 * **Validity.** One adjudicator; the A/N boundary involves judgement; the
   after-fix items were labelled by the same person who designed the fixes.
   The evaluation used the same 100 commits that motivated the fixes, so a
@@ -293,6 +312,207 @@ All five baseline defects (§4.3) are still reported, plus the pandapower
   not the 63% first computed: the first computation diffed renamed files
   without rename detection, so moved lines counted as added. Labels were not
   affected.
+
+
+---
+
+## 8. Validation on a fresh sample
+
+**Sample.** 50 new commits per project from the same population definition,
+excluding the 100 commits used above (`validation/scripts/sample_fresh.py`,
+seed 2027): pandapower 5,293 candidate commits (2016-10-28 – 2025-10-15),
+dronekit-python 537 (2014-03-27 – 2018-10-22); 168 changed Python files;
+median 9.5 / 7 added lines per commit. The fixed tool was run exactly as in
+§2 and every item labelled with the rubric of §3
+(`validation/scripts/label_fresh.py`; manual decisions listed in the script).
+
+**Bug found.** On the first run one item was false: pandapower `427e8244`
+re-indents six lines of `_make_objective` into the preceding block — a
+logic change — and the tool reported "No functional change". The cause was
+that hunk comparison ignored indentation tokens. Fixed (§5.1 #14, with a
+regression test that fails on the previous code); re-running both samples
+changed only that item. The figures below are from the fixed version.
+
+| | dronekit-python | pandapower | Total |
+|---|---:|---:|---:|
+| Items | 67 | 137 | 204 |
+| Actionable (A) | 6 | 14 | **20 (9.8%)** |
+| Non-actionable (N) | 60 | 123 | 183 |
+| Redundant (R) | 1 | 0 | 1 |
+| False (F) | 0 | 0 | **0** |
+| Commits with ≥1 item | 39 | 49 | 88 |
+| Commits with ≥1 actionable | 3 | 5 | 8 |
+| Largest checklist for one commit | 10 | 18 | |
+| Runtime / commit, median – max (s) | 0.12 – 1.29 | 1.68 – 16.87 | |
+
+| Checker | Items | A | N / R |
+|---|---:|---:|---:|
+| Linkage | 96 | 0 | 96 |
+| Magic number | 41 | 13 | 28 |
+| Parse failure | 40 | 1 | 39 |
+| No functional change | 14 | 0 | 14 |
+| Concurrency / subprocess | 5 | 3 | 2 |
+| Lifecycle | 4 | 3 | 1 R |
+| Structural divergence | 3 | 0 | 3 |
+| Shell execution | 1 | 0 | 1 |
+
+**Tuning sample vs fresh sample.**
+
+| | Tuning sample (§5) | Fresh sample |
+|---|---:|---:|
+| Items | 249 | 204 |
+| Actionable share, all items | 24.9% | 9.8% |
+| Informational notices (parse, no-functional-change, skipped, forward-only linkage) | 127 | 121 |
+| Actionable share of the remaining findings | 50.8% | **22.9%** |
+| Magic-number items actionable | 56% | 32% |
+
+The fresh-sample figures are the ones to quote. Part of the gap is sample
+composition (the tuning sample contained pandapower's JSON/pickle I/O code,
+13 actionable injection items; the fresh one has none) and part is the
+expected optimism of evaluating on the commits that motivated the fixes.
+
+**Notable fresh-sample findings.**
+
+* *Unresolved merge-conflict marker* — pandapower `create.py` contained
+  `<<<<<<< HEAD` (introduced in `b64d992b`, removed 11 minutes later in
+  `8b20d8ee`). IntentCheck reports the file as not parseable. Diff-scoped
+  linters do **not** report it for the sampled commit, because the broken
+  line was not added by that commit (§10).
+* *Leaking listening socket* — dronekit `7000397a` ("Properly close Vehicle
+  instances after SITL tests") leaves `socket.socket(...)` bound to port
+  5760 open in `test_timeout_empty`; still present on `master`.
+* `tempfile.mkstemp()[1]` file-descriptor leaks (2) and newly added
+  `Popen` calls (3) in dronekit's test runner.
+* Opaque solver codes (`alg == 3/4`) and cost/result column indices.
+
+No fresh-sample linkage item listed a caller of a *breaking* signature
+change (29 of 96 linkage items listed reverse users; all of those signatures
+were compatible).
+
+---
+
+## 9. Second rater
+
+An independent rater labelled 80 items blind: all 20 fresh-sample actionable
+items, 30 random other fresh-sample items, and 15 actionable + 15 other
+items from the tuning sample, shuffled. The rater had only the rubric
+(`validation/rater/RUBRIC.md`), the item list and read-only access to the
+git repositories, and investigated each item itself.
+
+| | Value |
+|---|---:|
+| Raw agreement, 4 labels | 95.0% (76/80) |
+| Cohen's κ, 4 labels | **0.90** |
+| Cohen's κ, A vs not-A | 0.90 |
+| Agreement on "worth attention" (A or R) vs (N or F) | 100% |
+
+All four disagreements are the same question: the same literal repeated in
+one function (e.g. `1e-10` three times in `_calc_branch_currents`), which the
+rater labelled R and the first rater A. Item-level reasons from both raters:
+`validation/rater/agreement.csv`.
+
+**Caveat.** The second rater was an AI agent (Claude) working in a separate
+context without access to the first labels; the first rater was also Claude.
+This shows the rubric can be applied consistently, but it is not a
+substitute for agreement between independent human reviewers.
+
+---
+
+## 10. Comparison with diff-scoped linters
+
+Diff-scoped static analysis is not unique to IntentCheck: diff-quality (part
+of diff-cover) reports pyflakes / flake8 / Pylint / Ruff violations on the
+changed lines of a diff, reviewdog filters any linter's output to added
+lines on pull requests, and SonarQube reports only issues in new code for
+pull requests. What differs is *how* the diff is used: those tools analyse
+whole files and filter the output by line; IntentCheck uses the diff to
+decide what to analyse (enclosing scope of each changed line, hunk
+classification) and follows changed definitions to their users outside the
+diff (reverse linkage).
+
+**Setup** (`validation/scripts/baseline_linters.py`). For each of the 200
+commits, a detached worktree of the post-change tree; pyflakes 4.0.3, Ruff 0.16.8 with its default rule
+set (`--isolated`; in 0.16 the default set includes pyflakes, bugbear,
+pyupgrade, Pylint ports and more), and Pylint 4.1.3 with its default
+configuration, each run on the commit's changed `.py` files; only messages
+on lines added by the commit are counted (diff-quality's rule).
+
+**Volume** (200 commits):
+
+| Tool | Messages on added lines | per commit, mean / median / max | on whole changed files | runtime / commit, median – max (s) |
+|---|---:|---|---:|---|
+| IntentCheck (items) | 453 | 2.3 / 1 / 18 | – | 0.59 – 16.9 |
+| pyflakes | 147 | 0.7 / 0 / 72 | 1,063 | 0.06 – 0.28 |
+| Ruff | 463 | 2.3 / 0 / 85 | 6,743 | 0.01 – 0.10 |
+| Pylint | 2,148 | 10.7 / 1 / 541 | 23,955 | 1.9 – 34.8 |
+
+Most frequent linter messages on added lines: Pylint `C0301` line too long
+(620), `C0103` naming (269), `C0303` trailing whitespace (239); Ruff
+`invalid-syntax` (142, Python 2 code), `F841` unused variable (49);
+pyflakes unused local variables (49) and redefinitions (18).
+
+**Do the linters report IntentCheck's actionable items?** For each of the 82
+actionable items (62 tuning + 20 fresh), every linter message on the same
+file and line was inspected by hand:
+
+| Overlap | Items |
+|---|---:|
+| Same issue reported on an added line (Pylint `R1732` consider-using-with on 4 newly added `Popen` calls) | 4 |
+| Same issue reported only when linting the whole file (merge-conflict marker: syntax error) | 1 |
+| Unrelated message on the same line (line length, protected access, `R1714`, the author's own TODO; on the three `mkstemp()[1]` lines Pylint's `R1732` concerns the `Popen` call, not the leaked descriptor) | 14 |
+| Nothing on that line | 63 |
+| **Not reported by any linter** | **77 of 82 (94%)** |
+
+**Developer-confirmed defects in the 200 commits** (fixed or removed later
+by the projects), and which tool reports them on the flagged commit:
+
+| Defect | Fixed | IntentCheck | pyflakes | Ruff | Pylint |
+|---|---|:-:|:-:|:-:|:-:|
+| 4 × dronekit SITL tests never close the vehicle connection | `b8b7d5e`, 3–14 days | ✓ | – | – | – |
+| `simple_plot.py` still passes a removed keyword (`55c50612`) | `e3a190e9`, 4 days | ✓ (reverse linkage) | – | – | – |
+| Merge-conflict marker in `create.py` | `8b20d8ee`, 11 min | ✓ | –* | –* | –* |
+| Duplicate `_create_ppc2pd_bus_lookup` | `b7e5721e`, 14 days | ✓ | ✓ | – | – |
+| Duplicate `_check_connectivity` (copies differ) | `c5ff6f8b`, same day | – | ✓ | – | – |
+| Duplicate `get_line_path` (copies differ) | removed in `77627435` (2025) | – | ✓ | ✓ | ✓ |
+| Missing `import time, math` (dronekit `71de7e8a`) | `bf3332b`, 77 min | – | ✓ | ✓ | ✓ |
+| Undefined `pp` in `plotly.py` | `70fa9801`, next day | – | ✓ | ✓ | ✓ |
+| Undefined `run_powermodels` | `8a16d039`, 6 days | – | ✓ | ✓ | ✓ |
+| **Total (12 defects)** | | **7** | **6** | **4** | **4** |
+
+\* reported when the whole file is linted, but not under diff-scoped
+filtering, because the marker line was not added by the flagged commit.
+Ruff 0.16.8 did not report `F811` for the underscore-prefixed duplicate;
+Pylint suppresses `function-redefined` for underscore-prefixed names by
+default.
+
+**Reading.** IntentCheck and the linters find almost disjoint sets of
+problems: one defect of twelve is found by both. The linters are better at
+name-resolution errors (undefined names, redefinitions of non-identical
+copies); IntentCheck is better at resource lifecycle in domain APIs,
+cross-file effects of a change, and file-level conditions the diff filter
+hides. IntentCheck produces fewer messages per commit than Pylint (2.3 vs
+10.7) and about as many as Ruff, but a larger share of its output is
+review-relevant.
+
+---
+
+## 11. Conclusions
+
+* After the fixes IntentCheck is a low-noise, fast, offline source of
+  change-specific review prompts: about 2 items per commit, no false claims
+  on 200 commits after the indentation fix, and roughly one item in four
+  findings (one in ten items overall) worth a reviewer's attention on unseen
+  commits.
+* Its strongest distinctive capabilities on real history were reverse
+  linkage (callers outside the diff), resource lifecycle for domain APIs,
+  and explicit file-level notices; magic-number prompts are the bulk of its
+  actionable output but of lower individual value.
+* It does not replace a linter: pyflakes alone found five confirmed defects
+  IntentCheck missed. The recommended setup is IntentCheck alongside a
+  diff-scoped pyflakes/Ruff run.
+* "Diff-scoped" should not be claimed as unique; "diff-driven" analysis
+  (choosing scopes and following changed definitions) is the defensible
+  distinction.
 
 ---
 
@@ -323,3 +543,12 @@ python match_v2.py && python verify_linkage.py && python label_v2.py && python s
 | `data/labels_baseline.csv`, `data/labels_after_fixes.csv` | one row per item: label and reason |
 | `data/summary.json`, `data/summary_v2.json` | every number in this document |
 | `data/linkage_v2.json` | linkage verification per item |
+| `validation/data/{pp,dk}_sample.json`, `{pp,dk}_raw.json` | fresh sample and tool output |
+| `validation/data/labels.json`, `labels_fresh.csv` | fresh-sample labels |
+| `validation/data/bl_{first,fresh}_{dk,pp}.json` | linter messages per commit |
+| `validation/data/compare.json` | volume and overlap analysis |
+| `validation/rater/` | rubric, blind item list, second-rater labels, agreement table |
+
+Validation pipeline (`evaluation/validation/scripts/`): `sample_fresh.py` →
+`../../scripts/run.py` → `dump.py` → `label_fresh.py`;
+`baseline_linters.py <raw.json> <repo> <out.json>` → `compare.py`.

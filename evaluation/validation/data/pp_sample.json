@@ -1,0 +1,445 @@
+{
+ "repo": "/home/claude/work/pandapower",
+ "population": 5293,
+ "seed": 2027,
+ "excluded": 50,
+ "sample": [
+  {
+   "sha": "8b04f0c6fc52c2199c296cc9f715fba494b552eb",
+   "date": "2016-10-28",
+   "subject": "Consistency checks running, fixed nan issue within results of shunts/ward/xward",
+   "py": [
+    "pandapower/results.py",
+    "pandapower/test/consistency_checks.py",
+    "pandapower/test/result_test_network_generator.py",
+    "pandapower/test/test_results.py"
+   ]
+  },
+  {
+   "sha": "742a8ed233f0a93474e50176b4d120d44d7ffefa",
+   "date": "2016-11-01",
+   "subject": "reverted attrdict because copy failed",
+   "py": [
+    "pandapower/auxiliary.py"
+   ]
+  },
+  {
+   "sha": "322301d0fadba685f2805e9dcb370db4d42d811d",
+   "date": "2016-11-03",
+   "subject": "changes to build_opf",
+   "py": [
+    "pandapower/build_opf.py"
+   ]
+  },
+  {
+   "sha": "89492cf7322ae21c7ef63a8dd0b4469432b45ddd",
+   "date": "2016-11-22",
+   "subject": "some bugfixes and new functionality in opf_task",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "1e8ff87958505a8275a8c8de90f6725c348f89c1",
+   "date": "2016-11-24",
+   "subject": "Speed improvements in newtonpf",
+   "py": [
+    "pandapower/pypower_extensions/create_J.py",
+    "pandapower/pypower_extensions/newtonpf.py"
+   ]
+  },
+  {
+   "sha": "f7ec9cfbcb193fa3469d14b7deec37396acda401",
+   "date": "2017-01-16",
+   "subject": "dcline formulation with new gen lookup to make dcline opf robust against unconsecutive bus-numbering",
+   "py": [
+    "pandapower/build_gen.py",
+    "pandapower/pypower_extensions/opf.py",
+    "pandapower/run.py",
+    "pandapower/test/opf/test_dcline.py"
+   ]
+  },
+  {
+   "sha": "a65a49d5960bb6cb407ed8f29865ddb5c6f54263",
+   "date": "2017-01-25",
+   "subject": "add parameters 'min_vm_pu' and 'max_vm_pu' to create_buses",
+   "py": [
+    "pandapower/create.py"
+   ]
+  },
+  {
+   "sha": "6ec2896b29c7c1972d54c1962751b73ee6fe5a00",
+   "date": "2017-02-16",
+   "subject": "set element status: added ext_grid",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "a0abb2947e21f5a7c477d4ac981a9c81d3d838ee",
+   "date": "2017-02-23",
+   "subject": "runpf code refactored",
+   "py": [
+    "pandapower/pypower_extensions/runpf.py",
+    "pandapower/run.py"
+   ]
+  },
+  {
+   "sha": "4e604e59813d172f36fb4c8507c4eeaf6aa96302",
+   "date": "2017-02-28",
+   "subject": "All tests passing",
+   "py": [
+    "pandapower/make_objective.py",
+    "pandapower/run.py",
+    "pandapower/test/opf/test_basic.py",
+    "pandapower/test/opf/test_costs_mixed.py",
+    "pandapower/test/opf/test_costs_pol.py"
+   ]
+  },
+  {
+   "sha": "1f8e58f3db0aebeaf9b6f2936b9af75d5bd7c26f",
+   "date": "2017-03-07",
+   "subject": "short-circuit tutorial",
+   "py": [
+    "pandapower/test/shortcircuit/test_line_transformer.py"
+   ]
+  },
+  {
+   "sha": "be6ac5ba5c9b1278d49ca8eb54ed55d1c7ae0560",
+   "date": "2017-03-15",
+   "subject": "save zbus",
+   "py": [
+    "pandapower/results.py",
+    "pandapower/shortcircuit/currents.py",
+    "pandapower/shortcircuit/run.py"
+   ]
+  },
+  {
+   "sha": "d28123bdec579b5fd25c3aedccbc4842734d2057",
+   "date": "2017-04-10",
+   "subject": "line plotting: added case for plotting all lines in network without given geodata.",
+   "py": [
+    "pandapower/plotting/collections.py"
+   ]
+  },
+  {
+   "sha": "96ed0b1a4df2fe16db23f7cc8f8ae9cdee5b6172",
+   "date": "2017-04-12",
+   "subject": "doc update and tutorial for zip-loads",
+   "py": [
+    "pandapower/create.py"
+   ]
+  },
+  {
+   "sha": "2b11cdbec6de3d24ff09b4deb580050f61971553",
+   "date": "2017-04-20",
+   "subject": "plotly collections improved, mapbox (token) updated",
+   "py": [
+    "pandapower/plotting/__init__.py",
+    "pandapower/plotting/colormaps.py",
+    "pandapower/plotting/plotly.py"
+   ]
+  },
+  {
+   "sha": "69ac5d0b128815ef7bb47d19e65042ad5b7c2f9f",
+   "date": "2017-05-09",
+   "subject": "changes for pandapower 1.3",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "7858040220f0aa26f6f828e25faba3e78acad7d5",
+   "date": "2017-05-10",
+   "subject": "removed type annotation (compatibility python2)",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "8792c05691e8784838805718538d7db2bf40c8d9",
+   "date": "2017-07-07",
+   "subject": "drop geodata in fuse buses",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "8b87ba225bd93246e82d8fc272116fbd0e8ab28f",
+   "date": "2017-09-19",
+   "subject": "tests",
+   "py": [
+    "pandapower/test/converter/test_from_ppc.py",
+    "pandapower/test/topology/test_graph_searches.py"
+   ]
+  },
+  {
+   "sha": "f33a2cf55ffd47449df90438868332b45ec79d15",
+   "date": "2017-10-25",
+   "subject": "additional MV line standard types",
+   "py": [
+    "pandapower/std_types.py"
+   ]
+  },
+  {
+   "sha": "427e82441bdd0f80e11878bc3c9f22decce86f3a",
+   "date": "2018-03-09",
+   "subject": "Fixing bug in opf for out of service but controllable loads.",
+   "py": [
+    "pandapower/build_gen.py",
+    "pandapower/opf/make_objective.py",
+    "pandapower/results_bus.py",
+    "pandapower/test/opf/test_basic.py"
+   ]
+  },
+  {
+   "sha": "e35345bb58f4617ca3897c12ad09e8daa636eecb",
+   "date": "2018-03-26",
+   "subject": "when loading grid: check for tp_st_degree when adding phase shifter info",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "cae9f3de34c0a0feab61b06caf7ef788f1dcd602",
+   "date": "2019-04-30",
+   "subject": "use the function drop_lines(...) for dropping lines instead of net.line.drop(...), because it drops line geodata and switches automatically",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "812323b1b14ac2c8add48d83dea7cda6af887e46",
+   "date": "2019-09-03",
+   "subject": " Changed everything to lowercase #409'",
+   "py": [
+    "pandapower/create.py",
+    "pandapower/pf/runpp_3ph.py",
+    "pandapower/results_branch.py",
+    "pandapower/results_bus.py",
+    "pandapower/results_gen.py",
+    "pandapower/test/loadflow/test_runpp_3ph.py"
+   ]
+  },
+  {
+   "sha": "825623a65e6cf8154d253328313084b214fb8b0c",
+   "date": "2019-11-17",
+   "subject": "added generic fancy branch collection creation with implementation for trafos",
+   "py": [
+    "pandapower/plotting/collections.py",
+    "pandapower/plotting/patch_makers.py"
+   ]
+  },
+  {
+   "sha": "1ae2c4e0f24717decc156569644b01c9d8b3fb17",
+   "date": "2020-01-08",
+   "subject": "bugfix for line collections concerning different types of geodata input",
+   "py": [
+    "pandapower/plotting/collections.py"
+   ]
+  },
+  {
+   "sha": "b5e40da3d266d6da3a939883ad683101edd9499c",
+   "date": "2020-03-27",
+   "subject": "Add test for issue #675",
+   "py": [
+    "pandapower/test/shortcircuit/test_sgen.py"
+   ]
+  },
+  {
+   "sha": "eca04b0ab889ca67f304b69f613fd5c3882cde02",
+   "date": "2020-08-18",
+   "subject": "use np.isclose to compare floats Closes #876",
+   "py": [
+    "pandapower/test/opf/test_costs_pwl.py"
+   ]
+  },
+  {
+   "sha": "b96e52fe556b16201c677ada93911f0446981b9d",
+   "date": "2020-11-20",
+   "subject": "improve include_results in select_subnet()",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "4a7f7766e2a3ce83596a6d34da937b79025f4d51",
+   "date": "2021-02-05",
+   "subject": "changed dtype in net.controller.recycle from bool to object since recycle can either be False or dict",
+   "py": [
+    "pandapower/create.py"
+   ]
+  },
+  {
+   "sha": "a0ec63482777bf4172abf09794e461dded3436c5",
+   "date": "2021-02-26",
+   "subject": "test passed for more tests",
+   "py": [
+    "pandapower/opf/run_powermodels.py",
+    "pandapower/runpm.py"
+   ]
+  },
+  {
+   "sha": "5a81e0497b18d526fa5ff47859aa6ec4e504a883",
+   "date": "2022-02-28",
+   "subject": "removed code duplication in const_control",
+   "py": [
+    "pandapower/control/controller/const_control.py"
+   ]
+  },
+  {
+   "sha": "6ffffb45f4771b276675d641f3308c2da7f6bba0",
+   "date": "2022-06-01",
+   "subject": "fix missing kwargs",
+   "py": [
+    "pandapower/networks/power_system_test_cases.py"
+   ]
+  },
+  {
+   "sha": "4907d310911cfffa73f2533d7e3f000e7fb26498",
+   "date": "2022-06-24",
+   "subject": "update kwargs with regular args",
+   "py": [
+    "pandapower/create.py"
+   ]
+  },
+  {
+   "sha": "5dd4d017ffc6385a682fa00c802caa2cb803c764",
+   "date": "2022-07-29",
+   "subject": "comment",
+   "py": [
+    "pandapower/postgresql_io.py"
+   ]
+  },
+  {
+   "sha": "aad6779bab02f7097ca38866cc09abcd50511bee",
+   "date": "2022-11-30",
+   "subject": "tiny fix",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "4886d67abe41687df920a5e3b41ac749f40b6479",
+   "date": "2023-02-23",
+   "subject": "Add Power Grid Model requirements to setup.py",
+   "py": [
+    "pandapower/run.py",
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "9bbc13981d0629c8cc3d0276be86aded970284d8",
+   "date": "2023-04-06",
+   "subject": "set deep=True",
+   "py": [
+    "pandapower/estimation/ppc_conversion.py"
+   ]
+  },
+  {
+   "sha": "f1a3c760560638ded49a622dfe44eb5e6cbafb9e",
+   "date": "2023-04-19",
+   "subject": "removed spaces",
+   "py": [
+    "pandapower/runpm.py",
+    "pandapower/test/opf/test_pandamodels_runpm.py"
+   ]
+  },
+  {
+   "sha": "7de01fc7d25ef7bc7dfd861ada1931adece04ece",
+   "date": "2023-07-13",
+   "subject": "extensive unit tests for cim2pp converter, plus some converter fixes (#2078)",
+   "py": [
+    "pandapower/converter/cim/cim2pp/build_pp_net.py",
+    "pandapower/test/converter/test_from_cim.py"
+   ]
+  },
+  {
+   "sha": "9a859ef9fb38caa633bf7a7b30b39f3c4b3f193f",
+   "date": "2024-04-10",
+   "subject": "allow passing a root bus, use np union instead of r_",
+   "py": [
+    "pandapower/plotting/powerflow_results.py"
+   ]
+  },
+  {
+   "sha": "bb65b4b68aae6ffed5527497751cf6791579f079",
+   "date": "2024-05-22",
+   "subject": "further proceed tutorial",
+   "py": [
+    "tutorials/DER_control_tutorial.py"
+   ]
+  },
+  {
+   "sha": "272d24259de28b913294ea32bccdb22976fbdf42",
+   "date": "2024-06-20",
+   "subject": "Implementation of VSC using Yt for DC part, use y array instead of Ybus in the J for VSC DC part",
+   "py": [
+    "pandapower/pf/create_jacobian_facts.py",
+    "pandapower/pypower/newtonpf.py",
+    "pandapower/test/loadflow/test_facts.py"
+   ]
+  },
+  {
+   "sha": "a3815968956947529e8e5da8c330387bc8d27927",
+   "date": "2024-08-06",
+   "subject": "Code improvement according to Codacy",
+   "py": [
+    "pandapower/control/controller/station_control.py"
+   ]
+  },
+  {
+   "sha": "3f7dcd4e3b607cd7d19a2860526486f64c9fadfc",
+   "date": "2024-09-02",
+   "subject": "Update create.py",
+   "py": [
+    "pandapower/create.py"
+   ]
+  },
+  {
+   "sha": "18ba569c639aaf137d6a08adaa827b187dbdbb3e",
+   "date": "2024-12-20",
+   "subject": "fix bug in contingency.py",
+   "py": [
+    "pandapower/contingency/contingency.py"
+   ]
+  },
+  {
+   "sha": "051b0e6ab7a30e13a0d4aeb0ba833b8bdb672a6f",
+   "date": "2025-09-01",
+   "subject": "removed bug in voltage control with droop, translated some comments",
+   "py": [
+    "pandapower/control/controller/station_control.py",
+    "pandapower/converter/powerfactory/pp_import_functions.py",
+    "pandapower/test/converter/test_from_powerfactory.py"
+   ]
+  },
+  {
+   "sha": "fd3c3d25956e6f58f665b84aa891d883ad7f364a",
+   "date": "2025-09-07",
+   "subject": "Update io_utils.py",
+   "py": [
+    "pandapower/io_utils.py"
+   ]
+  },
+  {
+   "sha": "688c9d8197ae051f121fe56d5bfa70018bb189e9",
+   "date": "2025-09-11",
+   "subject": "fixed create documentation.",
+   "py": [
+    "pandapower/create.py"
+   ]
+  },
+  {
+   "sha": "68a0180c18d8ac4d4db6a953ea0731056acde8d8",
+   "date": "2025-10-15",
+   "subject": "[ADDED] cim2pp: additional info about referencePrios, modes and targetValues for ext_grid / gen / sgen (#2751)",
+   "py": [
+    "pandapower/converter/cim/cim2pp/converter_classes/connectivitynodes/connectivityNodesCim16.py",
+    "pandapower/converter/cim/cim2pp/converter_classes/externalnetworks/externalNetworkInjectionsCim16.py",
+    "pandapower/converter/cim/cim2pp/converter_classes/generators/synchronousMachinesCim16.py",
+    "pandapower/converter/cim/cim_tools.py"
+   ]
+  }
+ ]
+}

@@ -758,10 +758,10 @@ class StructuralDivergenceChecker:
                         category="structural",
                         message=f"High structural similarity in {filename}",
                         detail=(
-                            f"SD({na}, {nb}) = {score:.2f}  "
+                            f"SD({na}, {nb}) = {int(score * 1000) / 1000:.3f}  "
                             f"(info threshold >= {self.INFO_THRESHOLD})\n"
                             f"'{na}' (line {la}) and '{nb}' (line {lb}) "
-                            f"share {score*100:.0f}% structural similarity.\n"
+                            f"share {int(score * 1000) / 10:.1f}% structural similarity (not identical).\n"
                             f"Verify whether the divergence is intentional."
                         ),
                         line=la, score=score,

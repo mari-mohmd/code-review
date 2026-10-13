@@ -32,7 +32,7 @@ from pathlib import Path
 from .graph_builder import DependencyGraphBuilder, _TEST_RE
 from .diff_model import (split_files, parse_hunks, relocate, reconstruct_old,
                          string_statement_lines, classify_hunk, is_comment_or_blank,
-                         code_identifiers)
+                         code_identifiers, confirm_non_functional)
 from .checklist_data import ChecklistItem
 from .checkers import LifecycleChecker, NameSimilarityChecker, DeadImportChecker, MagicNumberChecker, \
     StructuralDivergenceChecker, PathCoherenceChecker, HardcodedPathChecker, InjectionRiskChecker, ConcurrencyChecker, \
@@ -864,6 +864,7 @@ class ChecklistGenerator:
             old_doc = string_statement_lines(old_tree)
             for h in hunks:
                 h.kind = classify_hunk(h, new_doc, old_doc)
+            confirm_non_functional(hunks, tree, old_tree)
             code_hunks = [h for h in hunks if h.kind == "code"]
 
             analyser = DiffScopeAnalyser(source, path)

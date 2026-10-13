@@ -12,3 +12,5 @@ _here = Path(__file__).resolve().parent
 WORK = os.environ.get("INTENTCHECK_WORK", str(_here.parents[2]))
 EVAL = os.environ.get("INTENTCHECK_DATA", str(_here.parent / "data"))
 TOOL = os.environ.get("INTENTCHECK_TOOL", str(_here.parents[1] / "IntentCheck.py"))
+VAL = os.environ.get("INTENTCHECK_VALIDATION", str(_here.parent / "validation" / "data"))
+RATER = os.environ.get("INTENTCHECK_RATER", str(_here.parent / "validation" / "rater"))

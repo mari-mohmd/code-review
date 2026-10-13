@@ -29,8 +29,9 @@ import tokenize
 from dataclasses import dataclass, field
 
 _HUNK_RE = re.compile(r"@@ -(\d+)(?:,(\d+))? \+(\d+)(?:,(\d+))? @@")
-_SKIP_TOKENS = {tokenize.NL, tokenize.NEWLINE, tokenize.INDENT,
-                tokenize.DEDENT, tokenize.ENDMARKER, tokenize.ENCODING}
+# INDENT/DEDENT are kept: indentation is syntax in Python, so re-indenting a
+# block into an `if` is a logic change, not a layout change.
+_SKIP_TOKENS = {tokenize.NL, tokenize.NEWLINE, tokenize.ENDMARKER, tokenize.ENCODING}
 _KEYWORDS = set(keyword.kwlist) | {"self", "cls", "True", "False", "None"}
 
 
@@ -182,7 +183,21 @@ def _tokens(lines: list):
             out.append((t.type, s))
         return out
     except (tokenize.TokenError, IndentationError, SyntaxError):
-        return " ".join(text.split())
+        # fragment cannot be tokenised on its own: keep each line's relative
+        # indentation so that re-indentation is never mistaken for layout
+        # (indentation only matters at the start of a statement, not on
+        #  continuation lines inside brackets or after a backslash)
+        out, depth, cont = [], 0, False
+        for line in text.splitlines():
+            if not line.strip():
+                continue
+            starts_stmt = depth == 0 and not cont
+            indent = len(line) - len(line.lstrip()) if starts_stmt else None
+            out.append((indent, " ".join(line.split())))
+            code = re.sub(r"\"(\\.|[^\"\\])*\"|'(\\.|[^'\\])*'", "", line).split("#", 1)[0]
+            depth = max(0, depth + sum(code.count(c) for c in "([{") - sum(code.count(c) for c in ")]}"))
+            cont = code.rstrip().endswith("\\")
+        return out
 
 
 def classify_hunk(h: Hunk, new_doc: set, old_doc: set) -> str:
@@ -202,3 +217,66 @@ def code_identifiers(text: str) -> set:
     s = re.sub(r"\"(\\.|[^\"\\])*\"|'(\\.|[^'\\])*'", " ", s)
     s = s.split("#", 1)[0]
     return set(re.findall(r"\b[A-Za-z_]\w*\b", s)) - _KEYWORDS
+
+
+# --------------------------------------------------------------------------
+# AST safety net
+# --------------------------------------------------------------------------
+def _strip_docs(node) -> str:
+    """ast.dump of `node` with docstrings / bare string statements removed."""
+    import copy
+    node = copy.deepcopy(node)
+    for n in ast.walk(node):
+        body = getattr(n, "body", None)
+        if isinstance(body, list):
+            kept = [s for s in body if not (isinstance(s, ast.Expr) and isinstance(s.value, ast.Constant)
+                                            and isinstance(s.value.value, str))]
+            n.body = kept or [ast.Pass()]
+    return ast.dump(node)
+
+
+def _qualified_scopes(tree) -> dict:
+    """{qualified name: node} for every function / class, e.g. 'A.f'."""
+    out = {}
+
+    def walk(node, prefix):
+        for ch in ast.iter_child_nodes(node):
+            if isinstance(ch, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
+                q = f"{prefix}.{ch.name}" if prefix else ch.name
+                out.setdefault(q, ch)
+                walk(ch, q)
+            else:
+                walk(ch, prefix)
+    walk(tree, "")
+    return out
+
+
+def _innermost(scopes: dict, lines: list):
+    best = None
+    for q, n in scopes.items():
+        start = min([n.lineno] + [d.lineno for d in getattr(n, "decorator_list", [])])
+        end = getattr(n, "end_lineno", n.lineno)
+        if all(start <= l <= end for l in lines):
+            if best is None or n.lineno > scopes[best].lineno:
+                best = q
+    return best
+
+
+def confirm_non_functional(hunks: list, tree, old_tree) -> None:
+    """Demote 'cosmetic'/'noncode' hunks to 'code' unless the AST proves the
+    enclosing scope is unchanged.  Errs on the side of 'code'."""
+    if old_tree is None:
+        for h in hunks:
+            h.kind = "code"
+        return
+    if _strip_docs(tree) == _strip_docs(old_tree):
+        return  # whole file unchanged apart from layout/comments/docstrings
+    new_scopes, old_scopes = _qualified_scopes(tree), _qualified_scopes(old_tree)
+    for h in hunks:
+        if h.kind == "code":
+            continue
+        lines = list(h.added) or [p for p in h.del_points if p > 0]
+        q = _innermost(new_scopes, lines) if lines else None
+        if q is None or q not in old_scopes or \
+                _strip_docs(new_scopes[q]) != _strip_docs(old_scopes[q]):
+            h.kind = "code"

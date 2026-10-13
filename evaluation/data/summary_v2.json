@@ -58,8 +58,8 @@
    "commits_with_A": 6,
    "median_items": 1.0,
    "max_items": 7,
-   "sec_median": 0.11,
-   "sec_max": 1.12,
+   "sec_median": 0.12,
+   "sec_max": 1.49,
    "by_cat": {
     "concurrency": {
      "A": 5,
@@ -140,8 +140,8 @@
    "commits_with_A": 16,
    "median_items": 2.0,
    "max_items": 11,
-   "sec_median": 1.28,
-   "sec_max": 9.72,
+   "sec_median": 1.54,
+   "sec_max": 12.43,
    "by_cat": {
     "formatting": {
      "N": 5

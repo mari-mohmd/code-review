@@ -7,7 +7,7 @@
    "droneapi/lib/DroneApi.py"
   ],
   "parent": "de9748338d85d3dcfc09b734f2b47dd65e575132",
-  "seconds": 0.135,
+  "seconds": 0.153,
   "returncode": 0,
   "stderr": "",
   "added": 19,
@@ -45,7 +45,7 @@
    "setup.py"
   ],
   "parent": "494bae6ea42567e78470af04f3ea72545399fab2",
-  "seconds": 0.07,
+  "seconds": 0.089,
   "returncode": 0,
   "stderr": "",
   "added": 6,
@@ -60,7 +60,7 @@
    "droneapi/lib/__init__.py"
   ],
   "parent": "3ad9b4bb4e3d76be54f1aac5d85a043ceb1d95f9",
-  "seconds": 0.082,
+  "seconds": 0.088,
   "returncode": 0,
   "stderr": "",
   "added": 8,
@@ -84,7 +84,7 @@
    "example/small_demo.py"
   ],
   "parent": "685599b96aa58f4f11f6574abc7e2cd29235f6f5",
-  "seconds": 0.099,
+  "seconds": 0.086,
   "returncode": 0,
   "stderr": "",
   "added": 26,
@@ -114,7 +114,7 @@
    "droneapi/lib/webapi_pb2.py"
   ],
   "parent": "ac27de9946695120b6306e7ce2f7a72055b02576",
-  "seconds": 0.088,
+  "seconds": 0.1,
   "returncode": 0,
   "stderr": "",
   "added": 41,
@@ -137,7 +137,7 @@
    "droneapi/module/api.py"
   ],
   "parent": "668c8dcfc889c283124d2fa37bfddbd5a25ce4a7",
-  "seconds": 0.109,
+  "seconds": 0.096,
   "returncode": 0,
   "stderr": "",
   "added": 13,
@@ -160,7 +160,7 @@
    "droneapi/module/api.py"
   ],
   "parent": "4ffb67c2000a68b2fa7148f88141656514675235",
-  "seconds": 0.083,
+  "seconds": 0.094,
   "returncode": 0,
   "stderr": "",
   "added": 13,
@@ -183,7 +183,7 @@
    "droneapi/module/api.py"
   ],
   "parent": "77738549d3b996068fed4397262240286a4cdff3",
-  "seconds": 0.09,
+  "seconds": 0.088,
   "returncode": 0,
   "stderr": "",
   "added": 9,
@@ -206,7 +206,7 @@
    "droneapi/module/api.py"
   ],
   "parent": "c53a46e281cb412d48621ed291af1e013eb7ea7f",
-  "seconds": 0.08,
+  "seconds": 0.082,
   "returncode": 0,
   "stderr": "",
   "added": 3,
@@ -230,7 +230,7 @@
    "tests/web_integration_test.py"
   ],
   "parent": "5cee787af96b815c35560c1c3e978cbba6a808c4",
-  "seconds": 0.113,
+  "seconds": 0.131,
   "returncode": 0,
   "stderr": "",
   "added": 39,
@@ -260,7 +260,7 @@
    "setup.py"
   ],
   "parent": "8b96d3f73d7b0e7ced8fe9418059a976b4a12866",
-  "seconds": 0.102,
+  "seconds": 0.107,
   "returncode": 0,
   "stderr": "",
   "added": 3,
@@ -275,7 +275,7 @@
    "droneapi/lib/__init__.py"
   ],
   "parent": "10c9bcfd58a669587f568b4d21354ce95b94fef9",
-  "seconds": 0.13,
+  "seconds": 0.127,
   "returncode": 0,
   "stderr": "",
   "added": 512,
@@ -298,7 +298,7 @@
    "droneapi/lib/__init__.py"
   ],
   "parent": "43f9310d152a45d539ae9d0bbfe11f6aaaf3a997",
-  "seconds": 0.095,
+  "seconds": 0.108,
   "returncode": 0,
   "stderr": "",
   "added": 5,
@@ -321,7 +321,7 @@
    "droneapi/lib/__init__.py"
   ],
   "parent": "6cafee7a0b2f9014194c698b90cd61bfa261f0f4",
-  "seconds": 0.1,
+  "seconds": 0.119,
   "returncode": 0,
   "stderr": "",
   "added": 10,
@@ -344,7 +344,7 @@
    "example/vehicle_state/vehicle_state.py"
   ],
   "parent": "02f358bf4fbb147fb418d89cd2df2915d9a462ce",
-  "seconds": 0.105,
+  "seconds": 0.097,
   "returncode": 0,
   "stderr": "",
   "added": 367,
@@ -368,7 +368,7 @@
    "examples/vehicle_state/vehicle_state.py"
   ],
   "parent": "26f39db6a2142caa35c6d28537270458d543806f",
-  "seconds": 0.121,
+  "seconds": 0.162,
   "returncode": 0,
   "stderr": "",
   "added": 51,
@@ -398,7 +398,7 @@
    "droneapi/lib/WebClient.py"
   ],
   "parent": "cc38a3f47a2e66c0f31cb6c0349dde7f894fecf4",
-  "seconds": 0.139,
+  "seconds": 0.223,
   "returncode": 0,
   "stderr": "",
   "added": 8,
@@ -413,7 +413,7 @@
    "tests/sitl/__main__.py"
   ],
   "parent": "3cee6c5ce5cd17cb04530cc4b501d624b67fd16b",
-  "seconds": 0.217,
+  "seconds": 0.368,
   "returncode": 0,
   "stderr": "",
   "added": 66,
@@ -478,7 +478,7 @@
    "setup.py"
   ],
   "parent": "38b2e12fdc79f73c650e89a3cba63fb342e63585",
-  "seconds": 0.098,
+  "seconds": 0.14,
   "returncode": 0,
   "stderr": "",
   "added": 11,
@@ -494,7 +494,7 @@
    "examples/vehicle_state/vehicle_state.py"
   ],
   "parent": "7558d7b6a0f6cabf2b77826663ce949a6f317a35",
-  "seconds": 0.175,
+  "seconds": 0.214,
   "returncode": 0,
   "stderr": "",
   "added": 57,
@@ -524,7 +524,7 @@
    "tests/sitl/test_110.py"
   ],
   "parent": "3c0c5df67361a40e12d1d5332d588282ee4f9293",
-  "seconds": 0.105,
+  "seconds": 0.11,
   "returncode": 0,
   "stderr": "",
   "added": 6,
@@ -548,7 +548,7 @@
    "tests/sitl/test_localposition.py"
   ],
   "parent": "bdd0b06152201257b09d2c1c73af0c472dee5719",
-  "seconds": 0.456,
+  "seconds": 0.504,
   "returncode": 0,
   "stderr": "",
   "added": 22,
@@ -590,7 +590,7 @@
    "tests/sitl/test_localposition.py"
   ],
   "parent": "7d9eb8b367506f11a52d34af86f83e273382ad41",
-  "seconds": 0.193,
+  "seconds": 0.252,
   "returncode": 0,
   "stderr": "",
   "added": 20,
@@ -655,7 +655,7 @@
    "examples/guided_set_speed_yaw/guided_set_speed_yaw.py"
   ],
   "parent": "ebbf4a8a400d6aa14ccf380e8ee67c0bacee3cf5",
-  "seconds": 0.09,
+  "seconds": 0.117,
   "returncode": 0,
   "stderr": "",
   "added": 76,
@@ -679,7 +679,7 @@
    "examples/mission_import_export/mission_import_export.py"
   ],
   "parent": "881f661b4a46d12ca0b76ba06503414415080d82",
-  "seconds": 0.123,
+  "seconds": 0.125,
   "returncode": 0,
   "stderr": "",
   "added": 170,
@@ -709,7 +709,7 @@
    "setup.py"
   ],
   "parent": "1badabe8b43731f2d42b10f3ee4f3f02140803ee",
-  "seconds": 0.09,
+  "seconds": 0.128,
   "returncode": 0,
   "stderr": "",
   "added": 1,
@@ -725,7 +725,7 @@
    "dronekit/module/api.py"
   ],
   "parent": "ebcf7346da29486aabc74a819d710434f8e0623a",
-  "seconds": 0.346,
+  "seconds": 0.447,
   "returncode": 0,
   "stderr": "",
   "added": 75,
@@ -741,7 +741,7 @@
    "dronekit/lib/__init__.py"
   ],
   "parent": "4a170ecf2a79ea8ec1831bd432720dbcd420223e",
-  "seconds": 1.121,
+  "seconds": 1.341,
   "returncode": 0,
   "stderr": "",
   "added": 111,
@@ -800,7 +800,7 @@
    "tests/sitl/test_waypoints.py"
   ],
   "parent": "c1f497aad7ddba98fd2a67a00a415d35d2f620f6",
-  "seconds": 0.215,
+  "seconds": 0.281,
   "returncode": 0,
   "stderr": "",
   "added": 25,
@@ -837,7 +837,7 @@
    "examples/vehicle_state/vehicle_state.py"
   ],
   "parent": "32f14fdaacbb4e5ba01a26e3ff26a710df06420c",
-  "seconds": 0.092,
+  "seconds": 0.09,
   "returncode": 0,
   "stderr": "",
   "added": 21,
@@ -860,7 +860,7 @@
    "dronekit/lib/__init__.py"
   ],
   "parent": "f5e71145114b90485b4e8525b167972e79377194",
-  "seconds": 0.098,
+  "seconds": 0.09,
   "returncode": 0,
   "stderr": "",
   "added": 19,
@@ -885,7 +885,7 @@
    "examples/vehicle_state/vehicle_state.py"
   ],
   "parent": "5f3f223de71a0947065871623b2549cb8ebe6637",
-  "seconds": 0.095,
+  "seconds": 0.097,
   "returncode": 0,
   "stderr": "",
   "added": 65,
@@ -922,7 +922,7 @@
    "dronekit/lib/__init__.py"
   ],
   "parent": "a3dad03934bbedcc53f732e29ba6693ea4262659",
-  "seconds": 0.093,
+  "seconds": 0.142,
   "returncode": 0,
   "stderr": "",
   "added": 20,
@@ -946,7 +946,7 @@
    "dronekit/test/sitl/test_parameters.py"
   ],
   "parent": "1ea2032a5d6ce784306712cec442364e1137075f",
-  "seconds": 0.113,
+  "seconds": 0.139,
   "returncode": 0,
   "stderr": "",
   "added": 35,
@@ -977,7 +977,7 @@
    "dronekit/test/sitl/test_localposition.py"
   ],
   "parent": "dbc39dae7b27580d42c9974675d256eeba923cbb",
-  "seconds": 0.136,
+  "seconds": 0.127,
   "returncode": 0,
   "stderr": "",
   "added": 5,
@@ -1008,7 +1008,7 @@
    "examples/vehicle_state/vehicle_state.py"
   ],
   "parent": "5bf2d4e2a1d47251cfb02e063c0481a6419d3059",
-  "seconds": 0.126,
+  "seconds": 0.105,
   "returncode": 0,
   "stderr": "",
   "added": 93,
@@ -1041,7 +1041,7 @@
    "examples/vehicle_state/vehicle_state.py"
   ],
   "parent": "292327f53de2dc091c65091b04054e3ad7ac5479",
-  "seconds": 0.143,
+  "seconds": 0.095,
   "returncode": 0,
   "stderr": "",
   "added": 129,
@@ -1085,7 +1085,7 @@
    "examples/follow_me/follow_me.py"
   ],
   "parent": "21c9bcd077dcf63c8482ceb89f330e8ecbf20581",
-  "seconds": 0.114,
+  "seconds": 0.086,
   "returncode": 0,
   "stderr": "",
   "added": 2,
@@ -1108,7 +1108,7 @@
    "dronekit/__init__.py"
   ],
   "parent": "75e1d8b11271d6f9a95097cfff19e56954f7475b",
-  "seconds": 0.121,
+  "seconds": 0.096,
   "returncode": 0,
   "stderr": "",
   "added": 115,
@@ -1131,7 +1131,7 @@
    "dronekit/__init__.py"
   ],
   "parent": "59383874f89d6a7728936d615361f31c299b6c44",
-  "seconds": 0.124,
+  "seconds": 0.105,
   "returncode": 0,
   "stderr": "",
   "added": 1,
@@ -1154,7 +1154,7 @@
    "dronekit/__init__.py"
   ],
   "parent": "d65471b44e720583a6ef3728dcb44a01050a50ab",
-  "seconds": 0.122,
+  "seconds": 0.102,
   "returncode": 0,
   "stderr": "",
   "added": 29,
@@ -1177,7 +1177,7 @@
    "examples/vehicle_state/vehicle_state.py"
   ],
   "parent": "dd196378cea92a274fb65ee1d399d65424a852d7",
-  "seconds": 0.112,
+  "seconds": 0.104,
   "returncode": 0,
   "stderr": "",
   "added": 213,
@@ -1200,7 +1200,7 @@
    "setup.py"
   ],
   "parent": "fac629cff66a92a63017e96f7c8a8d27a06a6189",
-  "seconds": 0.1,
+  "seconds": 0.117,
   "returncode": 0,
   "stderr": "",
   "added": 30,
@@ -1215,7 +1215,7 @@
    "dronekit/mavlink.py"
   ],
   "parent": "0d77e600de0a97afe887b2b2fa9d864e959f9dc7",
-  "seconds": 0.152,
+  "seconds": 0.185,
   "returncode": 0,
   "stderr": "",
   "added": 2,
@@ -1240,7 +1240,7 @@
    "examples/simple_goto/simple_goto.py"
   ],
   "parent": "4d05c05363cf2300ddcc2b60af729f66c8f18fd4",
-  "seconds": 0.309,
+  "seconds": 0.347,
   "returncode": 0,
   "stderr": "",
   "added": 92,
@@ -1270,7 +1270,7 @@
    "examples/reboot/reboot.py"
   ],
   "parent": "689aa2240b86d8c5903768c47553869632ed2415",
-  "seconds": 0.122,
+  "seconds": 0.143,
   "returncode": 0,
   "stderr": "",
   "added": 36,
@@ -1300,7 +1300,7 @@
    "dronekit/__init__.py"
   ],
   "parent": "f786a6323191ab1fe0cf252111262287ff511adb",
-  "seconds": 1.105,
+  "seconds": 1.443,
   "returncode": 0,
   "stderr": "",
   "added": 1,
@@ -1323,7 +1323,7 @@
    "dronekit/__init__.py"
   ],
   "parent": "a80a9bdbcfd7b80ba60a9fa860478cb748a4de16",
-  "seconds": 1.049,
+  "seconds": 1.486,
   "returncode": 0,
   "stderr": "",
   "added": 1,
@@ -1346,7 +1346,7 @@
    "dronekit/__init__.py"
   ],
   "parent": "ed132cce3588b5a9b0fa93e50f255a284fb8a0f7",
-  "seconds": 0.446,
+  "seconds": 0.707,
   "returncode": 0,
   "stderr": "",
   "added": 4,
