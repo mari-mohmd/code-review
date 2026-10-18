@@ -1,0 +1,1037 @@
+[
+ {
+  "id": "dk-05-002",
+  "a": "LoginResponseMsg",
+  "b": "PingResponseMsg",
+  "kind_a": "ClassDef",
+  "kind_b": "ClassDef",
+  "body_a": "__metaclass__ = _reflection.GeneratedProtocolMessageType\nDESCRIPTOR = _LOGINRESPONSEMSG",
+  "body_b": "__metaclass__ = _reflection.GeneratedProtocolMessageType\nDESCRIPTOR = _PINGRESPONSEMSG"
+ },
+ {
+  "id": "dk-05-003",
+  "a": "StartMissionMsg",
+  "b": "StopMissionMsg",
+  "kind_a": "ClassDef",
+  "kind_b": "ClassDef",
+  "body_a": "__metaclass__ = _reflection.GeneratedProtocolMessageType\nDESCRIPTOR = _STARTMISSIONMSG",
+  "body_b": "__metaclass__ = _reflection.GeneratedProtocolMessageType\nDESCRIPTOR = _STOPMISSIONMSG"
+ },
+ {
+  "id": "dk-10-007",
+  "a": "setUp",
+  "b": "tearDown",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-000",
+  "a": "web_connect",
+  "b": "local_connect",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "return APIConnection()",
+  "body_b": "return APIConnection()"
+ },
+ {
+  "id": "dk-12-001",
+  "a": "Mission",
+  "b": "Command",
+  "kind_a": "ClassDef",
+  "kind_b": "ClassDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-002",
+  "a": "Mission",
+  "b": "delete",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-003",
+  "a": "Mission",
+  "b": "send_mavlink",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-004",
+  "a": "Mission",
+  "b": "flush",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-005",
+  "a": "Mission",
+  "b": "download",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-006",
+  "a": "Mission",
+  "b": "wait_valid",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-007",
+  "a": "Mission",
+  "b": "goto",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-008",
+  "a": "Mission",
+  "b": "clear",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-009",
+  "a": "Mission",
+  "b": "add",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-010",
+  "a": "Mission",
+  "b": "next",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-011",
+  "a": "Command",
+  "b": "delete",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-012",
+  "a": "Command",
+  "b": "send_mavlink",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-013",
+  "a": "Command",
+  "b": "flush",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-014",
+  "a": "Command",
+  "b": "download",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-015",
+  "a": "Command",
+  "b": "wait_valid",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-016",
+  "a": "Command",
+  "b": "goto",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-017",
+  "a": "Command",
+  "b": "clear",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-018",
+  "a": "Command",
+  "b": "add",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-019",
+  "a": "Command",
+  "b": "next",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-020",
+  "a": "commands",
+  "b": "message_factory",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "None",
+  "body_b": "None"
+ },
+ {
+  "id": "dk-12-021",
+  "a": "delete",
+  "b": "send_mavlink",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-022",
+  "a": "delete",
+  "b": "flush",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-023",
+  "a": "delete",
+  "b": "download",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-024",
+  "a": "delete",
+  "b": "wait_valid",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-025",
+  "a": "delete",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-026",
+  "a": "delete",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-027",
+  "a": "delete",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-028",
+  "a": "delete",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-029",
+  "a": "send_mavlink",
+  "b": "flush",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-030",
+  "a": "send_mavlink",
+  "b": "download",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-031",
+  "a": "send_mavlink",
+  "b": "wait_valid",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-032",
+  "a": "send_mavlink",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-033",
+  "a": "send_mavlink",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-034",
+  "a": "send_mavlink",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-035",
+  "a": "send_mavlink",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-036",
+  "a": "flush",
+  "b": "download",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-037",
+  "a": "flush",
+  "b": "wait_valid",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-038",
+  "a": "flush",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-039",
+  "a": "flush",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-040",
+  "a": "flush",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-041",
+  "a": "flush",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-042",
+  "a": "download",
+  "b": "wait_valid",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-043",
+  "a": "download",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-044",
+  "a": "download",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-045",
+  "a": "download",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-046",
+  "a": "download",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-047",
+  "a": "wait_valid",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-048",
+  "a": "wait_valid",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-049",
+  "a": "wait_valid",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-050",
+  "a": "wait_valid",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-051",
+  "a": "goto",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-052",
+  "a": "goto",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-053",
+  "a": "goto",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-054",
+  "a": "clear",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-055",
+  "a": "clear",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-12-056",
+  "a": "add",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-14-000",
+  "a": "commands",
+  "b": "message_factory",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "None",
+  "body_b": "None"
+ },
+ {
+  "id": "dk-16-000",
+  "a": "Mission",
+  "b": "Command",
+  "kind_a": "ClassDef",
+  "kind_b": "ClassDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-001",
+  "a": "Mission",
+  "b": "delete",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-002",
+  "a": "Mission",
+  "b": "send_mavlink",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-003",
+  "a": "Mission",
+  "b": "flush",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-004",
+  "a": "Mission",
+  "b": "download",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-005",
+  "a": "Mission",
+  "b": "wait_valid",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-006",
+  "a": "Mission",
+  "b": "goto",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-007",
+  "a": "Mission",
+  "b": "clear",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-008",
+  "a": "Mission",
+  "b": "add",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-009",
+  "a": "Mission",
+  "b": "next",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-010",
+  "a": "Command",
+  "b": "flush",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-011",
+  "a": "Command",
+  "b": "download",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-012",
+  "a": "Command",
+  "b": "wait_valid",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-013",
+  "a": "Command",
+  "b": "goto",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-014",
+  "a": "commands",
+  "b": "message_factory",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "None",
+  "body_b": "None"
+ },
+ {
+  "id": "dk-16-015",
+  "a": "delete",
+  "b": "flush",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-016",
+  "a": "delete",
+  "b": "download",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-017",
+  "a": "delete",
+  "b": "wait_valid",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-018",
+  "a": "delete",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-019",
+  "a": "send_mavlink",
+  "b": "flush",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-020",
+  "a": "send_mavlink",
+  "b": "download",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-021",
+  "a": "send_mavlink",
+  "b": "wait_valid",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-022",
+  "a": "send_mavlink",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-023",
+  "a": "flush",
+  "b": "download",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-024",
+  "a": "flush",
+  "b": "wait_valid",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-025",
+  "a": "flush",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-026",
+  "a": "flush",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-027",
+  "a": "flush",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-028",
+  "a": "flush",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-029",
+  "a": "download",
+  "b": "wait_valid",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-030",
+  "a": "download",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-031",
+  "a": "download",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-032",
+  "a": "download",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-033",
+  "a": "download",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-034",
+  "a": "wait_valid",
+  "b": "goto",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-035",
+  "a": "wait_valid",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-036",
+  "a": "wait_valid",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-037",
+  "a": "wait_valid",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-038",
+  "a": "goto",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-039",
+  "a": "goto",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-16-040",
+  "a": "goto",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-000",
+  "a": "Mission",
+  "b": "clear",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-001",
+  "a": "Command",
+  "b": "clear",
+  "kind_a": "ClassDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-002",
+  "a": "commands",
+  "b": "message_factory",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "None",
+  "body_b": "None"
+ },
+ {
+  "id": "dk-20-003",
+  "a": "delete",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-004",
+  "a": "send_mavlink",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-005",
+  "a": "flush",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-006",
+  "a": "download",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-007",
+  "a": "wait_valid",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-008",
+  "a": "goto",
+  "b": "clear",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-009",
+  "a": "clear",
+  "b": "add",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-20-010",
+  "a": "clear",
+  "b": "next",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pass",
+  "body_b": "pass"
+ },
+ {
+  "id": "dk-28-006",
+  "a": "count",
+  "b": "__len__",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "return self._vehicle._wploader.count()",
+  "body_b": "return self._vehicle._wploader.count()"
+ },
+ {
+  "id": "pp-04-001",
+  "a": "_create_ppc2pd_bus_lookup",
+  "b": "_create_ppc2pd_bus_lookup",
+  "kind_a": "FunctionDef",
+  "kind_b": "FunctionDef",
+  "body_a": "pd2ppc_bus_lookup = net['_pd2ppc_lookups']['bus']\nvalid_entries = pd2ppc_bus_lookup >= 0\nppc2pd_bus_lookup = np.ones(max(pd2ppc_bus_lookup[valid_entries]) + 1, dtype=int) * -1\nind_pd2ppc_bus_lookup = np.array(range(len(pd2ppc_bus_lookup)), dtype=int)\nppc2pd_bus_lookup[pd2ppc_bus_lookup[valid_entries]] = ind_pd2ppc_bus_lookup[valid_entries]\nnet['_ppc2pd_lookups']['bus'] = ppc2pd_bus_lookup",
+  "body_b": "pd2ppc_bus_lookup = net['_pd2ppc_lookups']['bus']\nvalid_entries = pd2ppc_bus_lookup >= 0\nppc2pd_bus_lookup = np.ones(max(pd2ppc_bus_lookup[valid_entries]) + 1, dtype=int) * -1\nind_pd2ppc_bus_lookup = np.array(range(len(pd2ppc_bus_lookup)), dtype=int)\nppc2pd_bus_lookup[pd2ppc_bus_lookup[valid_entries]] = ind_pd2ppc_bus_lookup[valid_entries]\nnet['_ppc2pd_lookups']['bus'] = ppc2pd_bus_lookup"
+ }
+]

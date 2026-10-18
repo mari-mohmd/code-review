@@ -36,7 +36,7 @@ The methodology is grounded in four formal models:
 
 | No. | Checker              | What It Detects                                        |
 |-----|----------------------|--------------------------------------------------------|
-| 1   | Linkage              | Linked files missing from the diff                     |
+| 1   | Linkage              | Linked files missing from the diff: files the changed file imports/opens, and files that use a definition changed in the diff |
 | 2   | Naming               | Identifier variants in the same scope (user_id/userId) |
 | 3   | Magic Number         | Bare numeric literals with no named constant           |
 | 4   | Lifecycle            | Resources or context managers not properly released    |
@@ -45,6 +45,21 @@ The methodology is grounded in four formal models:
 | 7   | Path Coherence       | File written outside its intended directory            |
 | 8   | Shell Execution      | os.system, subprocess with shell=True                  |
 | 9   | Input                | input() validation, blocking, encoding, and echo risks |
+| 10  | Injection            | eval/exec, computed imports, pickle/yaml/custom-JSON deserialisation |
+
+In diff mode the tool also reports, once per file:
+
+- **parse** - a changed `.py` file that is not valid Python 3 (e.g. Python 2 code)
+  and was therefore not analysed;
+- **skipped** - a generated file (protobuf `_pb2.py`, `DO NOT EDIT`, `@generated`);
+- **formatting** - a file whose hunks change only layout, comments or docstrings
+  ("No functional change"); no other checks run on it.
+
+Only `.py` files are analysed. Each diff hunk is classified as cosmetic,
+comment/docstring-only or code, and only code hunks select the functions and
+classes that the checkers inspect. Magic-number notices are limited to changed
+lines (plus comparison operands elsewhere in a changed function) and skip
+self-documenting literals and test files.
 
 ---
 
@@ -56,8 +71,12 @@ code-review/
     lib/
         analyzer.py
         checkers.py
-        checklist_data
-        graph_builder
+        checklist_data.py
+        diff_model.py           -- hunk parsing, relocation and classification
+        graph_builder.py
+        static_checklist.py
+    tests/                   -- regression tests (python -m unittest discover -s tests)
+    evaluation/              -- 100-commit evaluation: EVALUATION.md, scripts, data
     test_scenarios/          -- self-contained scenarios for testing and replication
         scenario1/
             project_dir/
@@ -253,6 +272,23 @@ Additional checkers can be implemented by creating new checker classes in
 `lib/checkers.py` and registering them in the `ChecklistGenerator` class within
 `lib/analyzer.py`, allowing the checklist to be tailored to project-specific
 requirements.
+
+---
+
+## Tests
+
+```bash
+python -m unittest discover -s tests
+```
+
+`tests/test_accuracy.py` contains one regression test for each accuracy issue
+found in the 100-commit evaluation.
+
+## Evaluation
+
+`evaluation/EVALUATION.md` reports an evaluation on 100 randomly sampled commits
+from pandapower and dronekit-python, before and after the accuracy fixes, with
+all scripts, raw output and per-item labels in `evaluation/`.
 
 ---
 

@@ -1,0 +1,461 @@
+{
+ "repo": "/home/claude/work/pandapower",
+ "population": 5343,
+ "seed": 2026,
+ "sample": [
+  {
+   "sha": "62702b120b7a0bf85c4f33b36614f3792afc732b",
+   "date": "2016-11-02",
+   "subject": "fixed line geodata bug in to_excel / from_excel",
+   "py": [
+    "pandapower/file_io.py",
+    "pandapower/test/test_file_io.py"
+   ]
+  },
+  {
+   "sha": "381acb293522b32386d06f3b93d002d8933feb22",
+   "date": "2017-02-16",
+   "subject": "numpy 1.10",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "1e2a9fa26f1b16d4cc3464e955f8dddaf01f3e16",
+   "date": "2017-03-29",
+   "subject": "plotly.py added in pandapower.plotting",
+   "py": [
+    "pandapower/plotting/generic_geodata.py",
+    "pandapower/plotting/plotly.py"
+   ]
+  },
+  {
+   "sha": "b2ecc5dc5c15970e0a1b0e0b1fbd21df607880cb",
+   "date": "2017-04-20",
+   "subject": "no need to call function for empty element table",
+   "py": [
+    "pandapower/auxiliary.py"
+   ]
+  },
+  {
+   "sha": "233854cdfe6de3a938591fc265adaa217ff56204",
+   "date": "2017-04-20",
+   "subject": "second step; small fixes and refactorings; all tests pass",
+   "py": [
+    "pandapower/auxiliary.py",
+    "pandapower/pd2ppc.py"
+   ]
+  },
+  {
+   "sha": "2be4d9c8546170c67644d0c4b5964d9c8c48b4db",
+   "date": "2017-05-03",
+   "subject": "mock scipy.linalg",
+   "py": [
+    "doc/conf.py"
+   ]
+  },
+  {
+   "sha": "d585dfa0a22be1d03468384e4d3c7bae860604f4",
+   "date": "2017-05-10",
+   "subject": "fixed possible issue",
+   "py": [
+    "pandapower/html.py"
+   ]
+  },
+  {
+   "sha": "0124975f557e27deda6c84b9a4c56a74c2e2033f",
+   "date": "2017-05-21",
+   "subject": "repickled with column as list #35",
+   "py": [
+    "pandapower/file_io.py",
+    "pandapower/test/converter/test_from_ppc.py"
+   ]
+  },
+  {
+   "sha": "0442ff9fe5f4ea5d005690c728193059399f5de0",
+   "date": "2017-06-09",
+   "subject": "tiny bug fix in log controllables; improve coding style",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "f3e38997e034cfd9bd8a6df9ffcdd40f3184fcd9",
+   "date": "2017-06-28",
+   "subject": "improve geodata of simple_mv_open_ring",
+   "py": [
+    "pandapower/networks/simple_pandapower_test_networks.py"
+   ]
+  },
+  {
+   "sha": "b57ab904047a7449f2d2980253d4c2caf7cf6772",
+   "date": "2017-07-18",
+   "subject": "numba makeYbus for state estimation",
+   "py": [
+    "pandapower/estimation/wls_matrix_ops.py",
+    "pandapower/estimation/wls_ppc_conversions.py"
+   ]
+  },
+  {
+   "sha": "55c5061278e99e509bf1b16ccbeb58c2db1b1a8b",
+   "date": "2017-07-20",
+   "subject": "adapted line_collections and trafo_collections to new plotting",
+   "py": [
+    "pandapower/plotting/collections.py"
+   ]
+  },
+  {
+   "sha": "af9dea9c19004c0957a108c078ee8ddd174aee06",
+   "date": "2017-08-09",
+   "subject": "When pickling we now save shapely data as primitive datatypes and convert them to shapely on loading if geopandas is installed",
+   "py": [
+    "pandapower/file_io.py",
+    "pandapower/plotting/__init__.py",
+    "pandapower/plotting/geo.py"
+   ]
+  },
+  {
+   "sha": "f16f7faa044ad5738a00913595f189188a09d4f6",
+   "date": "2017-10-20",
+   "subject": "added flag for articulation points to find_bridges",
+   "py": [
+    "pandapower/topology/graph_searches.py"
+   ]
+  },
+  {
+   "sha": "2fa58623d5c3ef1d014a22d82df89a260ba61795",
+   "date": "2017-12-11",
+   "subject": "improved creation of line switch collection and added plotting of line switches to simple_plot",
+   "py": [
+    "pandapower/plotting/collections.py",
+    "pandapower/plotting/simple_plot.py",
+    "pandapower/topology/graph_searches.py"
+   ]
+  },
+  {
+   "sha": "8dbeda7d42387850061a0d7ab0a0f82510d8fcb9",
+   "date": "2018-04-17",
+   "subject": "isolated buses in zero sequence",
+   "py": [
+    "pandapower/auxiliary.py",
+    "pandapower/pd2ppc_zero.py",
+    "pandapower/test/shortcircuit/test_1ph.py"
+   ]
+  },
+  {
+   "sha": "c8653df59326c6fe689c40d6c6888e8847e14965",
+   "date": "2018-07-19",
+   "subject": " YNyn V comp: Pass PQ comparison: Fail",
+   "py": [
+    "pandapower/test/loadflow/test_runpp_3ph.py"
+   ]
+  },
+  {
+   "sha": "09253c832305149cefe7219d3acacd18196b3846",
+   "date": "2018-10-12",
+   "subject": "t3 switches #30",
+   "py": [
+    "pandapower/build_branch.py",
+    "pandapower/create.py",
+    "pandapower/test/loadflow/test_scenarios.py"
+   ]
+  },
+  {
+   "sha": "73507bc869912c8734683c9dff5739e85461aca5",
+   "date": "2019-01-19",
+   "subject": "using csr matrix in calculation subjacobian matrix (+1 squashed commits)",
+   "py": [
+    "pandapower/estimation/estimator/wls_matrix_ops.py"
+   ]
+  },
+  {
+   "sha": "ecaf32d7909ddbd1e410a08faaa3b41db6c8446a",
+   "date": "2019-03-13",
+   "subject": "remove unused pypower code #325",
+   "py": [
+    "pandapower/pypower/opf_costfcn.py",
+    "pandapower/pypower/opf_setup.py",
+    "pandapower/pypower/qps_pypower.py"
+   ]
+  },
+  {
+   "sha": "e7ff57a95dc0ad094f5d0eafaec0d0d94c890673",
+   "date": "2019-03-20",
+   "subject": "replace deprecated numpy.assscalar() with ndarray.item()",
+   "py": [
+    "pandapower/pypower/dSbr_dV.py",
+    "pandapower/pypower/gausspf.py"
+   ]
+  },
+  {
+   "sha": "e4ffd7aeec63ea8a2c81d7d103ee3d62a6462266",
+   "date": "2019-03-26",
+   "subject": " Convergence tests and fix for mismatch check #96",
+   "py": [
+    "pandapower/pf/runpp_3ph.py",
+    "pandapower/test/loadflow/test_runpp_3ph.py"
+   ]
+  },
+  {
+   "sha": "5bc13727d6f4c0085cc0991c9368b773d94d5262",
+   "date": "2019-10-25",
+   "subject": "add toolbox functions replace_ext_grid_by_gen, replace_gen_by_ext_grid, get_connected_elements_dict",
+   "py": [
+    "pandapower/test/api/test_toolbox.py",
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "cc5df47c33c1c9ed7603384048072ec1e1b0081d",
+   "date": "2019-11-17",
+   "subject": "few more corrections",
+   "py": [
+    "pandapower/plotting/collections.py"
+   ]
+  },
+  {
+   "sha": "fce3b39c9cb2ebd53cea6543cbcd329df1ed9c6c",
+   "date": "2020-02-25",
+   "subject": "add merge_results to merge_nets(); fasten _select_cost_df()",
+   "py": [
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "d95df5f30a8020f77bf1e2426fdc7cccdf88e30b",
+   "date": "2020-07-29",
+   "subject": "Minimum short circuit branch current ignore 0, update tests",
+   "py": [
+    "pandapower/shortcircuit/currents.py",
+    "pandapower/test/shortcircuit/test_gen.py",
+    "pandapower/test/shortcircuit/test_motor.py",
+    "pandapower/test/shortcircuit/test_sgen.py"
+   ]
+  },
+  {
+   "sha": "dd962149c61897cec9b3cebb5a56290b0e146df0",
+   "date": "2020-08-09",
+   "subject": "Fixed failed test which used \"results\" as init option",
+   "py": [
+    "pandapower/build_bus.py",
+    "pandapower/test/converter/test_from_ppc.py",
+    "pandapower/test/converter/test_to_ppc_and_mpc.py",
+    "pandapower/test/estimation/test_wls_estimation.py"
+   ]
+  },
+  {
+   "sha": "c3090c6ae5c17d81242f61faba63e62445f67f44",
+   "date": "2021-02-22",
+   "subject": "Update setup.py",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "e32bbc95c95609a54b10d3c802e62a1c7b66f66a",
+   "date": "2021-03-25",
+   "subject": "Add auto_open parameter",
+   "py": [
+    "pandapower/plotting/plotly/pf_res_plotly.py",
+    "pandapower/plotting/plotly/simple_plotly.py",
+    "pandapower/plotting/plotly/traces.py",
+    "pandapower/plotting/plotly/vlevel_plotly.py"
+   ]
+  },
+  {
+   "sha": "fdbb5deafd2eb901599c7d5d01cb856acecebbab",
+   "date": "2021-04-28",
+   "subject": "added docstring for CharacteristicControl and updated CHANGELOG.rst",
+   "py": [
+    "pandapower/control/controller/characteristic_controller.py"
+   ]
+  },
+  {
+   "sha": "87aab1e5c088656a4043d345b344655e62f3d344",
+   "date": "2021-08-04",
+   "subject": "adaptions of tests",
+   "py": [
+    "pandapower/test/api/test_convert_format.py",
+    "pandapower/test/api/test_file_io.py"
+   ]
+  },
+  {
+   "sha": "289fb4f63bdd49ccd450294f95a16eb6a709f88f",
+   "date": "2021-11-15",
+   "subject": "consolidate and revise comparison methods #505",
+   "py": [
+    "pandapower/test/api/test_file_io.py",
+    "pandapower/test/toolbox.py",
+    "pandapower/toolbox.py"
+   ]
+  },
+  {
+   "sha": "735ed762b8fcc8c2f51a867d602f92d04196577d",
+   "date": "2021-12-14",
+   "subject": "bugfix",
+   "py": [
+    "pandapower/control/basic_controller.py"
+   ]
+  },
+  {
+   "sha": "8a9d76806e07a974845e15cdb344922a42ccae44",
+   "date": "2022-02-23",
+   "subject": "change simple_plotly_generic call from positional args to kwargs",
+   "py": [
+    "pandapower/plotting/plotly/simple_plotly.py"
+   ]
+  },
+  {
+   "sha": "1fe5b65bd734c4317fc07af569f5e3d2727acc6c",
+   "date": "2022-07-18",
+   "subject": "random id",
+   "py": [
+    "pandapower/test/api/test_file_io.py"
+   ]
+  },
+  {
+   "sha": "f9c801539fec895be51d171dac094fbee69a610e",
+   "date": "2022-08-02",
+   "subject": "json io generalization",
+   "py": [
+    "pandapower/file_io.py",
+    "pandapower/io_utils.py",
+    "pandapower/test/api/test_file_io.py"
+   ]
+  },
+  {
+   "sha": "96496d271d8cc00df84bab49752886452e95a1c0",
+   "date": "2022-08-09",
+   "subject": "bugfix in auxiliary.py for dealing with user_pf_options",
+   "py": [
+    "pandapower/auxiliary.py",
+    "pandapower/test/loadflow/test_dist_slack.py",
+    "pandapower/test/loadflow/test_tdpf.py"
+   ]
+  },
+  {
+   "sha": "9f12d0685faa87046fa6a74f4e1864d4403d0bd5",
+   "date": "2022-09-02",
+   "subject": "add subfunctions of add_basic_std_types",
+   "py": [
+    "pandapower/__init__.py",
+    "pandapower/file_io.py",
+    "pandapower/std_types.py"
+   ]
+  },
+  {
+   "sha": "910b589b1222e3d47faada6dfb58231304f23179",
+   "date": "2022-11-16",
+   "subject": "Oc relay relase with DTOC, IDMT",
+   "py": [
+    "pandapower/protection/oc_relay_model.py",
+    "pandapower/test/protection/test_oc_relay_model.py"
+   ]
+  },
+  {
+   "sha": "74abfd14154c33124feb3c755e4bf687829b4f5d",
+   "date": "2022-11-17",
+   "subject": "works",
+   "py": [
+    "pandapower/contingency/contingency.py"
+   ]
+  },
+  {
+   "sha": "c31bb6d63cfc210213c01b70445d4527267fb490",
+   "date": "2023-04-12",
+   "subject": "try with julia 1.8 (#1970)",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "66d56e72b8598cdfaea349e1a1ec88282159c75a",
+   "date": "2023-08-07",
+   "subject": "0.7.3 finish test_oc_relay",
+   "py": [
+    "pandapower/protection/protection_devices/ocrelay.py",
+    "pandapower/test/protection/test_oc_relay.py"
+   ]
+  },
+  {
+   "sha": "7ee6d904dbbff8898ce4ff7c7293be08783f5f2a",
+   "date": "2024-04-24",
+   "subject": "finished shunt conversions",
+   "py": [
+    "pandapower/converter/powerfactory/pp_import_functions.py"
+   ]
+  },
+  {
+   "sha": "a76f1992c333bb3390a071aae3ccdf3a91081260",
+   "date": "2024-09-08",
+   "subject": "Replacing deprecated in1d with isin",
+   "py": [
+    "pandapower/build_branch.py",
+    "pandapower/pf/run_bfswpf.py",
+    "pandapower/shortcircuit/ppc_conversion.py",
+    "pandapower/shortcircuit/toolbox.py",
+    "pandapower/test/loadflow/test_results.py",
+    "pandapower/topology/create_graph.py"
+   ]
+  },
+  {
+   "sha": "7cade729e093c085fb2f117e1b9a1f0a4fa425f8",
+   "date": "2024-11-22",
+   "subject": "address Mario's comments; update create.py lib for trafo/trafo3w parameter changes",
+   "py": [
+    "pandapower/control/util/auxiliary.py",
+    "pandapower/converter/cim/cim2pp/converter_classes/shunts/linearShuntCompensatorCim16.py",
+    "pandapower/converter/cim/cim2pp/converter_classes/shunts/nonLinearShuntCompensatorCim16.py",
+    "pandapower/converter/cim/cim2pp/converter_classes/shunts/staticVarCompensatorCim16.py",
+    "pandapower/converter/cim/cim2pp/converter_classes/transformers/powerTransformersCim16.py",
+    "pandapower/converter/cim/cim_tools.py",
+    "pandapower/converter/cim/pp_tools.py",
+    "pandapower/create.py",
+    "pandapower/std_types.py",
+    "pandapower/test/control/test_tap_dependent_impedance.py"
+   ]
+  },
+  {
+   "sha": "26dbbb02a38a27213780dd6a097f0b1d2ed17b67",
+   "date": "2024-11-25",
+   "subject": "fixed formatting issues switched to f-strings instead of % notation added some type hints and docstrings",
+   "py": [
+    "pandapower/converter/powerfactory/pp_import_functions.py"
+   ]
+  },
+  {
+   "sha": "92e78c0a810792a46734dc5bddc1b36963726e1f",
+   "date": "2024-12-20",
+   "subject": "panos comment, change not necessary",
+   "py": [
+    "pandapower/convert_format.py"
+   ]
+  },
+  {
+   "sha": "cb967fec9880a845cd9a459f9d648528c0a4c2e1",
+   "date": "2025-02-06",
+   "subject": "Update convert_measurements.py",
+   "py": [
+    "pandapower/converter/cim/cim2pp/convert_measurements.py"
+   ]
+  },
+  {
+   "sha": "7a09ae953adef07870b8c6c557c210b9fe97add0",
+   "date": "2025-07-29",
+   "subject": "added a source_dc object to pandapower",
+   "py": [
+    "pandapower/pypower/idx_source_dc.py"
+   ]
+  },
+  {
+   "sha": "dd3f6166d4443043a8e7e5baa0c862a6cb18a774",
+   "date": "2025-09-12",
+   "subject": "Plotting map, add 'zoomlevel' parameter to vlevel and pf_res",
+   "py": [
+    "pandapower/plotting/plotly/pf_res_plotly.py",
+    "pandapower/plotting/plotly/traces.py",
+    "pandapower/plotting/plotly/vlevel_plotly.py"
+   ]
+  }
+ ]
+}

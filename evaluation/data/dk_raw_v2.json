@@ -1,0 +1,1364 @@
+[
+ {
+  "sha": "df279718d69e48cde056ba56df0e03bce0174b37",
+  "date": "2014-03-27",
+  "subject": "make HasAttributeObservers work",
+  "py": [
+   "droneapi/lib/DroneApi.py"
+  ],
+  "parent": "de9748338d85d3dcfc09b734f2b47dd65e575132",
+  "seconds": 0.153,
+  "returncode": 0,
+  "stderr": "",
+  "added": 19,
+  "removed": 4,
+  "items": []
+ },
+ {
+  "sha": "f5e44e8f731ee3002b041f00987ff0b5d8d21f82",
+  "date": "2014-03-29",
+  "subject": "A minimal API example",
+  "py": [
+   "example/small-demo.py"
+  ],
+  "parent": "0a3d3ab9be15010bd214163ad92170a30808d262",
+  "seconds": 0.088,
+  "returncode": 0,
+  "stderr": "",
+  "added": 22,
+  "removed": 1,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: example/small-demo.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 15. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 15,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "b16fe4d68dd691bda859c02e59b0c859f90e0266",
+  "date": "2014-04-02",
+  "subject": "update release script",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "494bae6ea42567e78470af04f3ea72545399fab2",
+  "seconds": 0.089,
+  "returncode": 0,
+  "stderr": "",
+  "added": 6,
+  "removed": 5,
+  "items": []
+ },
+ {
+  "sha": "bb6f073476408bb5161fc8dcc9eec4e2fc957031",
+  "date": "2014-05-10",
+  "subject": "better docs",
+  "py": [
+   "droneapi/lib/__init__.py"
+  ],
+  "parent": "3ad9b4bb4e3d76be54f1aac5d85a043ceb1d95f9",
+  "seconds": 0.088,
+  "returncode": 0,
+  "stderr": "",
+  "added": 8,
+  "removed": 2,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "No functional change in droneapi/lib/__init__.py",
+    "detail": "1 hunk(s): 0 layout/whitespace only, 1 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "36aa54f4edf16f6cb3dec2416b0893118d430b1d",
+  "date": "2014-07-05",
+  "subject": "implement v.rc_readback per spec",
+  "py": [
+   "droneapi/module/api.py",
+   "example/small_demo.py"
+  ],
+  "parent": "685599b96aa58f4f11f6574abc7e2cd29235f6f5",
+  "seconds": 0.086,
+  "returncode": 0,
+  "stderr": "",
+  "added": 26,
+  "removed": 2,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: droneapi/module/api.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 46. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 46,
+    "score": null
+   },
+   {
+    "category": "parse",
+    "message": "Not analysed: example/small_demo.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 16. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 16,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "937d74b01a8bd879f4febcd5a5c520c953b9ee86",
+  "date": "2014-07-31",
+  "subject": "update to latest protobufs",
+  "py": [
+   "droneapi/lib/webapi_pb2.py"
+  ],
+  "parent": "ac27de9946695120b6306e7ce2f7a72055b02576",
+  "seconds": 0.1,
+  "returncode": 0,
+  "stderr": "",
+  "added": 41,
+  "removed": 34,
+  "items": [
+   {
+    "category": "skipped",
+    "message": "Generated file not analysed: droneapi/lib/webapi_pb2.py",
+    "detail": "The file header marks it as generated code. Review the generator input instead of the generated output.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "dbc369177c96f8f7303a08a26c86338641163d3a",
+  "date": "2014-08-01",
+  "subject": "remote commands are now accepted by the local vehicle",
+  "py": [
+   "droneapi/module/api.py"
+  ],
+  "parent": "668c8dcfc889c283124d2fa37bfddbd5a25ce4a7",
+  "seconds": 0.096,
+  "returncode": 0,
+  "stderr": "",
+  "added": 13,
+  "removed": 3,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: droneapi/module/api.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 48. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 48,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "241bacd3ec4d1ac720e0c45c5e562a0c08f3afa4",
+  "date": "2014-12-05",
+  "subject": "Wait on reading params until after they have been fetched from vehicle.",
+  "py": [
+   "droneapi/module/api.py"
+  ],
+  "parent": "4ffb67c2000a68b2fa7148f88141656514675235",
+  "seconds": 0.094,
+  "returncode": 0,
+  "stderr": "",
+  "added": 13,
+  "removed": 0,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: droneapi/module/api.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 244. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 244,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "8b6189d1d3fd2421c9a653f2911e449c64bbb2e0",
+  "date": "2014-12-19",
+  "subject": "api takeoff",
+  "py": [
+   "droneapi/module/api.py"
+  ],
+  "parent": "77738549d3b996068fed4397262240286a4cdff3",
+  "seconds": 0.088,
+  "returncode": 0,
+  "stderr": "",
+  "added": 9,
+  "removed": 0,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: droneapi/module/api.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 294. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 294,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "6eef088446a710a8266b757b7c4c462badf76795",
+  "date": "2014-12-29",
+  "subject": "use abspath of the script to derive local_path",
+  "py": [
+   "droneapi/module/api.py"
+  ],
+  "parent": "c53a46e281cb412d48621ed291af1e013eb7ea7f",
+  "seconds": 0.082,
+  "returncode": 0,
+  "stderr": "",
+  "added": 3,
+  "removed": 9,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: droneapi/module/api.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 139. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 139,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "b05a9999e44a1e90ddf59ac2dbad7ce88ee74c35",
+  "date": "2015-02-23",
+  "subject": "tests are now a package",
+  "py": [
+   "tests/__init__.py",
+   "tests/web_integration_test.py"
+  ],
+  "parent": "5cee787af96b815c35560c1c3e978cbba6a808c4",
+  "seconds": 0.131,
+  "returncode": 0,
+  "stderr": "",
+  "added": 39,
+  "removed": 20,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'tests/cloud_client_test.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - droneapi/lib/CloudClient.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'tests/web_integration_test.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - droneapi/lib/WebClient.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "2a3ab95d082c29a7bcd8e2193cbae06953672240",
+  "date": "2015-04-10",
+  "subject": "bump mavproxy and update version",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "8b96d3f73d7b0e7ced8fe9418059a976b4a12866",
+  "seconds": 0.107,
+  "returncode": 0,
+  "stderr": "",
+  "added": 3,
+  "removed": 2,
+  "items": []
+ },
+ {
+  "sha": "9b9b303e1ddcebb7cb75d3e364faa226dc18742c",
+  "date": "2015-04-30",
+  "subject": "Significant changes to API reference - including addition of introductory section and code snippets throughout API. Also put warnings for APIs that are still not implemented or not intended for third party use",
+  "py": [
+   "droneapi/lib/__init__.py"
+  ],
+  "parent": "10c9bcfd58a669587f568b4d21354ce95b94fef9",
+  "seconds": 0.127,
+  "returncode": 0,
+  "stderr": "",
+  "added": 512,
+  "removed": 134,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "No functional change in droneapi/lib/__init__.py",
+    "detail": "15 hunk(s): 0 layout/whitespace only, 15 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "d78abc112302d92b8394bbdd3388216abba4173d",
+  "date": "2015-05-06",
+  "subject": "Hide Vehicle.delete from api docs, as discussed in #65. Update source file to also make usage clear for people reading that directly",
+  "py": [
+   "droneapi/lib/__init__.py"
+  ],
+  "parent": "43f9310d152a45d539ae9d0bbfe11f6aaaf3a997",
+  "seconds": 0.108,
+  "returncode": 0,
+  "stderr": "",
+  "added": 5,
+  "removed": 4,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "No functional change in droneapi/lib/__init__.py",
+    "detail": "1 hunk(s): 0 layout/whitespace only, 1 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "7e9dc44155dd8eb57166991b33ebe98271547098",
+  "date": "2015-05-19",
+  "subject": "Update instructions for preferred VehicleMode on Plane/Rover",
+  "py": [
+   "droneapi/lib/__init__.py"
+  ],
+  "parent": "6cafee7a0b2f9014194c698b90cd61bfa261f0f4",
+  "seconds": 0.119,
+  "returncode": 0,
+  "stderr": "",
+  "added": 10,
+  "removed": 5,
+  "items": [
+   {
+    "category": "formatting",
+    "message": "No functional change in droneapi/lib/__init__.py",
+    "detail": "1 hunk(s): 0 layout/whitespace only, 1 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "406757653d2ad1e04720ba827f715dbd4fb62952",
+  "date": "2015-05-19",
+  "subject": "First draft of example .py file and documentation",
+  "py": [
+   "example/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "02f358bf4fbb147fb418d89cd2df2915d9a462ce",
+  "seconds": 0.097,
+  "returncode": 0,
+  "stderr": "",
+  "added": 367,
+  "removed": 69,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: example/vehicle_state/vehicle_state.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 20. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 20,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "bbf7d95f8115ae9ba862cd4b3defe59bcd7168fc",
+  "date": "2015-06-03",
+  "subject": "Tidy documentation for addition of Battery class #137",
+  "py": [
+   "droneapi/lib/__init__.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "26f39db6a2142caa35c6d28537270458d543806f",
+  "seconds": 0.162,
+  "returncode": 0,
+  "stderr": "",
+  "added": 51,
+  "removed": 50,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/vehicle_state/vehicle_state.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 20. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 20,
+    "score": null
+   },
+   {
+    "category": "formatting",
+    "message": "No functional change in droneapi/lib/__init__.py",
+    "detail": "19 hunk(s): 12 layout/whitespace only, 7 comment/docstring only.\nNo logic, identifiers or values in code were modified; no further checks were run.",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "272dc266b4f13cd8abd8a9598662e3aabaa03e5e",
+  "date": "2015-07-10",
+  "subject": "Fixes MSG_WAITALL implementation for Windows.",
+  "py": [
+   "droneapi/lib/WebClient.py"
+  ],
+  "parent": "cc38a3f47a2e66c0f31cb6c0349dde7f894fecf4",
+  "seconds": 0.223,
+  "returncode": 0,
+  "stderr": "",
+  "added": 8,
+  "removed": 1,
+  "items": []
+ },
+ {
+  "sha": "2db66b66bbc4dd5125da256a31e5e41d84d48b9b",
+  "date": "2015-07-16",
+  "subject": "Allows TEST_VERBOSE to be set to enable verbose messaging.",
+  "py": [
+   "tests/sitl/__main__.py"
+  ],
+  "parent": "3cee6c5ce5cd17cb04530cc4b501d624b67fd16b",
+  "seconds": 0.368,
+  "returncode": 0,
+  "stderr": "",
+  "added": 66,
+  "removed": 25,
+  "items": [
+   {
+    "category": "concurrency",
+    "message": "Concurrency construct in tests/sitl/__main__.py",
+    "detail": "[scope: class:NonBlockingStreamReader]\nConcurrency construct 'Queue' at line 55.\nVerify thread-safety and absence of deadlocks:\n  * Are all shared variables accessed under the appropriate lock?\n  * Is lock acquisition order consistent to prevent deadlock?\n  * Are daemon threads explicitly joined or their lifecycle managed?",
+    "line": 55,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Concurrency construct in tests/sitl/__main__.py",
+    "detail": "[scope: class:NonBlockingStreamReader]\nConcurrency construct 'Thread' at line 69.\nVerify thread-safety and absence of deadlocks:\n  * Are all shared variables accessed under the appropriate lock?\n  * Is lock acquisition order consistent to prevent deadlock?\n  * Are daemon threads explicitly joined or their lifecycle managed?",
+    "line": 69,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unreleasable resource from 'mkstemp()' in tests/sitl/__main__.py",
+    "detail": "[scope: function:lets_run_a_test]\nThe handle returned by 'mkstemp()' at line 166 is never bound to a name,\nso it can never be closed (e.g. mkstemp() returns an open file descriptor).\nBind it and close it, or use a context manager.",
+    "line": 166,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Subprocess spawned in tests/sitl/__main__.py",
+    "detail": "[scope: function:lets_run_a_test]\nSubprocess spawned via 'Popen' at line 126.\nReview:\n  * Is the child process always waited on (communicate() / wait())\n    to prevent zombie processes?\n  * Are stdout/stderr explicitly handled or closed to prevent\n    file-descriptor leaks?\n  * Could a race condition exist between the parent and child on\n    any shared resource (files, sockets, signals)?\n  * Is shell=False? (or is shell=True justified and reviewed\n    by the ShellInjectionChecker)?",
+    "line": 126,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Subprocess spawned in tests/sitl/__main__.py",
+    "detail": "[scope: function:lets_run_a_test]\nSubprocess spawned via 'Popen' at line 128.\nReview:\n  * Is the child process always waited on (communicate() / wait())\n    to prevent zombie processes?\n  * Are stdout/stderr explicitly handled or closed to prevent\n    file-descriptor leaks?\n  * Could a race condition exist between the parent and child on\n    any shared resource (files, sockets, signals)?\n  * Is shell=False? (or is shell=True justified and reviewed\n    by the ShellInjectionChecker)?",
+    "line": 128,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Subprocess spawned in tests/sitl/__main__.py",
+    "detail": "[scope: function:lets_run_a_test]\nSubprocess spawned via 'Popen' at line 166.\nReview:\n  * Is the child process always waited on (communicate() / wait())\n    to prevent zombie processes?\n  * Are stdout/stderr explicitly handled or closed to prevent\n    file-descriptor leaks?\n  * Could a race condition exist between the parent and child on\n    any shared resource (files, sockets, signals)?\n  * Is shell=False? (or is shell=True justified and reviewed\n    by the ShellInjectionChecker)?",
+    "line": 166,
+    "score": null
+   },
+   {
+    "category": "shell",
+    "message": "subprocess with shell=True in tests/sitl/__main__.py",
+    "detail": "[scope: function:lets_run_a_test]\n'Popen(..., shell=True)' at line 126 enables shell expansion (e.g command injection).\nPass a list of arguments instead and remove shell=True.",
+    "line": 126,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "f5a8e5973601bdaef007725806d810fd2ff46024",
+  "date": "2015-07-27",
+  "subject": "v1.4.1",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "38b2e12fdc79f73c650e89a3cba63fb342e63585",
+  "seconds": 0.14,
+  "returncode": 0,
+  "stderr": "",
+  "added": 11,
+  "removed": 14,
+  "items": []
+ },
+ {
+  "sha": "c9e9096a62f54b0231a0c00dc3c11e99c8065c30",
+  "date": "2015-08-12",
+  "subject": "Improve documentation now we can unset notification for raw mavlink messages",
+  "py": [
+   "droneapi/lib/__init__.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "7558d7b6a0f6cabf2b77826663ce949a6f317a35",
+  "seconds": 0.214,
+  "returncode": 0,
+  "stderr": "",
+  "added": 57,
+  "removed": 9,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/vehicle_state/vehicle_state.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 19. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 19,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'droneapi/lib/__init__.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - droneapi/module/api.py  (uses Vehicle)",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "7d7b9c8f67ed183d352fdb32d974552c91267933",
+  "date": "2015-09-21",
+  "subject": "Updates to add test_110.",
+  "py": [
+   "tests/sitl/test_110.py"
+  ],
+  "parent": "3c0c5df67361a40e12d1d5332d588282ee4f9293",
+  "seconds": 0.11,
+  "returncode": 0,
+  "stderr": "",
+  "added": 6,
+  "removed": 3,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'tests/sitl/test_110.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - droneapi/__init__.py\n  - droneapi/lib/__init__.py\n  - droneapi/tools/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "f352d4f4a83b72e91357d0ab974c4c994f9f4540",
+  "date": "2015-10-22",
+  "subject": "Updates test to pass locally.",
+  "py": [
+   "dronekit/__init__.py",
+   "tests/sitl/test_localposition.py"
+  ],
+  "parent": "bdd0b06152201257b09d2c1c73af0c472dee5719",
+  "seconds": 0.504,
+  "returncode": 0,
+  "stderr": "",
+  "added": 22,
+  "removed": 18,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/__init__.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/module/api.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'tests/sitl/test_localposition.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/tools/__init__.py\n  - dronekit/lib/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in tests/sitl/test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nHandle from 'connect()' at line 9 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.\nLC_score = |O| / |R| = 0 / 1 = 0.00",
+    "line": 9,
+    "score": 0.0
+   }
+  ]
+ },
+ {
+  "sha": "96dac34198c3994c729e544b12c950394e7bf359",
+  "date": "2015-10-22",
+  "subject": "Updates API, adds backward compatibility to local/global loc.",
+  "py": [
+   "dronekit/__main__.py",
+   "dronekit/lib/__init__.py",
+   "dronekit/module/api.py",
+   "examples/vehicle_state/vehicle_state.py",
+   "tests/sitl/test_goto.py",
+   "tests/sitl/test_localposition.py"
+  ],
+  "parent": "7d9eb8b367506f11a52d34af86f83e273382ad41",
+  "seconds": 0.252,
+  "returncode": 0,
+  "stderr": "",
+  "added": 20,
+  "removed": 16,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/__main__.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 22. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 22,
+    "score": null
+   },
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/vehicle_state/vehicle_state.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 23. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 23,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/module/api.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - dronekit/__init__.py  (uses MPVehicle)",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'tests/sitl/test_goto.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/__init__.py\n  - dronekit/tools/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'tests/sitl/test_localposition.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/__init__.py\n  - dronekit/tools/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in tests/sitl/test_goto.py",
+    "detail": "[scope: function:test_goto [uses arm_and_takeoff]]\nHandle from 'connect()' at line 19 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.\nLC_score = |O| / |R| = 0 / 1 = 0.00",
+    "line": 19,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'v' in tests/sitl/test_localposition.py",
+    "detail": "[scope: function:test_timeout]\nHandle from 'connect()' at line 8 is never explicitly closed.\nUse 'with connect(...) as v:' or call 'v.close()'.\nLC_score = |O| / |R| = 0 / 1 = 0.00",
+    "line": 8,
+    "score": 0.0
+   }
+  ]
+ },
+ {
+  "sha": "881f661b4a46d12ca0b76ba06503414415080d82",
+  "date": "2015-10-22",
+  "subject": "Update guided-set-speed-yaw-demo with new connect and vehicle.close. Test.",
+  "py": [
+   "examples/guided_set_speed_yaw/guided_set_speed_yaw.py"
+  ],
+  "parent": "ebbf4a8a400d6aa14ccf380e8ee67c0bacee3cf5",
+  "seconds": 0.117,
+  "returncode": 0,
+  "stderr": "",
+  "added": 76,
+  "removed": 51,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/guided_set_speed_yaw/guided_set_speed_yaw.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 25. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 25,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "35d0604e3274a5487e2fc2f38831306870cf0e7c",
+  "date": "2015-10-22",
+  "subject": "Updates mission examples/docs/guide to DKPY2. Further testing/update required when #355 fixed",
+  "py": [
+   "examples/mission_basic/mission_basic.py",
+   "examples/mission_import_export/mission_import_export.py"
+  ],
+  "parent": "881f661b4a46d12ca0b76ba06503414415080d82",
+  "seconds": 0.125,
+  "returncode": 0,
+  "stderr": "",
+  "added": 170,
+  "removed": 67,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/mission_basic/mission_basic.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 23. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 23,
+    "score": null
+   },
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/mission_import_export/mission_import_export.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 28. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 28,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "a16546e1990bead7a4a087e05d5d635e9666163c",
+  "date": "2015-10-26",
+  "subject": "2.0.0c1",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "1badabe8b43731f2d42b10f3ee4f3f02140803ee",
+  "seconds": 0.128,
+  "returncode": 0,
+  "stderr": "",
+  "added": 1,
+  "removed": 1,
+  "items": []
+ },
+ {
+  "sha": "71de7e8a8ecd90b9a2e029b703fc6b3a84ec7048",
+  "date": "2015-10-27",
+  "subject": "Merges MPCommandSequence into CommandSequence.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "dronekit/module/api.py"
+  ],
+  "parent": "ebcf7346da29486aabc74a819d710434f8e0623a",
+  "seconds": 0.447,
+  "returncode": 0,
+  "stderr": "",
+  "added": 75,
+  "removed": 98,
+  "items": []
+ },
+ {
+  "sha": "01b7183d768d349ed06772642eee222bf393634f",
+  "date": "2015-11-02",
+  "subject": "Merges all handling code into Vehicle.",
+  "py": [
+   "dronekit/__init__.py",
+   "dronekit/lib/__init__.py"
+  ],
+  "parent": "4a170ecf2a79ea8ec1831bd432720dbcd420223e",
+  "seconds": 1.341,
+  "returncode": 0,
+  "stderr": "",
+  "added": 111,
+  "removed": 127,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/__init__.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - tests/sitl/test_110.py  (uses connect)\n  - tests/sitl/test_115.py  (uses connect)\n  - tests/sitl/test_12.py  (uses connect)\n  - tests/sitl/test_goto.py  (uses connect)\n  - tests/sitl/test_localposition.py  (uses connect)\n  - tests/sitl/test_simpledemo.py  (uses connect)\n  - tests/sitl/test_vehicleclass.py  (uses connect)\n  - tests/sitl/test_waypoints.py  (uses connect)\nFiles this file imports or opens (not in the diff):\n  - dronekit/tools/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/lib/__init__.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/tools/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Concurrency construct in dronekit/__init__.py",
+    "detail": "[scope: class:MAVHandler]\nConcurrency construct 'Queue' at line 48.\nVerify thread-safety and absence of deadlocks:\n  * Are all shared variables accessed under the appropriate lock?\n  * Is lock acquisition order consistent to prevent deadlock?\n  * Are daemon threads explicitly joined or their lifecycle managed?",
+    "line": 48,
+    "score": null
+   },
+   {
+    "category": "concurrency",
+    "message": "Concurrency construct in dronekit/__init__.py",
+    "detail": "[scope: class:MAVHandler]\nConcurrency construct 'Thread' at line 140.\nVerify thread-safety and absence of deadlocks:\n  * Are all shared variables accessed under the appropriate lock?\n  * Is lock acquisition order consistent to prevent deadlock?\n  * Are daemon threads explicitly joined or their lifecycle managed?",
+    "line": 140,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 5 in dronekit/lib/__init__.py",
+    "detail": "[scope: class:Vehicle]\nBare literal 5 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 845,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 50 in dronekit/lib/__init__.py",
+    "detail": "[scope: class:Vehicle]\nBare literal 50 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.\n(Unchanged line inside the modified scope - comparison operand.)",
+    "line": 799,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "e4201bb9aff6626b8d43440fc2689927f21224b5",
+  "date": "2015-11-02",
+  "subject": "Adds upload() command.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "tests/sitl/test_waypoints.py"
+  ],
+  "parent": "c1f497aad7ddba98fd2a67a00a415d35d2f620f6",
+  "seconds": 0.281,
+  "returncode": 0,
+  "stderr": "",
+  "added": 25,
+  "removed": 15,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'tests/sitl/test_waypoints.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/__init__.py\n  - dronekit/tools/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in tests/sitl/test_waypoints.py",
+    "detail": "[scope: function:test_empty_clear]\nHandle from 'connect()' at line 9 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.\nLC_score = |O| / |R| = 0 / 1 = 0.00",
+    "line": 9,
+    "score": 0.0
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in tests/sitl/test_waypoints.py",
+    "detail": "[scope: function:test_parameter]\nHandle from 'connect()' at line 19 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.\nLC_score = |O| / |R| = 0 / 1 = 0.00",
+    "line": 19,
+    "score": 0.0
+   }
+  ]
+ },
+ {
+  "sha": "f5e71145114b90485b4e8525b167972e79377194",
+  "date": "2015-11-09",
+  "subject": "Add attributes docs for system_status, heading as per #305",
+  "py": [
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "32f14fdaacbb4e5ba01a26e3ff26a710df06420c",
+  "seconds": 0.09,
+  "returncode": 0,
+  "stderr": "",
+  "added": 21,
+  "removed": 3,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/vehicle_state/vehicle_state.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 23. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 23,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "ed56dda2e9214c48fbcda795b4c2b68bd73cc28e",
+  "date": "2015-11-09",
+  "subject": "Addition file changes (this should have been part of last commit)",
+  "py": [
+   "dronekit/lib/__init__.py"
+  ],
+  "parent": "f5e71145114b90485b4e8525b167972e79377194",
+  "seconds": 0.09,
+  "returncode": 0,
+  "stderr": "",
+  "added": 19,
+  "removed": 0,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/lib/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 1285. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 1285,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "c2c9240cc1097eba4485fdaaf8af53f7f3f7ff70",
+  "date": "2015-11-10",
+  "subject": "Updates to docs for is_armable attribute. Update to two main examples.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "examples/simple_goto/simple_goto.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "5f3f223de71a0947065871623b2549cb8ebe6637",
+  "seconds": 0.097,
+  "returncode": 0,
+  "stderr": "",
+  "added": 65,
+  "removed": 26,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/lib/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 1320. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 1320,
+    "score": null
+   },
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/simple_goto/simple_goto.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 25. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 25,
+    "score": null
+   },
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/vehicle_state/vehicle_state.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 23. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 23,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "06446d27c694e2f91a4f4a1ed8fb764680d37408",
+  "date": "2015-11-11",
+  "subject": "Makes parameters case-insensitive.",
+  "py": [
+   "dronekit/lib/__init__.py"
+  ],
+  "parent": "a3dad03934bbedcc53f732e29ba6693ea4262659",
+  "seconds": 0.142,
+  "returncode": 0,
+  "stderr": "",
+  "added": 20,
+  "removed": 1,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/lib/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 1477. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 1477,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "a3dad03934bbedcc53f732e29ba6693ea4262659",
+  "date": "2015-11-11",
+  "subject": "Enables vehicle.parameters to be observed.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "dronekit/test/sitl/test_parameters.py"
+  ],
+  "parent": "1ea2032a5d6ce784306712cec442364e1137075f",
+  "seconds": 0.139,
+  "returncode": 0,
+  "stderr": "",
+  "added": 35,
+  "removed": 9,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/lib/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 1477. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 1477,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/test/sitl/test_parameters.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/__init__.py\n  - dronekit/test/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "89b89bd0a9ae87f17fa7c28a8b5ff714aa2c22fc",
+  "date": "2015-11-17",
+  "subject": "Fixes localposition. Allows wait_ready on location.local_frame.",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "dronekit/test/sitl/test_localposition.py"
+  ],
+  "parent": "dbc39dae7b27580d42c9974675d256eeba923cbb",
+  "seconds": 0.127,
+  "returncode": 0,
+  "stderr": "",
+  "added": 5,
+  "removed": 2,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/lib/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 1611. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 1611,
+    "score": null
+   },
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/test/sitl/test_localposition.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/__init__.py\n  - dronekit/test/__init__.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "bcfff544d34672190168fd80d61db3cbef640fb7",
+  "date": "2015-11-17",
+  "subject": "Fixes to API ref, example, documentation",
+  "py": [
+   "dronekit/lib/__init__.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "5bf2d4e2a1d47251cfb02e063c0481a6419d3059",
+  "seconds": 0.105,
+  "returncode": 0,
+  "stderr": "",
+  "added": 93,
+  "removed": 31,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/lib/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 1610. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 1610,
+    "score": null
+   },
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/vehicle_state/vehicle_state.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 24. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 24,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "2ff3bae2f1ed9628b2c7878deeb84c2c0a49e1df",
+  "date": "2015-11-20",
+  "subject": "Fixes to lots of examples and docs for new settable speed, simple_takeoff and simple_goto",
+  "py": [
+   "dronekit/__init__.py",
+   "examples/drone_delivery/drone_delivery.py",
+   "examples/simple_goto/simple_goto.py",
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "292327f53de2dc091c65091b04054e3ad7ac5479",
+  "seconds": 0.095,
+  "returncode": 0,
+  "stderr": "",
+  "added": 129,
+  "removed": 51,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 1883. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 1883,
+    "score": null
+   },
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/drone_delivery/drone_delivery.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 28. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 28,
+    "score": null
+   },
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/simple_goto/simple_goto.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 22. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 22,
+    "score": null
+   },
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/vehicle_state/vehicle_state.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 22. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 22,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "61922591d590490fd486e6cb3f3271e9677b4b43",
+  "date": "2015-11-23",
+  "subject": "Fixes to follow_me example docs due to changed LocationGlobalRelative",
+  "py": [
+   "examples/follow_me/follow_me.py"
+  ],
+  "parent": "21c9bcd077dcf63c8482ceb89f330e8ecbf20581",
+  "seconds": 0.086,
+  "returncode": 0,
+  "stderr": "",
+  "added": 2,
+  "removed": 2,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/follow_me/follow_me.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 28. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 28,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "0dde190ad535b7ddcb2f801e662c549a89f359af",
+  "date": "2015-12-10",
+  "subject": "Gimbal: Added gimbal control",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "75e1d8b11271d6f9a95097cfff19e56954f7475b",
+  "seconds": 0.096,
+  "returncode": 0,
+  "stderr": "",
+  "added": 115,
+  "removed": 0,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 1886. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 1886,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "66a0523bceb44e867cab3cddb89b11354198af82",
+  "date": "2016-02-03",
+  "subject": "Fix incorrect property marker for airspeed",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "59383874f89d6a7728936d615361f31c299b6c44",
+  "seconds": 0.105,
+  "returncode": 0,
+  "stderr": "",
+  "added": 1,
+  "removed": 1,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 1900. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 1900,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "dd196378cea92a274fb65ee1d399d65424a852d7",
+  "date": "2016-02-11",
+  "subject": "Fix doc strings in library",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "d65471b44e720583a6ef3728dcb44a01050a50ab",
+  "seconds": 0.102,
+  "returncode": 0,
+  "stderr": "",
+  "added": 29,
+  "removed": 14,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 2099. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 2099,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "b1207a170ecbecb465ae52a63ca7c95da35951c5",
+  "date": "2016-02-11",
+  "subject": "Fix up examples for new version and capabilities attributes",
+  "py": [
+   "examples/vehicle_state/vehicle_state.py"
+  ],
+  "parent": "dd196378cea92a274fb65ee1d399d65424a852d7",
+  "seconds": 0.104,
+  "returncode": 0,
+  "stderr": "",
+  "added": 213,
+  "removed": 145,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: examples/vehicle_state/vehicle_state.py is not valid Python 3.13",
+    "detail": "Missing parentheses in call to 'print'. Did you mean print(...)? at line 23. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 23,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "fe6226fb087301b058824916568d88ec0d4607e5",
+  "date": "2016-08-29",
+  "subject": "there is no :cloud:",
+  "py": [
+   "setup.py"
+  ],
+  "parent": "fac629cff66a92a63017e96f7c8a8d27a06a6189",
+  "seconds": 0.117,
+  "returncode": 0,
+  "stderr": "",
+  "added": 30,
+  "removed": 171,
+  "items": []
+ },
+ {
+  "sha": "270e9d7502e256c4182506591bb9a86541540a4a",
+  "date": "2017-03-03",
+  "subject": "adding *args to send method in case pymavlink modifies its send method signature",
+  "py": [
+   "dronekit/mavlink.py"
+  ],
+  "parent": "0d77e600de0a97afe887b2b2fa9d864e959f9dc7",
+  "seconds": 0.185,
+  "returncode": 0,
+  "stderr": "",
+  "added": 2,
+  "removed": 2,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/mavlink.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - dronekit/test/sitl/test_mavlink.py  (uses MAVConnection)\nFiles this file imports or opens (not in the diff):\n  - dronekit/__init__.py\n  - dronekit/util.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "c633a5ca514ac6464a00814f578237e031fef486",
+  "date": "2017-04-21",
+  "subject": "Python 3: define basestring, use bytes.decode() (#705)",
+  "py": [
+   "dronekit/__init__.py",
+   "examples/drone_delivery/drone_delivery.py",
+   "examples/simple_goto/simple_goto.py"
+  ],
+  "parent": "4d05c05363cf2300ddcc2b60af729f66c8f18fd4",
+  "seconds": 0.347,
+  "returncode": 0,
+  "stderr": "",
+  "added": 92,
+  "removed": 80,
+  "items": [
+   {
+    "category": "parse",
+    "message": "Not analysed: dronekit/__init__.py is not valid Python 3.13",
+    "detail": "invalid syntax at line 2192. No checks were run on this file (e.g. Python 2 code). Review it manually.",
+    "line": 2192,
+    "score": null
+   },
+   {
+    "category": "magic",
+    "message": "Magic number 0.95 in examples/simple_goto/simple_goto.py",
+    "detail": "[scope: function:arm_and_takeoff]\nBare literal 0.95 - intent is not self-evident.\nNamed constants improve readability and make future changes safer.",
+    "line": 71,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "9f6572a9ea20cdeaeba93c4029b5409966d25535",
+  "date": "2018-03-31",
+  "subject": "examples: add a reboot example",
+  "py": [
+   "examples/reboot/reboot.py"
+  ],
+  "parent": "689aa2240b86d8c5903768c47553869632ed2415",
+  "seconds": 0.143,
+  "returncode": 0,
+  "stderr": "",
+  "added": 36,
+  "removed": 0,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'examples/reboot/reboot.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/__init__.py",
+    "line": null,
+    "score": null
+   },
+   {
+    "category": "lifecycle",
+    "message": "Unmanaged resource 'vehicle' in examples/reboot/reboot.py",
+    "detail": "[scope: module:line 29]\nHandle from 'connect()' at line 29 is never explicitly closed.\nUse 'with connect(...) as vehicle:' or call 'vehicle.close()'.\nLC_score = |O| / |R| = 0 / 1 = 0.00",
+    "line": 29,
+    "score": 0.0
+   }
+  ]
+ },
+ {
+  "sha": "c89175ac941d29f7e0f0b5d42f97f96ec268fd6d",
+  "date": "2018-11-15",
+  "subject": "param_request_read_send wants bytes, not str",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "f786a6323191ab1fe0cf252111262287ff511adb",
+  "seconds": 1.443,
+  "returncode": 0,
+  "stderr": "",
+  "added": 1,
+  "removed": 1,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/__init__.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - dronekit/test/sitl/test_vehicleclass.py  (uses Vehicle)\n  - examples/create_attribute/create_attribute.py  (uses Vehicle)\n  - examples/create_attribute/my_vehicle.py  (uses Vehicle)\nFiles this file imports or opens (not in the diff):\n  - dronekit/util.py\n  - dronekit/mavlink.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "e412e95d24169c606edcd87fa1dc309af305eb0e",
+  "date": "2018-12-28",
+  "subject": "incase None > int in python3",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "a80a9bdbcfd7b80ba60a9fa860478cb748a4de16",
+  "seconds": 1.486,
+  "returncode": 0,
+  "stderr": "",
+  "added": 1,
+  "removed": 1,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/__init__.py' - have they been checked?",
+    "detail": "Files using definitions changed in this diff (not in the diff):\n  - dronekit/test/sitl/test_vehicleclass.py  (uses Vehicle)\n  - examples/create_attribute/create_attribute.py  (uses Vehicle)\n  - examples/create_attribute/my_vehicle.py  (uses Vehicle)\nFiles this file imports or opens (not in the diff):\n  - dronekit/util.py\n  - dronekit/mavlink.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ },
+ {
+  "sha": "22ae381f188167d45157b574993bdaaf80778658",
+  "date": "2019-02-01",
+  "subject": "Set a timeout for uploading missions",
+  "py": [
+   "dronekit/__init__.py"
+  ],
+  "parent": "ed132cce3588b5a9b0fa93e50f255a284fb8a0f7",
+  "seconds": 0.707,
+  "returncode": 0,
+  "stderr": "",
+  "added": 4,
+  "removed": 1,
+  "items": [
+   {
+    "category": "linkage",
+    "message": "Linked files to 'dronekit/__init__.py' - have they been checked?",
+    "detail": "Files this file imports or opens (not in the diff):\n  - dronekit/util.py\n  - dronekit/mavlink.py",
+    "line": null,
+    "score": null
+   }
+  ]
+ }
+]

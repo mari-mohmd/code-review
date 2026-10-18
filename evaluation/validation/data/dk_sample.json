@@ -1,0 +1,439 @@
+{
+ "repo": "/home/claude/work/dronekit-python",
+ "population": 537,
+ "seed": 2027,
+ "excluded": 50,
+ "sample": [
+  {
+   "sha": "9245266530f7ba0808e784d329e04f54b97b92f4",
+   "date": "2014-03-27",
+   "subject": "Move previous sketch into this project.",
+   "py": [
+    "dapi_module/DroneApi.py",
+    "example/client_sketch.py"
+   ]
+  },
+  {
+   "sha": "c268602d1ad3888d5372cd304b40cdf591d65029",
+   "date": "2014-03-28",
+   "subject": "attitude/location works",
+   "py": [
+    "droneapi/lib/DroneApi.py",
+    "droneapi/module/api.py"
+   ]
+  },
+  {
+   "sha": "2431c98dd1a1f648d7de3cddbdde985c94d0a823",
+   "date": "2014-03-28",
+   "subject": "gps info works",
+   "py": [
+    "droneapi/lib/DroneApi.py",
+    "droneapi/module/api.py"
+   ]
+  },
+  {
+   "sha": "9e9b3e03c052084f3965025c8096467b67181217",
+   "date": "2014-03-28",
+   "subject": "Updates to make nice packages",
+   "py": [
+    "droneapi/lib/__init__.py",
+    "droneapi/module/api.py",
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "a2a35e143cd4255cef8e3530185b9a5b8bda4017",
+   "date": "2014-05-23",
+   "subject": "Fix reading of current next wpt (see example below)",
+   "py": [
+    "droneapi/module/api.py",
+    "example/small_demo.py",
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "791cd940469ea740b51afa6753d61d364ca7461f",
+   "date": "2014-06-30",
+   "subject": "add missing airspeed/groundspeed properties",
+   "py": [
+    "droneapi/module/api.py",
+    "example/small_demo.py",
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "c599781fd9896ace7173a367eeb7becb58a33dd2",
+   "date": "2014-07-07",
+   "subject": "release 0.1.7: depend on new mavproxy",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "223e6c6c930398de9714a1e4ab09468469be3ed0",
+   "date": "2014-07-17",
+   "subject": "Fix Cancel override example",
+   "py": [
+    "example/small_demo.py"
+   ]
+  },
+  {
+   "sha": "7e792e186929429ea5bb3810c72b2136135cb156",
+   "date": "2014-07-29",
+   "subject": "Fix #6 - set_mavlink_callback already works, fix the docs and add example",
+   "py": [
+    "droneapi/lib/__init__.py",
+    "example/small_demo.py"
+   ]
+  },
+  {
+   "sha": "7f0c285ba089900b7fd1779c2ce0c31320bdf5dd",
+   "date": "2014-07-31",
+   "subject": "use ssl links for connection to server",
+   "py": [
+    "test-upload.py"
+   ]
+  },
+  {
+   "sha": "3f1e0277da2455b37ff5c5df2ac6849095f6c335",
+   "date": "2014-12-15",
+   "subject": "Print perf measurements less often",
+   "py": [
+    "example/perf_test.py"
+   ]
+  },
+  {
+   "sha": "86c8d031f4b709d0a5a2357dd920da236e1e2e32",
+   "date": "2014-12-29",
+   "subject": "Flight replay demo WIP",
+   "py": [
+    "example/flight_replay/flight_replay.py"
+   ]
+  },
+  {
+   "sha": "36edc4ff616655a399a5c673ff41c09fe391bcb6",
+   "date": "2015-02-12",
+   "subject": "release: 1.0.3",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "ca3c1466ae721f99fc09ec4ba4ebb2c8d41dbd04",
+   "date": "2015-02-22",
+   "subject": "fixes test-upload.py it now posts",
+   "py": [
+    "test-upload.py"
+   ]
+  },
+  {
+   "sha": "f4dc3b1a51b1df8a8e05d00ab9e934083b224c98",
+   "date": "2015-04-07",
+   "subject": "fix the import path for sphinx",
+   "py": [
+    "docs/conf.py"
+   ]
+  },
+  {
+   "sha": "591f4037438ae02a16f9b3a88d0495c8edb61f45",
+   "date": "2015-04-30",
+   "subject": "Adds script to retrieve the latest release notes from a specified git repo",
+   "py": [
+    "docs/get_release_notes.py"
+   ]
+  },
+  {
+   "sha": "29d51f802879f843f786d7d625a8c4e203e4aec6",
+   "date": "2015-05-07",
+   "subject": "Fixes APIRef around GPSInfo doc (#86) and send_mavlink (#85)",
+   "py": [
+    "droneapi/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "789c4e7d50f77d2c27f38adfa18c45610bb47c6b",
+   "date": "2015-06-26",
+   "subject": "Added inf and NaN check on takeoff",
+   "py": [
+    "droneapi/module/api.py"
+   ]
+  },
+  {
+   "sha": "bed39a5a4addc3f16450ca008fbc6a9fa805122a",
+   "date": "2015-07-08",
+   "subject": "Update vehicle_state example with rangefinder attribute. Include info about setting up rangefinder on SITL",
+   "py": [
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "4d4e61b58003e02d207b6c54dcc70ef5af640009",
+   "date": "2015-07-10",
+   "subject": "Adds a framework for testing with SITL.",
+   "py": [
+    "tests/sitl/__init__.py",
+    "tests/sitl/__main__.py",
+    "tests/sitl/test_12.py",
+    "tests/sitl/test_simple.py",
+    "tests/sitl/testlib.py"
+   ]
+  },
+  {
+   "sha": "d8099e56242ac3d97fbf46ba1dcdf8358f70dc16",
+   "date": "2015-07-10",
+   "subject": "Adds \"requests\" to setup.py",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "24f616f8942acbe9215b411fd7c482ef818956b7",
+   "date": "2015-07-27",
+   "subject": "Enables Windows SITL tests to use mavproxy.exe",
+   "py": [
+    "tests/sitl/__main__.py"
+   ]
+  },
+  {
+   "sha": "de4b39b58ff7c40d3fde853719bcd4f3b9d61ba9",
+   "date": "2015-07-29",
+   "subject": "Ensures observers can't be added twice. Fixes #110",
+   "py": [
+    "droneapi/lib/__init__.py",
+    "tests/sitl/test_110.py"
+   ]
+  },
+  {
+   "sha": "78c35173b75dd608f79d9998419a24e5f797d61e",
+   "date": "2015-07-29",
+   "subject": "v1.4.2",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "b6c0586d77039d5068d541915f89b60c36241936",
+   "date": "2015-09-21",
+   "subject": "Loads params listing.",
+   "py": [
+    "droneapi/__main__.py"
+   ]
+  },
+  {
+   "sha": "5e9b989ea2f83b0bdc31870b37450de6fbc59de6",
+   "date": "2015-09-21",
+   "subject": "Stubs out fix_targets.",
+   "py": [
+    "droneapi/__init__.py"
+   ]
+  },
+  {
+   "sha": "8d41915a7e6643a68e4d700d3bb225196c017ae9",
+   "date": "2015-10-13",
+   "subject": "Abstracts MAVLink listeners in the constructor.",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "981480d3d52c79cde205650298d4bd59067071d4",
+   "date": "2015-10-13",
+   "subject": "Removes some read-only, deprecated properties.",
+   "py": [
+    "dronekit/module/api.py"
+   ]
+  },
+  {
+   "sha": "b990e13e79ac8834c8e03eb77957a046292ff753",
+   "date": "2015-10-13",
+   "subject": "Removes synthetic clock.",
+   "py": [
+    "dronekit/tools/__init__.py"
+   ]
+  },
+  {
+   "sha": "247b91d97b07585d10de8a8e158679f03b8209d6",
+   "date": "2015-10-15",
+   "subject": "2.0.0b6",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "e6e6ed296a9bf16640ea2786a490d709df76beea",
+   "date": "2015-10-22",
+   "subject": "Update in line with Tims comments",
+   "py": [
+    "examples/flight_replay/flight_replay.py"
+   ]
+  },
+  {
+   "sha": "7e036b650727fa442d2f2944a7464d26da67d16f",
+   "date": "2015-10-22",
+   "subject": "Fix example's help description",
+   "py": [
+    "examples/follow_me/follow_me.py"
+   ]
+  },
+  {
+   "sha": "c78c1090abc9e2e36b50ee8141244616df0f97b3",
+   "date": "2015-10-22",
+   "subject": "Fix help description. Add vehicle.close to the example",
+   "py": [
+    "examples/channel_overrides/channel_overrides.py"
+   ]
+  },
+  {
+   "sha": "bed6320aa27601899599547f956dc3ffe3af5d5e",
+   "date": "2015-10-26",
+   "subject": "Global updates to fix the examples to use LocationGlobal rather than Location",
+   "py": [
+    "dronekit/lib/__init__.py",
+    "examples/drone_delivery/drone_delivery.py",
+    "examples/follow_me/follow_me.py",
+    "examples/guided_set_speed_yaw/guided_set_speed_yaw.py",
+    "examples/mission_basic/mission_basic.py",
+    "examples/simple_goto/simple_goto.py",
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "b44c903de4c172250a041ec3bf8c513b3d4d1df1",
+   "date": "2015-10-27",
+   "subject": "Cleans up many shim classes.",
+   "py": [
+    "dronekit/__init__.py",
+    "dronekit/lib/__init__.py",
+    "dronekit/module/api.py",
+    "tests/unit/test_api.py"
+   ]
+  },
+  {
+   "sha": "ef53e5fd793246836e0b434ba300f6618cc4909f",
+   "date": "2015-11-04",
+   "subject": "Fix errors in API ref generation due to file structure",
+   "py": [
+    "dronekit/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "e09b975944b7b787986dc5f53e552e20e6638dac",
+   "date": "2015-11-05",
+   "subject": "Fix GPSInfo to remove units from eph and epv definition",
+   "py": [
+    "dronekit/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "6a9125184d29f441b89af66ac7fee5e1a70d475e",
+   "date": "2015-11-09",
+   "subject": "Supports cached home_location.",
+   "py": [
+    "dronekit/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "5b625efd6605c30bb7832d3c335d1beb3e136b51",
+   "date": "2015-11-10",
+   "subject": "Prevents arming while already armed.",
+   "py": [
+    "dronekit/lib/__init__.py"
+   ]
+  },
+  {
+   "sha": "2ef81d4dba608e1980b0002e14b5b9f6d36286cc",
+   "date": "2015-11-11",
+   "subject": "Improves drone delivery example, also cleanup.",
+   "py": [
+    "examples/drone_delivery/drone_delivery.py"
+   ]
+  },
+  {
+   "sha": "5859b833b1ceaa9cbcd4d61bd963c8935460fd0a",
+   "date": "2015-11-11",
+   "subject": "Fix typos in example",
+   "py": [
+    "examples/vehicle_state/vehicle_state.py"
+   ]
+  },
+  {
+   "sha": "a06884d06881f4cbd4e68c9bc2a8bf12322ff7d1",
+   "date": "2015-11-17",
+   "subject": "2.0.0rc11",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "50cde45802592a5b8e80befe90157645103873a1",
+   "date": "2015-11-19",
+   "subject": "Adds speed params to goto.",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "a323c18ee4eadc6b550ec41bc12c03cd7fc4fae8",
+   "date": "2015-11-23",
+   "subject": "Modify example to use wait_ready when downloading commands",
+   "py": [
+    "examples/mission_import_export/mission_import_export.py"
+   ]
+  },
+  {
+   "sha": "950f4fa1f660437332643acb90a1341f980d9a99",
+   "date": "2015-11-30",
+   "subject": "fixed Unknown Endpoint message",
+   "py": [
+    "dronekit/cloud/CloudClient.py"
+   ]
+  },
+  {
+   "sha": "09496ed494ebe867f31eda00a11cd7ed4c491341",
+   "date": "2016-02-18",
+   "subject": "Improve description of dronekit on PyPi",
+   "py": [
+    "setup.py"
+   ]
+  },
+  {
+   "sha": "59dc3681ef597d994d542824aae167c0c63d6403",
+   "date": "2016-08-14",
+   "subject": "base_mode is now optional to success on unit tests",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "1e871786a834e3e1e0d67c2bee564ec8cec8d4e0",
+   "date": "2016-08-30",
+   "subject": "adds notification whenever home location is changed (#650)",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "200fbaf50208e0d7a99dbd026d2324ff6b26a03b",
+   "date": "2017-11-08",
+   "subject": "raise KeyError instead of a bare Exception",
+   "py": [
+    "dronekit/__init__.py"
+   ]
+  },
+  {
+   "sha": "7000397ad04441eb1531ca7e546fa7dbdfd88986",
+   "date": "2018-10-22",
+   "subject": "Properly close Vehicle instances after SITL tests",
+   "py": [
+    "dronekit/test/sitl/test_capability_and_version.py",
+    "dronekit/test/sitl/test_locations.py",
+    "dronekit/test/sitl/test_mavlink.py",
+    "dronekit/test/sitl/test_mode_settings.py",
+    "dronekit/test/sitl/test_reboot.py",
+    "dronekit/test/sitl/test_state.py",
+    "dronekit/test/sitl/test_timeout.py",
+    "dronekit/test/sitl/test_waypoints.py"
+   ]
+  }
+ ]
+}

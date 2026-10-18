@@ -1,0 +1,190 @@
+{
+ "dk": {
+  "before": {
+   "items": 297,
+   "A": 11,
+   "N": 110,
+   "R": 6,
+   "F": 170,
+   "pct_A": 3.7,
+   "pct_F": 57.2,
+   "pct_correct": 42.8,
+   "commits_with_items": 24,
+   "commits_with_A": 6,
+   "median_items": 0.0,
+   "max_items": 57,
+   "sec_median": 0.13,
+   "sec_max": 2.61,
+   "by_cat": {
+    "concurrency": {
+     "A": 5,
+     "N": 2
+    },
+    "formatting": {
+     "N": 48,
+     "F": 40
+    },
+    "lifecycle": {
+     "A": 6,
+     "R": 6,
+     "F": 10
+    },
+    "magic": {
+     "N": 55,
+     "F": 7
+    },
+    "naming": {
+     "F": 3
+    },
+    "shell": {
+     "N": 1
+    },
+    "structural": {
+     "N": 4,
+     "F": 110
+    }
+   }
+  },
+  "after": {
+   "items": 78,
+   "A": 14,
+   "N": 64,
+   "R": 0,
+   "F": 0,
+   "pct_A": 17.9,
+   "pct_F": 0.0,
+   "pct_correct": 100.0,
+   "commits_with_items": 42,
+   "commits_with_A": 6,
+   "median_items": 1.0,
+   "max_items": 7,
+   "sec_median": 0.12,
+   "sec_max": 1.49,
+   "by_cat": {
+    "concurrency": {
+     "A": 5,
+     "N": 2
+    },
+    "formatting": {
+     "N": 5
+    },
+    "lifecycle": {
+     "A": 7
+    },
+    "linkage": {
+     "N": 19
+    },
+    "magic": {
+     "A": 2,
+     "N": 1
+    },
+    "parse": {
+     "N": 35
+    },
+    "shell": {
+     "N": 1
+    },
+    "skipped": {
+     "N": 1
+    }
+   }
+  }
+ },
+ "pp": {
+  "before": {
+   "items": 1503,
+   "A": 52,
+   "N": 1446,
+   "R": 0,
+   "F": 5,
+   "pct_A": 3.5,
+   "pct_F": 0.3,
+   "pct_correct": 99.7,
+   "commits_with_items": 34,
+   "commits_with_A": 13,
+   "median_items": 2.0,
+   "max_items": 431,
+   "sec_median": 1.07,
+   "sec_max": 8.41,
+   "by_cat": {
+    "formatting": {
+     "N": 27,
+     "F": 3
+    },
+    "injection": {
+     "F": 2,
+     "A": 9
+    },
+    "magic": {
+     "N": 1418,
+     "A": 42
+    },
+    "naming": {
+     "N": 1
+    },
+    "structural": {
+     "A": 1
+    }
+   }
+  },
+  "after": {
+   "items": 171,
+   "A": 48,
+   "N": 123,
+   "R": 0,
+   "F": 0,
+   "pct_A": 28.1,
+   "pct_F": 0.0,
+   "pct_correct": 100.0,
+   "commits_with_items": 45,
+   "commits_with_A": 16,
+   "median_items": 2.0,
+   "max_items": 11,
+   "sec_median": 1.54,
+   "sec_max": 12.43,
+   "by_cat": {
+    "formatting": {
+     "N": 5
+    },
+    "injection": {
+     "A": 13
+    },
+    "linkage": {
+     "N": 96,
+     "A": 3
+    },
+    "magic": {
+     "N": 22,
+     "A": 27
+    },
+    "structural": {
+     "A": 5
+    }
+   }
+  }
+ },
+ "total": {
+  "before": {
+   "items": 1800,
+   "A": 63,
+   "N": 1556,
+   "R": 6,
+   "F": 175,
+   "pct_A": 3.5,
+   "pct_F": 9.7
+  },
+  "after": {
+   "items": 249,
+   "A": 62,
+   "N": 187,
+   "R": 0,
+   "F": 0,
+   "pct_A": 24.9,
+   "pct_F": 0.0
+  }
+ },
+ "baseline_A_kept": 45,
+ "baseline_A_lost": 18,
+ "new_A": 17,
+ "baseline_F_removed": 175
+}

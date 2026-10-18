@@ -1,0 +1,402 @@
+[
+ {
+  "item": "R001",
+  "label": "A",
+  "reason": "from_json_string was modified in this commit and line 360 json.loads uses PPJSONDecoder whose pp_hook/registry calls importlib.import_module on module names taken from the JSON, a genuine risk in the modified function."
+ },
+ {
+  "item": "R002",
+  "label": "A",
+  "reason": "Line 166 (reformatted Popen call in this commit) passes tempfile.mkstemp()[1], discarding the open fd, which is leaked on every test run."
+ },
+ {
+  "item": "R003",
+  "label": "A",
+  "reason": "New SITL Popen at line 48 uses stdout/stderr=PIPE that are never read and the process is only kill()ed, never waited, in newly added code."
+ },
+ {
+  "item": "R004",
+  "label": "N",
+  "reason": "test_toolbox.py does use replace_zero_branches_with_switches, but its signature is identical in parent and commit; forward imports are correct."
+ },
+ {
+  "item": "R005",
+  "label": "N",
+  "reason": "postgresql_io.py does import pandapower and pandapower.auxiliary; only forward dependencies listed."
+ },
+ {
+  "item": "R006",
+  "label": "N",
+  "reason": "0.35 is a plotting offset factor for the trafo circle patches in patch_makers.trafo_patches."
+ },
+ {
+  "item": "R007",
+  "label": "N",
+  "reason": "table[4:] strips the \"res_\" prefix checked by table.startswith(\"res_\") in the same condition, so intent is evident."
+ },
+ {
+  "item": "R008",
+  "label": "N",
+  "reason": "700 is a plotly figure pixel-size scale factor (figsize * 700), a plotting size."
+ },
+ {
+  "item": "R009",
+  "label": "N",
+  "reason": "Line 2099 uses `await` as a variable name, valid in Python 2/<3.7 legacy code; not a problem introduced by this docstring commit."
+ },
+ {
+  "item": "R010",
+  "label": "N",
+  "reason": "utility_functions.py does import pandapower, shortcircuit, plotting and topology.create_graph; forward dependencies only."
+ },
+ {
+  "item": "R011",
+  "label": "N",
+  "reason": "simple_plot.py imports generic_geodata and networks as stated; forward dependencies only."
+ },
+ {
+  "item": "R012",
+  "label": "A",
+  "reason": "create.py at this commit contains committed merge-conflict markers (<<<<<<< HEAD at 4960, ======= 4979, >>>>>>> 5047), so the touched file is not importable."
+ },
+ {
+  "item": "R013",
+  "label": "A",
+  "reason": "1e10 at line 149 is an unexplained sentinel meaning \"unlimited RATE_A\" in opf_setup branch-flow constraints."
+ },
+ {
+  "item": "R014",
+  "label": "N",
+  "reason": "20 is only a cutoff deciding whether to log the count or the list of duplicated geodata indices; trivial logging threshold."
+ },
+ {
+  "item": "R015",
+  "label": "N",
+  "reason": "follow_me.py line 29 uses a Python 2 print statement; legacy Python 2 example code."
+ },
+ {
+  "item": "R016",
+  "label": "N",
+  "reason": "graph_searches.py imports topology.create_graph as stated; forward dependency only."
+ },
+ {
+  "item": "R017",
+  "label": "N",
+  "reason": "180 is part of the radians-to-degrees conversion *180/np.pi."
+ },
+ {
+  "item": "R018",
+  "label": "A",
+  "reason": "1e-10 at line 119 is an unexplained numerical threshold below which branch currents are set to NaN, added for the minimum-current change."
+ },
+ {
+  "item": "R019",
+  "label": "N",
+  "reason": "All listed tests do call connect, but connect(ip, await_params, status_printer, vehicle_class, rate, baud) is unchanged between parent and commit."
+ },
+ {
+  "item": "R020",
+  "label": "A",
+  "reason": "test_timeout_empty (modified in this commit about closing resources) creates and binds socket s on port 5760 and never closes it."
+ },
+ {
+  "item": "R021",
+  "label": "N",
+  "reason": "simple_plot.py uses create_line_collection but its signature is unchanged between parent and commit."
+ },
+ {
+  "item": "R022",
+  "label": "N",
+  "reason": "file_io.py and sql_io.py use to_dict_of_dfs whose signature is unchanged in this commit."
+ },
+ {
+  "item": "R023",
+  "label": "N",
+  "reason": "test_mavlink.py imports dronekit, dronekit.mavlink and dronekit.test as stated; forward dependencies only."
+ },
+ {
+  "item": "R024",
+  "label": "N",
+  "reason": "externalNetworkInjectionsCim16.py imports build_pp_net and other_classes as stated; forward dependencies only."
+ },
+ {
+  "item": "R025",
+  "label": "R",
+  "reason": "Same literal 4 used as gencost cost-column start (4::) in the same _make_objective function as R076."
+ },
+ {
+  "item": "R026",
+  "label": "N",
+  "reason": "drone_delivery.py line 28 is a Python 2 print statement; legacy Python 2 example."
+ },
+ {
+  "item": "R027",
+  "label": "N",
+  "reason": "simple_goto.py line 22 is a Python 2 print statement; legacy Python 2 example."
+ },
+ {
+  "item": "R028",
+  "label": "A",
+  "reason": "bus_pq[:, 3] is an opaque column index (q_b) in _get_bus_results_3ph with no named constant."
+ },
+ {
+  "item": "R029",
+  "label": "N",
+  "reason": "test_toolbox.py uses create_replacement_switch_for_branch, whose change only removed type annotations (net, element, idx) - not breaking."
+ },
+ {
+  "item": "R030",
+  "label": "N",
+  "reason": "test_results.py imports pandapower; forward dependency only."
+ },
+ {
+  "item": "R031",
+  "label": "N",
+  "reason": "pf_res_plotly.py imports run, generic_geodata, mapbox_plot and geo as stated; forward dependencies only."
+ },
+ {
+  "item": "R032",
+  "label": "N",
+  "reason": "test_file_io.py imports the listed modules; forward dependencies only."
+ },
+ {
+  "item": "R033",
+  "label": "R",
+  "reason": "Same 1e-10 threshold in the same _calc_branch_currents function as R018 (here for ip currents)."
+ },
+ {
+  "item": "R034",
+  "label": "N",
+  "reason": "calc_sc.py uses _calc_branch_currents(net, ppc), whose signature is unchanged."
+ },
+ {
+  "item": "R035",
+  "label": "N",
+  "reason": "vehicle_state.py line 19 is a Python 2 print statement; legacy Python 2 example."
+ },
+ {
+  "item": "R036",
+  "label": "N",
+  "reason": "shortcircuit/run.py imports the listed modules; forward dependencies only."
+ },
+ {
+  "item": "R037",
+  "label": "A",
+  "reason": "test_goto (modified in this commit) obtains vehicle from connect() at line 19 and never calls vehicle.close()."
+ },
+ {
+  "item": "R038",
+  "label": "A",
+  "reason": "mpc[\"gencost\"][nref:ng, 5] uses opaque gencost column index 5 instead of a named pypower index constant."
+ },
+ {
+  "item": "R039",
+  "label": "A",
+  "reason": "1000 is an arbitrary minloss weighting factor in the H matrix, only hinted at by a comment; a named weight constant would clarify it."
+ },
+ {
+  "item": "R040",
+  "label": "N",
+  "reason": "result_test_network_generator.py imports pandapower and test.toolbox; forward dependencies only."
+ },
+ {
+  "item": "R041",
+  "label": "A",
+  "reason": "alg == 200 is an opaque solver-algorithm code in qps_pypower."
+ },
+ {
+  "item": "R042",
+  "label": "A",
+  "reason": "alg == 4 is an opaque PF_ALG solver code (Gauss-Seidel) in _print_info_about_solver."
+ },
+ {
+  "item": "R043",
+  "label": "N",
+  "reason": "run.py imports the listed modules; forward dependencies only."
+ },
+ {
+  "item": "R044",
+  "label": "N",
+  "reason": "testlib.py line 64 is a Python 2 print statement; the test lib was written in Python 2 at that time."
+ },
+ {
+  "item": "R045",
+  "label": "R",
+  "reason": "Same 1e-10 tolerance literal in the same _calc_branch_currents function as R018 (unchanged line)."
+ },
+ {
+  "item": "R046",
+  "label": "N",
+  "reason": "create.py imports auxiliary, results and std_types as stated; forward dependencies only (commit only changes a docstring)."
+ },
+ {
+  "item": "R047",
+  "label": "N",
+  "reason": "vehicle_state.py line 23 is a Python 2 print statement; legacy Python 2 example."
+ },
+ {
+  "item": "R048",
+  "label": "N",
+  "reason": "Line 1477 uses `await` as an identifier, valid in Python 2-era code; legacy, not a commit problem."
+ },
+ {
+  "item": "R049",
+  "label": "A",
+  "reason": "Newly added NonBlockingStreamReader uses Queue with a daemon reader thread that is never joined, created per wait_timeout call."
+ },
+ {
+  "item": "R050",
+  "label": "N",
+  "reason": "test_toolbox.py imports pandapower, networks and estimation.util; forward dependencies only."
+ },
+ {
+  "item": "R051",
+  "label": "N",
+  "reason": "The only hunk in droneapi/lib/__init__.py edits the VehicleMode docstring; no functional change."
+ },
+ {
+  "item": "R052",
+  "label": "N",
+  "reason": "runpm.py imports the listed modules; forward dependencies only."
+ },
+ {
+  "item": "R053",
+  "label": "A",
+  "reason": "bus_pq[:, 4] is an opaque column index (p_c) in _get_bus_results_3ph."
+ },
+ {
+  "item": "R054",
+  "label": "N",
+  "reason": "test_simple.py imports droneapi.lib (exists at commit); forward dependency only."
+ },
+ {
+  "item": "R055",
+  "label": "R",
+  "reason": "Same literal 5 (gencost 5::2 slice) in the same _make_objective function as R060."
+ },
+ {
+  "item": "R056",
+  "label": "N",
+  "reason": "test_mode_settings.py imports dronekit and dronekit.test; forward dependencies only."
+ },
+ {
+  "item": "R057",
+  "label": "A",
+  "reason": "Popen at line 177 (rewritten in this commit) passes tempfile.mkstemp()[1], leaking the open fd."
+ },
+ {
+  "item": "R058",
+  "label": "A",
+  "reason": "from_ppc.py calls create_transformers_from_parameters, whose tap_phase_shifter parameter was removed/replaced by tap_phase_shifter_type and id_characteristic_table (positional order changed) in this commit."
+ },
+ {
+  "item": "R059",
+  "label": "A",
+  "reason": "from_pickle was modified in this commit and uses pickle.load on the given file, which can execute arbitrary code."
+ },
+ {
+  "item": "R060",
+  "label": "A",
+  "reason": "gencost[elements, 5::2] uses an opaque gencost column index (5) for cost coefficients."
+ },
+ {
+  "item": "R061",
+  "label": "N",
+  "reason": "test_timeout.py imports dronekit and dronekit.test; forward dependencies only."
+ },
+ {
+  "item": "R062",
+  "label": "N",
+  "reason": "The listed files use BinarySearchControl/DroopControl, whose class and __init__ signatures are unchanged in this commit."
+ },
+ {
+  "item": "R063",
+  "label": "A",
+  "reason": "alg == 3 is an opaque PF_ALG solver code (fast-decoupled BX) in _print_info_about_solver."
+ },
+ {
+  "item": "R064",
+  "label": "N",
+  "reason": "The only create.py hunk adds docstring text for const_z_percent/const_i_percent; no functional change."
+ },
+ {
+  "item": "R065",
+  "label": "N",
+  "reason": "run.py imports the listed modules; forward dependencies only."
+ },
+ {
+  "item": "R066",
+  "label": "A",
+  "reason": "Newly added Popen at line 61 passes tempfile.mkstemp()[1], leaking the open fd from mkstemp."
+ },
+ {
+  "item": "R067",
+  "label": "N",
+  "reason": "control/__init__.py and ts_runpp.py use ConstControl, whose __init__ signature is unchanged; the removed write_* methods are not used by them."
+ },
+ {
+  "item": "R068",
+  "label": "A",
+  "reason": "bus_pq[:, 5] is an opaque column index (q_c) in _get_bus_results_3ph."
+ },
+ {
+  "item": "R069",
+  "label": "A",
+  "reason": "alg == 4 is an opaque PF_ALG solver code in _call_power_flow_function dispatch."
+ },
+ {
+  "item": "R070",
+  "label": "A",
+  "reason": "load_4bus_net_oc_doc is a ~60-line copy of load_4bus_net differing only in three switch types (sw4/sw5 still CB_directional), copy-paste that should be parametrized."
+ },
+ {
+  "item": "R071",
+  "label": "A",
+  "reason": "alg == 2 or alg == 3 uses opaque PF_ALG solver codes in _call_power_flow_function."
+ },
+ {
+  "item": "R072",
+  "label": "A",
+  "reason": "FromSerializableRegistry (modified) line 507 json.loads with PPJSONDecoder/pp_hook in rest(), which import_module()s arbitrary module/class names from the input."
+ },
+ {
+  "item": "R073",
+  "label": "A",
+  "reason": "BUS_TYPE != 4 uses opaque pypower bus-type code 4 (NONE/isolated) instead of a named constant."
+ },
+ {
+  "item": "R074",
+  "label": "N",
+  "reason": "simple_plot.py uses create_line_collection, whose signature is unchanged in this commit."
+ },
+ {
+  "item": "R075",
+  "label": "A",
+  "reason": "Newly added mavproxy Popen at line 61 is kill()ed on timeout without wait(), and stdout/stderr pipes are left unhandled."
+ },
+ {
+  "item": "R076",
+  "label": "A",
+  "reason": "gencost[elements, 4::] uses opaque gencost column index 4 for polynomial coefficients."
+ },
+ {
+  "item": "R077",
+  "label": "A",
+  "reason": "Popen at line 177 (rewritten in this commit) uses stderr=PIPE never read in non-verbose mode and is killed without wait."
+ },
+ {
+  "item": "R078",
+  "label": "N",
+  "reason": "create.py uses add_basic_std_types(net), whose signature is unchanged."
+ },
+ {
+  "item": "R079",
+  "label": "A",
+  "reason": "New reboot example obtains vehicle from connect() at line 29 and never calls vehicle.close()."
+ },
+ {
+  "item": "R080",
+  "label": "N",
+  "reason": "Line 2235 uses `await` as an identifier in Python 2-era code; legacy, unrelated to the KeyError change."
+ }
+]
