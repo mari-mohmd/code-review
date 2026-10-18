@@ -192,7 +192,7 @@ class LifecycleChecker:
             if not is_resource:
                 continue
 
-            ln      = getattr(node, "lineno", 0)
+            ln = getattr(node, "lineno", 0)
             in_with = ln in with_lines
 
             for t in node.targets:
@@ -266,21 +266,21 @@ class LifecycleChecker:
             except SyntaxError:
                 ctx_tree = tree
 
-        cm_names   = self._cm_class_names(ctx_tree) | self._cm_class_names(tree)
+        cm_names = self._cm_class_names(ctx_tree) | self._cm_class_names(tree)
         with_lines = self._with_managed_lines(tree)
-        resources  = self._collect_resources(tree, cm_names, with_lines)
+        resources = self._collect_resources(tree, cm_names, with_lines)
 
-        closed  = self._collect_closed(ctx_tree) | self._transferred(ctx_tree)
+        closed = self._collect_closed(ctx_tree) | self._transferred(ctx_tree)
         managed = {
             v for v, (ln, cn, iw) in resources.items()
             if iw or v in closed
         }
         unmanaged = {v: d for v, d in resources.items() if v not in managed}
 
-        r_count  = len(resources)
-        o_count  = len(managed)
+        r_count = len(resources)
+        o_count = len(managed)
         lc_score = o_count / r_count if r_count > 0 else 1.0
-        lc_line  = (f"LC_score = |O| / |R| = {o_count} / {r_count} = {lc_score:.2f}")
+        lc_line = (f"LC_score = |O| / |R| = {o_count} / {r_count} = {lc_score:.2f}")
 
         # unmanaged resources
         for var, (ln, cn, _) in unmanaged.items():
@@ -360,6 +360,8 @@ class LifecycleChecker:
         if isinstance(node.func, ast.Attribute):
             return node.func.attr
         return ""
+
+
 # ------------------------------------------------------------------------------------------------
 
 class NameSimilarityChecker:
@@ -514,75 +516,6 @@ class NameSimilarityChecker:
 
 # ------------------------------------------------------------------------------------------------
 
-class DeadImportChecker:
-    """
-    Formal model:  DI(y) = I_y ∖ U_y
-
-      I_y  - set of names introduced by import statements in file y
-      U_y  - set of names actually referenced (Load context) anywhere in y
-
-    An import is dead if its bound name never appears as a Load node.
-    Only top-level simple names are tracked (not 'import a.b as c' aliases
-    where 'a' is the bound name but 'a.b' is the usage pattern - those are
-    common and should not be flagged).
-
-    Severity: INFO (the import may be intentional for side effects).
-    """
-
-    # Modules commonly imported for side effects - never flag these
-    _SIDE_EFFECT = {"__future__", "antigravity", "this", "readline",
-                    "sitecustomize", "usercustomize", "logging", "warnings"}
-
-    def check(self, source: str, filename: str) -> list:
-        items = []
-        try:
-            tree = ast.parse(source)
-        except SyntaxError:
-            return items
-
-        # Collect imported names: (bound_name, module, lineno)
-        imported: list[tuple[str, str, int]] = []
-        for node in ast.walk(tree):
-            if isinstance(node, ast.Import):
-                for alias in node.names:
-                    bound = alias.asname if alias.asname else alias.name.split(".")[0]
-                    mod = alias.name
-                    if mod.split(".")[0] not in self._SIDE_EFFECT:
-                        imported.append((bound, mod, node.lineno))
-            elif isinstance(node, ast.ImportFrom):
-                mod = node.module or ""
-                if mod.split(".")[0] not in self._SIDE_EFFECT:
-                    for alias in node.names:
-                        if alias.name == "*":
-                            continue  # star imports always assumed used
-                        bound = alias.asname if alias.asname else alias.name
-                        imported.append((bound, f"{mod}.{alias.name}", node.lineno))
-
-        if not imported:
-            return items
-
-        # Collect all Load-context name references in the file
-        used: set[str] = set()
-        for node in ast.walk(tree):
-            if isinstance(node, ast.Name) and isinstance(node.ctx, ast.Load):
-                used.add(node.id)
-            # Attribute access: os.path -> 'os' is used
-            elif isinstance(node, ast.Attribute) and isinstance(node.value, ast.Name):
-                used.add(node.value.id)
-
-        for bound, mod, ln in imported:
-            if bound not in used:
-                items.append(ChecklistItem(
-                    category="deadimport",
-                    message=f"Unused import '{bound}' in {filename}",
-                    detail=(f"'{mod}' imported at line {ln} but '{bound}' is never referenced.\n"
-                            f"Remove if not needed, or add a comment if imported for side effects."),
-                    line=ln,
-                ))
-        return items
-
-# ------------------------------------------------------------------------------------------------
-
 class MagicNumberChecker:
     """
     Detects bare numeric literals used directly in expressions - "magic numbers"
@@ -684,6 +617,7 @@ class MagicNumberChecker:
             ))
         return items
 
+
 # ------------------------------------------------------------------------------------------------
 
 class StructuralDivergenceChecker:
@@ -733,7 +667,7 @@ class StructuralDivergenceChecker:
             for j, (nb, tb, lb, kb, eb) in enumerate(blocks):
                 if i >= j or ka != kb:
                     continue
-                if (la <= lb <= ea) or (lb <= la <= eb):   # nested
+                if (la <= lb <= ea) or (lb <= la <= eb):  # nested
                     continue
                 if touched_lines is not None:
                     if not any(la <= t <= ea or lb <= t <= eb for t in touched_lines):
@@ -746,7 +680,7 @@ class StructuralDivergenceChecker:
                         detail=(
                             f"SD({na}, {nb}) = {score:.2f}  "
                             f"'{na}' (line {la}) and '{nb}' (line {lb}) "
-                            f"are {score*100:.0f}% structurally identical.\n"
+                            f"are {score * 100:.0f}% structurally identical.\n"
                             f"These two blocks of code are almost identical - "
                             f"is this the intended design?\n"
                             f"Consider extracting shared logic into a single reusable function."
@@ -801,6 +735,7 @@ class StructuralDivergenceChecker:
         if not a or not b:
             return 0.0
         return SequenceMatcher(None, a, b).ratio()
+
 
 # ------------------------------------------------------------------------------------------------
 
@@ -882,6 +817,7 @@ class InjectionRiskChecker:
                     line=ln,
                 ))
         return items
+
 
 # ------------------------------------------------------------------------------------------------
 
@@ -1037,6 +973,8 @@ class ConcurrencyChecker:
                 ))
 
         return items
+
+
 # ------------------------------------------------------------------------------------------------
 
 class InputChecker:
@@ -1098,7 +1036,7 @@ class InputChecker:
             if not (isinstance(node, ast.Call) and self._is_input_call(node)):
                 continue
 
-            ln     = getattr(node, "lineno", "?")
+            ln = getattr(node, "lineno", "?")
             prompt = self._prompt_text(node)
             is_secret = self._prompt_looks_secret(prompt)
 
@@ -1154,6 +1092,8 @@ class InputChecker:
             ))
 
         return items
+
+
 # ------------------------------------------------------------------------------------------------
 
 class HardcodedPathChecker:
@@ -1171,7 +1111,7 @@ class HardcodedPathChecker:
     """
 
     _ABS_UNIX = re.compile(r"^(/Users/|/home/|/root/|/tmp/|/var/|/etc/|/opt/|/srv/)")
-    _ABS_WIN  = re.compile(r"^[A-Za-z]:[/\\]")
+    _ABS_WIN = re.compile(r"^[A-Za-z]:[/\\]")
     _MULTI_COMPONENT = re.compile(r"^/[^/]+/[^/]+/")  # ≥ 3 components
 
     def check(self, source: str, filename: str) -> list:
@@ -1203,6 +1143,7 @@ class HardcodedPathChecker:
                 line=ln,
             ))
         return items
+
 
 # ------------------------------------------------------------------------------------------------
 
@@ -1273,6 +1214,7 @@ class ShellInjectionChecker:
                         ))
         return items
 
+
 # ------------------------------------------------------------------------------------------------
 
 class PathCoherenceChecker:
@@ -1314,14 +1256,14 @@ class PathCoherenceChecker:
     """
 
     # Calls that create directories
-    _DIR_CALLS  = {"makedirs", "mkdir"}
+    _DIR_CALLS = {"makedirs", "mkdir"}
     # Calls whose first positional argument is a file path
     _FILE_CALLS = {"open", "system", "popen", "getoutput", "getstatusoutput",
                    "copyfile", "copy", "copy2", "move", "rename"}
 
     # If file IS under the dir but the shared prefix is short (< 2 components),
     # emit INFO rather than silence - it may still be accidental.
-    _WARN_NOT_CHILD  = True   # always warn when file is NOT under the dir
+    _WARN_NOT_CHILD = True  # always warn when file is NOT under the dir
 
     @staticmethod
     def _components(path: str) -> list[str]:
@@ -1345,7 +1287,7 @@ class PathCoherenceChecker:
 
     def _extract_paths(self, tree) -> tuple[list, list]:
         """Return (dir_paths, file_paths) as lists of (path_str, lineno)."""
-        dir_paths  = []
+        dir_paths = []
         file_paths = []
 
         for node in ast.walk(tree):
@@ -1441,10 +1383,10 @@ class PathCoherenceChecker:
 
                 # Show the divergence point
                 if lc < len(dc):
-                    dir_diverges_at  = dc[lc] if lc < len(dc)  else "(end)"
+                    dir_diverges_at = dc[lc] if lc < len(dc) else "(end)"
                     file_diverges_at = fc[lc] if lc < len(fc) else "(end)"
                 else:
-                    dir_diverges_at  = "(end)"
+                    dir_diverges_at = "(end)"
                     file_diverges_at = fc[lc] if lc < len(fc) else "(end)"
 
                 shared = "/" + "/".join(dc[:lc]) if lc else "(none)"

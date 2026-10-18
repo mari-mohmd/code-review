@@ -34,7 +34,7 @@ from .diff_model import (split_files, parse_hunks, relocate, reconstruct_old,
                          string_statement_lines, classify_hunk, is_comment_or_blank,
                          code_identifiers, confirm_non_functional)
 from .checklist_data import ChecklistItem
-from .checkers import LifecycleChecker, NameSimilarityChecker, DeadImportChecker, MagicNumberChecker, \
+from .checkers import LifecycleChecker, NameSimilarityChecker, MagicNumberChecker, \
     StructuralDivergenceChecker, PathCoherenceChecker, HardcodedPathChecker, InjectionRiskChecker, ConcurrencyChecker, \
     ShellInjectionChecker, InputChecker
 from .static_checklist import StaticChecklistLoader
